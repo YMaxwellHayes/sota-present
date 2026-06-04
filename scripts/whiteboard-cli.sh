@@ -21,9 +21,10 @@ fi
 
 # Validate SVG against Feishu renderer constraints
 echo "🔍 Validating SVG rules..."
-python3 << EOF
-import sys
+SVG_FILE="$SVG_FILE" python3 << 'EOF'
+import os, sys
 import xml.etree.ElementTree as ET
+SVG_FILE = os.environ['SVG_FILE']
 
 ALLOWED_TAGS = {
     'svg', 'rect', 'circle', 'ellipse', 'line', 'polyline', 'text', 'tspan', 'g', 'defs', 'marker'
@@ -38,7 +39,7 @@ def localname(t):
     return t.split('}')[-1] if '}' in t else t
 
 try:
-    tree = ET.parse('$SVG_FILE')
+    tree = ET.parse(SVG_FILE)
     root = tree.getroot()
 
     # Remove namespace for easier checking
@@ -74,16 +75,25 @@ try:
         elif tag not in ALLOWED_TAGS:
             warnings.append(f"Unknown element: <{tag}>")
 
-        # Check for forbidden attributes
+        style = elem.attrib.get('style', '')
+
+        # Check for forbidden opacity — as a direct attr, fill/stroke-opacity, or inside style=""
         if 'opacity' in elem.attrib:
             errors.append(f"Forbidden attribute: opacity on <{tag}>")
+        for op_attr in ('fill-opacity', 'stroke-opacity'):
+            if op_attr in elem.attrib:
+                errors.append(f"Forbidden attribute: {op_attr} on <{tag}>")
+        if 'opacity' in style:  # catches opacity: / fill-opacity: / stroke-opacity: in style=""
+            errors.append(f"Forbidden opacity in style attribute on <{tag}>")
 
-        # Check colors (no rgba, hsl)
+        # Check colors (no rgba, hsl) — both presentation attrs AND inside style=""
         for attr in ['fill', 'stroke', 'color']:
             if attr in elem.attrib:
                 value = elem.attrib[attr]
                 if 'rgba' in value or 'hsl' in value:
                     errors.append(f"Forbidden color format in {attr}: {value}")
+        if 'rgba' in style or 'hsl' in style:
+            errors.append(f"Forbidden color format in style attribute on <{tag}>")
 
     # Check viewBox
     if 'viewBox' not in root.attrib:
@@ -129,10 +139,10 @@ elif command -v cairosvg &> /dev/null; then
   cairosvg "$SVG_FILE" -o "$PNG_FILE" --output-width 2400
   echo "✅ PNG exported: $PNG_FILE (using cairosvg)"
 elif python3 -c "import cairosvg" 2>/dev/null; then
-  python3 << EOF
-import cairosvg
-cairosvg.svg2png(url='$SVG_FILE', write_to='$PNG_FILE', output_width=2400)
-print("✅ PNG exported: $PNG_FILE (using cairosvg Python)")
+  SVG_FILE="$SVG_FILE" PNG_FILE="$PNG_FILE" python3 << 'EOF'
+import os, cairosvg
+cairosvg.svg2png(url=os.environ['SVG_FILE'], write_to=os.environ['PNG_FILE'], output_width=2400)
+print("✅ PNG exported:", os.environ['PNG_FILE'], "(using cairosvg Python)")
 EOF
 else
   echo "⚠️  No SVG→PNG converter found"

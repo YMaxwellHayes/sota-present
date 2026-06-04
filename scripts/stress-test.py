@@ -40,6 +40,13 @@ def check_catalog():
         rec("catalog", "parse JSON", False, str(e)); return
     rec("catalog", "parse 3 indexes", True, f"styles={len(styles)} slides={len(slides)} palettes={len(palettes)}")
 
+    # count sanity — guard against silent shrinkage (deleting items must trip a failure, not pass quietly)
+    EXPECT = {"styles": 69, "slides": 46, "palettes": 35}
+    got = {"styles": len(styles), "slides": len(slides), "palettes": len(palettes)}
+    rec("catalog", "counts match expected", got == EXPECT, f"expected {EXPECT}, got {got}")
+    nvd = sum(1 for s in styles if s.get("verified_dual"))
+    rec("catalog", "verified_dual count == 12", nvd == 12, f"got {nvd}")
+
     palette_ids = {p["id"] for p in palettes}
 
     # slides-index template_path must exist; gallery ones need template.html
@@ -148,7 +155,10 @@ def check_validator():
         "<linearGradient>": '<defs><linearGradient id="g"/></defs><rect width="10" height="10" style="fill:#000;"/>',
         "<filter>": '<defs><filter id="f"/></defs><rect width="10" height="10" style="fill:#000;"/>',
         "opacity attr": '<rect width="10" height="10" opacity="0.5" style="fill:#000;"/>',
-        "rgba color": '<rect width="10" height="10" fill="rgba(0,0,0,0.5)"/>',
+        "rgba color (attr)": '<rect width="10" height="10" fill="rgba(0,0,0,0.5)"/>',
+        "rgba color (in style=)": '<rect width="10" height="10" style="fill:rgba(0,0,0,0.5);"/>',
+        "opacity (in style=)": '<rect width="10" height="10" style="fill:#000; opacity:0.5;"/>',
+        "fill-opacity attr": '<rect width="10" height="10" fill="#000" fill-opacity="0.5"/>',
         "standalone <polygon>": '<polygon points="0 0, 10 0, 5 10" style="fill:#000;"/>',
     }
     for name, frag in bads.items():
@@ -158,6 +168,7 @@ def check_validator():
 # ---------- 4. TEMPLATE RENDER ----------
 def check_render():
     tpls = sorted(glob.glob("templates/slides/gallery/*/template.html"))
+    rec("render", "gallery template count == 34", len(tpls) == 34, f"got {len(tpls)}")
     if NO_RENDER or not CHROME:
         rec("render", f"{len(tpls)} gallery templates", True,
             "SKIPPED (--no-render)" if NO_RENDER else "SKIPPED (no Chrome found)")

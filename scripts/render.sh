@@ -23,15 +23,19 @@ mkdir -p "$OUTPUT_DIR"
 
 # Extract tokens for selected style
 echo "📋 Extracting design tokens..."
-python3 << EOF
-import json, sys
+SCRIPT_DIR="$SCRIPT_DIR" STYLE_ID="$STYLE_ID" OUTPUT_DIR="$OUTPUT_DIR" python3 << 'EOF'
+import json, os, sys
 
-with open('$SCRIPT_DIR/catalog/styles.json', 'r') as f:
+SCRIPT_DIR = os.environ['SCRIPT_DIR']
+STYLE_ID = os.environ['STYLE_ID']
+OUTPUT_DIR = os.environ['OUTPUT_DIR']
+
+with open(os.path.join(SCRIPT_DIR, 'catalog/styles.json')) as f:
     styles = json.load(f)
 
-style = next((s for s in styles['styles'] if s['id'] == '$STYLE_ID'), None)
+style = next((s for s in styles['styles'] if s['id'] == STYLE_ID), None)
 if not style:
-    print(f"❌ Style not found: $STYLE_ID")
+    print(f"❌ Style not found: {STYLE_ID}")
     sys.exit(1)
 
 tokens = style['tokens']
@@ -43,10 +47,10 @@ for key, value in tokens.items():
     css += f"  --{key.replace('_', '-')}: {value};\n"
 css += "}\n"
 
-with open('$OUTPUT_DIR/tokens.css', 'w') as f:
+with open(os.path.join(OUTPUT_DIR, 'tokens.css'), 'w') as f:
     f.write(css)
 
-print(f"✅ Tokens written to $OUTPUT_DIR/tokens.css")
+print(f"✅ Tokens written to {OUTPUT_DIR}/tokens.css")
 EOF
 
 # Mode-specific rendering
