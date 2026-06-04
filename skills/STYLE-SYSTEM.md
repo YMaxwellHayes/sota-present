@@ -1,7 +1,7 @@
 # STYLE-SYSTEM — Unified Design Token Architecture
 
-> The connective tissue between HTML slides, Feishu whiteboard SVGs, and code courses.
-> Read this file in `dual` mode to ensure aesthetic coordination across output types.
+> The connective tissue between HTML slides and Feishu whiteboard SVGs.
+> Read this file in `dual` mode to ensure aesthetic coordination across both outputs.
 
 ## Token Layers
 
@@ -68,7 +68,7 @@ Example for "Corporate Aurora" style:
 
 ### Layer 3: Format-Specific Compilation
 
-#### HTML / Course (CSS Custom Properties)
+#### HTML (CSS Custom Properties)
 ```css
 :root {
   --color-primary: #2563EB;
@@ -86,22 +86,23 @@ Example for "Corporate Aurora" style:
 #### Feishu SVG (Inline Literal Values)
 ```xml
 <!-- SVG doesn't support CSS custom properties in Feishu's renderer -->
-<!-- Tokens must be resolved to literal values -->
+<!-- Tokens must be resolved to literal values. Never set font-family. -->
 <rect fill="#2563EB" rx="8" width="400" height="200"/>
-<text font-family="system-ui" fill="#0F172A" font-size="24">Title</text>
+<text fill="#0F172A" font-size="24">Title</text>
 ```
 
 ## Cross-Format Font Mapping
 
-HTML/Course can use Google Fonts. Feishu SVG cannot — it only supports `system-ui`.
-Map the **personality** of the font, not the exact font:
+HTML can use Google Fonts. Feishu SVG cannot — it ignores any `font-family` and
+renders everything in Noto Sans SC, so **never set `font-family` in SVG**.
+Convey the font's **personality** through size, weight, and letter-spacing instead:
 
-| HTML Font | Personality | SVG Fallback |
-|-----------|-------------|--------------|
-| Fraunces | Elegant serif | system-ui (serif feel via letter-spacing) |
-| DM Sans | Clean modern sans | system-ui |
-| JetBrains Mono | Technical mono | system-ui (monospace via font-family="monospace") |
-| Archivo Black | Bold display | system-ui (bold weight, tight tracking) |
+| HTML Font | Personality | SVG (font-family omitted) |
+|-----------|-------------|---------------------------|
+| Fraunces | Elegant serif | larger size, generous letter-spacing |
+| DM Sans | Clean modern sans | default weight, neutral spacing |
+| JetBrains Mono | Technical mono | uppercase labels, wide tracking |
+| Archivo Black | Bold display | bold weight, tight tracking |
 
 In SVG, compensate for the font limitation with:
 - Careful font-size selection
@@ -125,7 +126,6 @@ Selected style: "Midnight Executive"
 This palette flows to:
 - **HTML**: `:root { --color-primary: #1a1a2e; ... }`
 - **SVG**: `<rect style="fill:#1a1a2e" ...>`
-- **Course**: Same `:root` as HTML
 
 The visual result: same mood, same story, different canvas.
 
@@ -165,7 +165,7 @@ Match intensity to DESIGN_VARIANCE dial:
 
 ## Shadow Rules
 
-### HTML/Course
+### HTML
 - Use CSS box-shadow with token-defined elevation levels
 - Soft shadows: `0 4px 6px -1px rgba(0,0,0,0.1)`
 - Hard shadows (neobrutalist): `4px 4px 0 var(--color-text)`

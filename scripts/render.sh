@@ -4,7 +4,7 @@
 
 set -e
 
-MODE=${1:?Usage: render.sh <slides|whiteboard|course> <input> <style-id> [output-dir]}
+MODE=${1:?Usage: render.sh <slides|whiteboard> <input> <style-id> [output-dir]}
 INPUT=${2:?Missing input file}
 STYLE_ID=${3:?Missing style ID}
 OUTPUT_DIR=${4:-output/$MODE}
@@ -71,19 +71,9 @@ case $MODE in
     echo "  5. Output: $OUTPUT_DIR/*.svg"
     ;;
 
-  course)
-    echo ""
-    echo "📚 Code Course"
-    echo "  1. Read SKILL.md and skills/COURSE.md"
-    echo "  2. Analyze codebase structure"
-    echo "  3. Design curriculum (4-6 modules)"
-    echo "  4. Generate interactive HTML course"
-    echo "  5. Output: $OUTPUT_DIR/index.html"
-    ;;
-
   *)
     echo "❌ Unknown mode: $MODE"
-    echo "   Valid modes: slides, whiteboard, course"
+    echo "   Valid modes: slides, whiteboard"
     exit 1
     ;;
 esac

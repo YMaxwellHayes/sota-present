@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Local preview server for sota-present output
-# Usage: serve.sh [slides|whiteboard|course] [port]
+# Usage: serve.sh [slides|whiteboard] [port]
 
 set -e
 
@@ -14,11 +14,8 @@ case $MODE in
   whiteboard)
     DIR="output/whiteboard"
     ;;
-  course)
-    DIR="output/course"
-    ;;
   *)
-    echo "Usage: serve.sh [slides|whiteboard|course] [port]"
+    echo "Usage: serve.sh [slides|whiteboard] [port]"
     exit 1
     ;;
 esac

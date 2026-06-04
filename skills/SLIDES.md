@@ -189,7 +189,7 @@ Motion intensity dial (0-10):
 1. Save to `output/slides/index.html`
 2. Open in browser for user preview
 3. Iterate on feedback
-4. Optional: deploy to Vercel or export PDF
+4. Optional: publish via lark-apps (飞书妙搭) or export PDF
 
 ## Slide Types Reference
 

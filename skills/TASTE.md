@@ -1,17 +1,17 @@
 # TASTE — Anti-Slop Design Rules
 
-> Design quality rules that apply to ALL output modes (slides, whiteboard, course).
+> Design quality rules that apply to ALL output modes (slides, whiteboard).
 > Read this file FIRST, before any other sub-skill.
 
 ## Three Design Dials
 
 Every generation starts with three dials (0-10). Defaults by mode:
 
-| Dial | Slides | Whiteboard | Course |
-|------|--------|------------|--------|
-| DESIGN_VARIANCE | 7 | 5 | 6 |
-| MOTION_INTENSITY | 7 | 0 | 4 |
-| VISUAL_DENSITY | 6 | 8 | 5 |
+| Dial | Slides | Whiteboard |
+|------|--------|------------|
+| DESIGN_VARIANCE | 7 | 5 |
+| MOTION_INTENSITY | 7 | 0 |
+| VISUAL_DENSITY | 6 | 8 |
 
 - **DESIGN_VARIANCE**: 1=conservative/corporate, 10=experimental/art-directed
 - **MOTION_INTENSITY**: 0=static, 10=maximum animation. Whiteboard is always 0 (SVG is static)
@@ -88,7 +88,7 @@ Once a palette is chosen, lock it for the entire piece:
 3. **Background/text pair** — must pass WCAG AA contrast (4.5:1 minimum)
 4. **No color drift** — every element uses a color from the locked palette
 
-## Motion Rules (Slides & Course only)
+## Motion Rules (Slides only)
 
 ### Allowed
 - transform: translate, scale, rotate
