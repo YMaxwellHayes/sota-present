@@ -2,7 +2,7 @@
   "name": "sota-present",
   "version": "1.0.0",
   "description": "State-of-the-art presentations: HTML slide decks and Feishu whiteboard SVGs with coordinated aesthetics",
-  "author": "rorschachachxd",
+  "author": "YMaxwellHayes",
   "triggers": [
     "create slides", "make presentation", "pitch deck",
     "whiteboard diagram", "feishu whiteboard", "SVG diagram",

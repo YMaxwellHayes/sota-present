@@ -36,7 +36,7 @@ It is a **scaffold for taste, assets, and platform-fit** — not a black box. Co
 ## Quick start
 
 ```bash
-npx skills add rorschachachxd/sota-present
+npx skills add YMaxwellHayes/sota-present
 ```
 
 Then just ask Claude Code, in natural language:

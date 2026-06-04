@@ -36,7 +36,7 @@
 ## 快速开始
 
 ```bash
-npx skills add rorschachachxd/sota-present
+npx skills add YMaxwellHayes/sota-present
 ```
 
 然后用自然语言对 Claude Code 说：
