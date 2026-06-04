@@ -102,17 +102,6 @@ python3 scripts/stress-test.py            # 全量（含模板渲染）
 python3 scripts/stress-test.py --no-render # 快速（跳过 Chrome 渲染）
 ```
 
-## 致敬
-
-`sota-present` 站在这些优秀开源项目的肩膀上，向作者们致以诚挚感谢：
-
-| 项目 | 作者 | 贡献 |
-|---|---|---|
-| [taste-skill](https://github.com/Leonxlnx/taste-skill) | [@Leonxlnx](https://github.com/Leonxlnx) | 反 AI-slop 设计哲学与质量规则层，是 `TASTE` 的核心。 |
-| [frontend-slides](https://github.com/zarazhangrui/frontend-slides) | [@zarazhangrui](https://github.com/zarazhangrui) | HTML 幻灯片工作流、固定舞台缩放模型与动效模式。 |
-| [beautiful-html-templates](https://github.com/zarazhangrui/beautiful-html-templates) | [@zarazhangrui](https://github.com/zarazhangrui) | 34 套 gallery 幻灯片模板与 `deck-stage` 组件。 |
-| [beautiful-feishu-whiteboard](https://github.com/zarazhangrui/beautiful-feishu-whiteboard) | [@zarazhangrui](https://github.com/zarazhangrui) | 画板调色板与经实测验证的飞书 SVG 规则集。 |
-
 ## 许可证
 
 [MIT](./LICENSE)。整合代码采用 MIT；内含的上游素材保留其原始署名（见「致敬」）。

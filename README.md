@@ -102,17 +102,6 @@ python3 scripts/stress-test.py            # full (renders templates)
 python3 scripts/stress-test.py --no-render # fast (skip Chrome renders)
 ```
 
-## Acknowledgments
-
-`sota-present` stands on the shoulders of these excellent open-source projects. Huge thanks to their authors:
-
-| Project | Author | What it contributed |
-|---|---|---|
-| [taste-skill](https://github.com/Leonxlnx/taste-skill) | [@Leonxlnx](https://github.com/Leonxlnx) | The anti-AI-slop design philosophy and quality-rule layer at the heart of `TASTE`. |
-| [frontend-slides](https://github.com/zarazhangrui/frontend-slides) | [@zarazhangrui](https://github.com/zarazhangrui) | The HTML slide workflow, fixed-stage scaling model, and animation patterns. |
-| [beautiful-html-templates](https://github.com/zarazhangrui/beautiful-html-templates) | [@zarazhangrui](https://github.com/zarazhangrui) | The 34 gallery slide templates and the `deck-stage` component. |
-| [beautiful-feishu-whiteboard](https://github.com/zarazhangrui/beautiful-feishu-whiteboard) | [@zarazhangrui](https://github.com/zarazhangrui) | The whiteboard palettes and the empirically-verified Feishu SVG rule set. |
-
 ## License
 
 [MIT](./LICENSE). Integration code is MIT; bundled upstream assets retain their original attribution (see Acknowledgments).
