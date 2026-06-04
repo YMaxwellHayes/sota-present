@@ -1,119 +1,118 @@
+<div align="center">
+
 # sota-present
 
-> AI 演示资料创作 Claude Code Skill
+**Turn one content description into polished HTML slide decks and Feishu whiteboards — with coordinated aesthetics and built-in taste.**
 
-一个 Claude Code Skill，通过自然语言描述内容，即可生成两种风格协调的输出：
+A [Claude Code](https://docs.claude.com/en/docs/claude-code) Skill for state-of-the-art presentations.
 
-- 🎞️ **HTML 演示文稿** — 单文件、零依赖、1920×1080 舞台模型
-- 🖼️ **飞书画板 SVG** — 符合飞书渲染器约束、可编辑白板对象
+English · [简体中文](./README.zh-CN.md)
 
-## ✨ 核心创新
+</div>
 
-**统一风格系统** — 描述一次内容，HTML 与飞书画板两种输出风格协调一致。
+---
 
-## 📦 整合的项目
+## What it is
 
-| 项目 | 贡献 |
-|------|------|
-| [taste-skill](https://github.com/Leonxlnx/taste-skill) | 反 AI 审美框架、设计质量规则（横切两条路径） |
-| [frontend-slides](https://github.com/zarazhangrui/frontend-slides) | HTML 幻灯片 7 阶段工作流、固定舞台 |
-| [beautiful-html-templates](https://github.com/zarazhangrui/beautiful-html-templates) | 34 套 HTML 模板、deck-stage 组件 |
-| [beautiful-feishu-whiteboard](https://github.com/zarazhangrui/beautiful-feishu-whiteboard) | 35 色调色板、飞书 SVG 规则 |
+`sota-present` is a Claude Code Skill. You describe your content once, and Claude produces presentation material along **two paths**:
 
-> 注：原 `codebase-to-course`（代码课程）模式已在精简中移除，本 skill 聚焦 HTML 演示与飞书画板两条路径。
+- 🎞️ **HTML slide decks** — single self-contained file, zero dependencies, fixed 1920×1080 stage with keyboard / touch / wheel navigation.
+- 🖼️ **Feishu (Lark) whiteboard SVGs** — compliant with Feishu's strict renderer, rendered as *editable* whiteboard objects, ready to drop into a Feishu doc.
 
-## 🚀 安装
+Pick `dual` and you get both from the same content, sharing one palette so they look like a family.
 
-```bash
-npx skills add Leonxlnx/sota-present
-```
+## Why use it
 
-## 💡 使用示例
+Most "ask an AI to make slides" attempts produce the same tell-tale slop: indigo accents, Inter everywhere, centered card grids, purple gradients, em-dashes. `sota-present` exists to fix three problems at once:
 
-### 生成演示文稿
+| Problem | How `sota-present` solves it |
+|---|---|
+| **AI design looks generic** | A non-negotiable anti-slop rule layer (`TASTE`) bans the tells (Inter/Roboto as display, generic indigo, centered-everything, em-dashes, fake screenshots…) and runs a pre-flight checklist before delivery. |
+| **Multi-channel rework + style drift** | One content description compiles to *both* HTML and Feishu whiteboard from a single shared design-token system. Choose a `verified_dual` style and the two outputs are guaranteed to match. |
+| **Platform constraints are painful** | Feishu's whiteboard renderer has brutal rules (no `<path>`, no gradients, no opacity, single font). `sota-present` encodes them as rules + a validator, so you get an uploadable, editable whiteboard without learning the renderer. |
 
-```
-用户: "为我们的 B 轮融资做一个 15 页的演示文稿"
+It is a **scaffold for taste, assets, and platform-fit** — not a black box. Content depth and correctness still come from you and Claude; what the skill guarantees is a higher quality floor and cross-output consistency.
 
-Claude:
-  1. 检测模式: slides
-  2. 运行预检
-  3. 展示 3 个风格预览
-  4. 用户选择风格
-  5. 生成完整 HTML 幻灯片
-  6. 在浏览器中打开预览
-```
-
-### 生成飞书画板
-
-```
-用户: "画一个我们系统架构的飞书画板图"
-
-Claude:
-  1. 检测模式: whiteboard
-  2. 运行预检
-  3. 选择匹配的调色板
-  4. 生成符合飞书规则的 SVG
-  5. 验证 + 导出 PNG
-  6. (可选) 内嵌进飞书文档（lark-doc <whiteboard type="svg">）
-```
-
-### 双模式（幻灯片 + 画板）
-
-```
-用户: "做一个技术分享的演示，加上架构图的飞书画板"
-
-Claude:
-  1. 检测模式: dual
-  2. 选择 verified_dual 风格（HTML 模板 + 画板调色板协调）
-  3. 生成 HTML 幻灯片
-  4. 生成匹配的飞书画板 SVG
-  5. 验证两种输出的风格一致性
-```
-
-## 🎨 模板统计
-
-（数字以 `catalog/` 实测为准）
-
-- **HTML 幻灯片模板**: 46 个已索引（34 gallery + 12 presets），另有 34 个 bold pack 在 `catalog/_source/` 原始导入文件中（未并入主索引）
-- **画板调色板**: 35 个（克制 → 均衡 → 大胆）
-- **验证的双模式配对**: 12 个（`verified_dual`，幻灯片 + 画板保证匹配）
-
-## 🛠️ 环境要求
-
-**必需**:
-- Node.js ≥ 20
-- Python 3
-
-**可选**:
-- `lark-cli` — 飞书 API 客户端（用于把画板写入飞书文档）
-- `@larksuite/whiteboard-cli` — 画板 CLI（SVG→PNG→飞书 JSON）
-- `librsvg` 或 `cairosvg` — SVG→PNG 转换
-
-运行预检脚本检查环境：
+## Quick start
 
 ```bash
-bash scripts/preflight.sh
+npx skills add rorschachachxd/sota-present
 ```
 
-## 📁 项目结构
+Then just ask Claude Code, in natural language:
 
 ```
-sota-present/
-├── SKILL.md              # 入口点（模式检测 + 路由）
-├── skill.json            # Skill 元数据
-├── skills/               # 子技能文件（渐进式披露）
-│   ├── TASTE.md          # 设计质量规则
-│   ├── SLIDES.md         # HTML 幻灯片工作流
-│   ├── WHITEBOARD.md     # 飞书 SVG 规则
-│   └── STYLE-SYSTEM.md   # 设计令牌架构
-├── catalog/              # 风格索引（JSON）
-├── templates/            # 模板源文件
-├── assets/               # 共享资源（CSS/JS）
-├── scripts/              # 工具脚本
-└── output/               # 生成产物
+"Make a 12-slide deck on our Q3 strategy."
+"Draw a Feishu whiteboard of our system architecture."
+"Make a tech-talk deck plus a matching Feishu whiteboard of the architecture."
 ```
 
-## 📄 许可证
+**Requirements:** Node.js ≥ 20, Python 3. Optional: `lark-cli` + `@larksuite/whiteboard-cli` (to push whiteboards into Feishu), `librsvg`/`cairosvg` (SVG→PNG). Run `bash scripts/preflight.sh` to check.
 
-MIT
+## Usage
+
+### HTML slides
+Claude detects `slides` mode, shows you 3 distinct style previews built from your real content, you pick one, and it generates the full deck into `output/slides/`.
+
+### Feishu whiteboard
+Claude detects `whiteboard` mode, picks a matching palette, writes a constraint-compliant SVG, validates it with `scripts/whiteboard-cli.sh`, and can embed it into a Feishu doc as an editable whiteboard (via the `lark-doc` / `lark-whiteboard` skills).
+
+### Dual (both, coordinated)
+Ask for both. Claude prefers a `verified_dual` style so the HTML deck and the whiteboard share one palette and read as a coordinated set.
+
+## How it works
+
+A layered architecture keeps the two output engines independent but consistent:
+
+```
+        TASTE (anti-slop rules)  +  STYLE-SYSTEM (shared design tokens)
+                              │  the shared spine
+              ┌───────────────┴───────────────┐
+        HTML engine                       Feishu whiteboard engine
+        (SLIDES.md)                       (WHITEBOARD.md)
+              │                                   │
+        gallery/preset templates           palette catalog + SVG rules
+```
+
+- `skills/TASTE.md` — anti-AI-slop design rules (applied to both paths).
+- `skills/SLIDES.md` — 7-phase HTML slide workflow, fixed 1920×1080 stage.
+- `skills/WHITEBOARD.md` — Feishu SVG generation under the renderer's hard rules.
+- `skills/STYLE-SYSTEM.md` — the design-token bridge that keeps both outputs in sync.
+- `catalog/` — the curated style/template/palette indexes.
+
+## What's inside
+
+| Asset | Count |
+|---|---|
+| Curated styles (`styles.json`) | **69** |
+| HTML slide templates (indexed) | **46** (34 gallery + 12 presets) |
+| Feishu whiteboard palettes | **35** |
+| Verified dual-mode pairings | **12** (HTML + whiteboard guaranteed to match) |
+
+## Quality & testing
+
+`scripts/stress-test.py` is a reproducible code-path stress harness covering catalog integrity, all 35 palettes through the SVG validator, validator precision (good SVGs pass, 9 classes of bad SVG rejected), all 34 gallery templates rendering non-blank, and script smoke tests. Current status: **26/26 checks pass, 34/34 templates render.**
+
+```bash
+python3 scripts/stress-test.py            # full (renders templates)
+python3 scripts/stress-test.py --no-render # fast (skip Chrome renders)
+```
+
+## Acknowledgments
+
+`sota-present` stands on the shoulders of these excellent open-source projects. Huge thanks to their authors:
+
+| Project | Author | What it contributed |
+|---|---|---|
+| [taste-skill](https://github.com/Leonxlnx/taste-skill) | [@Leonxlnx](https://github.com/Leonxlnx) | The anti-AI-slop design philosophy and quality-rule layer at the heart of `TASTE`. |
+| [frontend-slides](https://github.com/zarazhangrui/frontend-slides) | [@zarazhangrui](https://github.com/zarazhangrui) | The HTML slide workflow, fixed-stage scaling model, and animation patterns. |
+| [beautiful-html-templates](https://github.com/zarazhangrui/beautiful-html-templates) | [@zarazhangrui](https://github.com/zarazhangrui) | The 34 gallery slide templates and the `deck-stage` component. |
+| [beautiful-feishu-whiteboard](https://github.com/zarazhangrui/beautiful-feishu-whiteboard) | [@zarazhangrui](https://github.com/zarazhangrui) | The whiteboard palettes and the empirically-verified Feishu SVG rule set. |
+
+> The original integration also drew on [codebase-to-course](https://github.com/zarazhangrui/codebase-to-course); the code-course mode was later removed to keep this skill focused on the two presentation paths.
+
+Bundled templates and palettes remain the work of their original authors and are used under their respective licenses.
+
+## License
+
+[MIT](./LICENSE). Integration code is MIT; bundled upstream assets retain their original attribution (see Acknowledgments).
