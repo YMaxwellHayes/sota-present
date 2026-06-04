@@ -8,6 +8,10 @@
 
 [English](./README.md) · 简体中文
 
+<img src="docs/preview/showcase.png" alt="sota-present 效果展示 —— HTML 幻灯片与协调的飞书画板" width="820">
+
+<sub>三种 HTML 幻灯片风格 + 一张飞书画板。看底部一行：绿色封面与画板共用同一套配色，这就是 `dual` 双模式。</sub>
+
 </div>
 
 ---

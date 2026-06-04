@@ -8,6 +8,10 @@ A [Claude Code](https://docs.claude.com/en/docs/claude-code) Skill for state-of-
 
 English · [简体中文](./README.zh-CN.md)
 
+<img src="docs/preview/showcase.png" alt="sota-present showcase — HTML slide decks and a coordinated Feishu whiteboard" width="820">
+
+<sub>Three HTML slide styles + one Feishu whiteboard. Note the bottom row: the green slide cover and the whiteboard share one palette — that is `dual` mode.</sub>
+
 </div>
 
 ---
