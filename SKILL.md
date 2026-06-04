@@ -1,3 +1,9 @@
+---
+name: sota-present
+version: 1.0.0
+description: "Generate polished HTML slide decks and Feishu (Lark) whiteboard SVGs from a single content description, with coordinated aesthetics and built-in anti-AI-slop design rules. Use when the user wants to create slides / a presentation / deck / pitch deck / PPT / 演示文稿 / 幻灯片, or a Feishu whiteboard / 画板 / 白板 / SVG diagram, or both at once (dual mode)."
+---
+
 # sota-present — State-of-the-Art Presentations
 
 > Generate HTML slide decks and Feishu whiteboard SVGs from a single content
