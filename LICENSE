@@ -22,7 +22,5 @@ SOFTWARE.
 
 ---
 
-This project integrates and adapts work from several open-source projects.
-Bundled templates, palettes, and design rules remain credited to their original
-authors (see "Acknowledgments" in README.md). Each upstream project is used
-under its own license.
+This project integrates and adapts work from several open-source projects;
+each such upstream project is used under its own license.

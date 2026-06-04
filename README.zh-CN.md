@@ -41,6 +41,8 @@
 
 ```bash
 npx skills add YMaxwellHayes/sota-present
+# 或从 GitLab：
+npx skills add https://git.llsapp.com/yanxu.zhou01/sota-present
 ```
 
 然后用自然语言对 Claude Code 说：
@@ -104,4 +106,4 @@ python3 scripts/stress-test.py --no-render # 快速（跳过 Chrome 渲染）
 
 ## 许可证
 
-[MIT](./LICENSE)。整合代码采用 MIT；内含的上游素材保留其原始署名（见「致敬」）。
+[MIT](./LICENSE)。
