@@ -41,8 +41,6 @@
 
 ```bash
 npx skills add YMaxwellHayes/sota-present
-# 或从 GitLab：
-npx skills add https://git.llsapp.com/yanxu.zhou01/sota-present
 ```
 
 然后用自然语言对 Claude Code 说：

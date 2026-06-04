@@ -41,8 +41,6 @@ It is a **scaffold for taste, assets, and platform-fit** — not a black box. Co
 
 ```bash
 npx skills add YMaxwellHayes/sota-present
-# or from GitLab:
-npx skills add https://git.llsapp.com/yanxu.zhou01/sota-present
 ```
 
 Then just ask Claude Code, in natural language:
