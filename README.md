@@ -109,10 +109,6 @@ python3 scripts/stress-test.py --no-render # fast (skip Chrome renders)
 | [beautiful-html-templates](https://github.com/zarazhangrui/beautiful-html-templates) | [@zarazhangrui](https://github.com/zarazhangrui) | The 34 gallery slide templates and the `deck-stage` component. |
 | [beautiful-feishu-whiteboard](https://github.com/zarazhangrui/beautiful-feishu-whiteboard) | [@zarazhangrui](https://github.com/zarazhangrui) | The whiteboard palettes and the empirically-verified Feishu SVG rule set. |
 
-> The original integration also drew on [codebase-to-course](https://github.com/zarazhangrui/codebase-to-course); the code-course mode was later removed to keep this skill focused on the two presentation paths.
-
-Bundled templates and palettes remain the work of their original authors and are used under their respective licenses.
-
 ## License
 
 [MIT](./LICENSE). Integration code is MIT; bundled upstream assets retain their original attribution (see Acknowledgments).

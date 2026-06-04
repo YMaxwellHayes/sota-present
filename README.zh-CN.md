@@ -109,10 +109,6 @@ python3 scripts/stress-test.py --no-render # 快速（跳过 Chrome 渲染）
 | [beautiful-html-templates](https://github.com/zarazhangrui/beautiful-html-templates) | [@zarazhangrui](https://github.com/zarazhangrui) | 34 套 gallery 幻灯片模板与 `deck-stage` 组件。 |
 | [beautiful-feishu-whiteboard](https://github.com/zarazhangrui/beautiful-feishu-whiteboard) | [@zarazhangrui](https://github.com/zarazhangrui) | 画板调色板与经实测验证的飞书 SVG 规则集。 |
 
-> 最初的整合还参考了 [codebase-to-course](https://github.com/zarazhangrui/codebase-to-course)；为聚焦于两条演示路径，代码课程模式后来已被移除。
-
-内含的模板与调色板版权仍归原作者所有，并按其各自的许可证使用。
-
 ## 许可证
 
 [MIT](./LICENSE)。整合代码采用 MIT；内含的上游素材保留其原始署名（见「致敬」）。
