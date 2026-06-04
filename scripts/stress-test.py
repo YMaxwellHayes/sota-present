@@ -209,8 +209,44 @@ def check_scripts():
             leftovers.append(f)
     rec("scripts", "no course in active routing files", not leftovers, ",".join(leftovers) or "clean")
 
+# ---------- 6. PPTX BUILD ----------
+def check_pptx():
+    try:
+        import pptx  # noqa
+    except ImportError:
+        rec("pptx", "python-pptx available", False, "not installed (pip install python-pptx)")
+        return
+    spec = {"title": "stress", "slides": [
+        {"type": "cover", "eyebrow": "TEST", "title": "压测 Cover", "subtitle": "editable check", "footer": "x"},
+        {"type": "content", "heading": "Heading 标题", "lead": "lead", "bullets": ["one 一", "two 二"]},
+        {"type": "two_col", "heading": "对比", "left_title": "L", "left": ["a"], "right_title": "R", "right": ["b"]},
+        {"type": "stat", "heading": "数", "items": [{"value": "10¹²", "label": "x"}, {"value": "9", "label": "y"}]},
+        {"type": "statement", "text": "punch line", "sub": "s"},
+        {"type": "closing", "title": "end 结束", "subtitle": "s"},
+    ]}
+    import tempfile, json as _json
+    d = tempfile.mkdtemp()
+    sp = os.path.join(d, "spec.json"); out = os.path.join(d, "deck.pptx")
+    open(sp, "w").write(_json.dumps(spec, ensure_ascii=False))
+    p = subprocess.run(["python3", "scripts/build-pptx.py", "--style", "bold-signal",
+                        "--spec", sp, "--out", out], capture_output=True, text=True)
+    rec("pptx", "build-pptx.py runs", p.returncode == 0, (p.stderr or p.stdout)[-120:] if p.returncode else "ok")
+    if p.returncode != 0 or not os.path.exists(out):
+        return
+    # reopen: must be editable native text (real runs), not images
+    from pptx import Presentation
+    pr = Presentation(out)
+    n = len(pr.slides._sldIdLst)
+    rec("pptx", "slide count == 6", n == 6, f"got {n}")
+    has_text = any(sh.has_text_frame and sh.text_frame.text.strip()
+                   for s in pr.slides for sh in s.shapes)
+    rec("pptx", "slides contain editable text", has_text, "real text frames" if has_text else "no text!")
+    # 16:9
+    ratio_ok = abs((pr.slide_width / pr.slide_height) - 16/9) < 0.01
+    rec("pptx", "16:9 stage", ratio_ok, "")
+
 # ---------- run ----------
-for fn in (check_catalog, check_palettes, check_validator, check_render, check_scripts):
+for fn in (check_catalog, check_palettes, check_validator, check_render, check_pptx, check_scripts):
     try:
         fn()
     except Exception as e:

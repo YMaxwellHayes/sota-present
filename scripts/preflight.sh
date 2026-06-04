@@ -47,6 +47,22 @@ else
   echo "⚠️  Not found (SVG→PNG conversion will be limited)"
 fi
 
+# Check optional: python-pptx (for editable PowerPoint output)
+echo -n "  python-pptx (optional, for .pptx)... "
+if python3 -c "import pptx" 2>/dev/null; then
+  echo "✅ $(python3 -c 'import pptx;print(pptx.__version__)')"
+else
+  echo "⚠️  Not found (run: pip install python-pptx — needed for pptx mode)"
+fi
+
+# Check optional: LibreOffice (for .pptx → PNG/PDF preview)
+echo -n "  LibreOffice (optional, pptx preview)... "
+if command -v soffice &> /dev/null || [ -x "/Applications/LibreOffice.app/Contents/MacOS/soffice" ]; then
+  echo "✅ Available"
+else
+  echo "⚠️  Not found (pptx preview render unavailable; file still valid)"
+fi
+
 # Check optional: SVG→PNG converter
 echo -n "  SVG→PNG converter (optional)... "
 if command -v rsvg-convert &> /dev/null; then

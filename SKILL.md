@@ -1,32 +1,39 @@
 ---
 name: sota-present
 version: 1.0.0
-description: "Generate polished HTML slide decks and Feishu (Lark) whiteboard SVGs from a single content description, with coordinated aesthetics and built-in anti-AI-slop design rules. Use when the user wants to create slides / a presentation / deck / pitch deck / PPT / 演示文稿 / 幻灯片, or a Feishu whiteboard / 画板 / 白板 / SVG diagram, or both at once (dual mode)."
+description: "Generate polished HTML slide decks, Feishu (Lark) whiteboard SVGs, and editable PowerPoint (.pptx) source files from a single content description, with coordinated aesthetics and built-in anti-AI-slop design rules. Use when the user wants to create slides / a presentation / deck / pitch deck / PPT / PPTX / PowerPoint / Keynote / 演示文稿 / 幻灯片 / 可编辑源文件, or a Feishu whiteboard / 画板 / 白板 / SVG diagram, or any combination."
 ---
 
 # sota-present — State-of-the-Art Presentations
 
-> Generate HTML slide decks and Feishu whiteboard SVGs from a single content
-> description, with coordinated aesthetics across both outputs.
+> Generate HTML slide decks, Feishu whiteboard SVGs, and editable PowerPoint
+> (.pptx) source files from a single content description, with coordinated
+> aesthetics across all three outputs.
 
 ## Trigger
 
 Activate when the user asks to create, design, or generate:
 - A slide deck / presentation / slides / PPT
+- An editable PowerPoint / .pptx / Keynote / 可编辑源文件 ("源文件" / "能改的 ppt")
 - A whiteboard diagram / Feishu whiteboard / SVG diagram
-- Both of the above from the same content
+- Any combination of the above from the same content
 
 ## Mode Detection
 
-Determine output mode from user intent:
+Determine output mode(s) from user intent. Modes can be combined.
 
 | Signal | Mode |
 |--------|------|
-| "slides", "deck", "presentation", "PPT", "演示", "幻灯片" | `slides` |
+| "slides", "deck", "presentation", "网页 PPT", "HTML", "演示", "幻灯片" | `slides` (HTML) |
+| "PPT 源文件", "可编辑", "pptx", "PowerPoint", "Keynote", "能改的 ppt" | `pptx` (editable PowerPoint) |
 | "whiteboard", "feishu", "SVG diagram", "画板", "白板" | `whiteboard` |
-| Both signals, or "同时", or ambiguous | `dual` (or ask) |
+| Several of the above, or "同时", or ambiguous | combine (or ask) |
 
-If the user wants **both** HTML slides and whiteboard SVGs, set mode to `dual`.
+Notes:
+- Plain "PPT / 演示文稿" is ambiguous between `slides` (HTML) and `pptx` (editable
+  PowerPoint). If unclear, ask: "要网页版 HTML 演示，还是可编辑的 PowerPoint 源文件？"
+- `dual` = `slides` + `whiteboard` (the verified-pairing path). Any other mix
+  (e.g. `pptx` + `whiteboard`) is fine too; just run each engine in turn.
 
 ## Workflow
 
@@ -59,10 +66,11 @@ Based on mode, read the corresponding sub-skill files and follow their workflow:
 | Mode | Files to Read |
 |------|---------------|
 | `slides` | `skills/TASTE.md` + `skills/SLIDES.md` |
+| `pptx` | `skills/TASTE.md` + `skills/PPTX.md` |
 | `whiteboard` | `skills/TASTE.md` + `skills/WHITEBOARD.md` |
-| `dual` | `skills/TASTE.md` + `skills/SLIDES.md` + `skills/WHITEBOARD.md` + `skills/STYLE-SYSTEM.md` |
+| `dual` / combos | `skills/TASTE.md` + the relevant engine files + `skills/STYLE-SYSTEM.md` |
 
-**Always read `skills/TASTE.md`** — design quality rules apply to both modes.
+**Always read `skills/TASTE.md`** — design quality rules apply to all modes.
 
 ### Phase 5: Generate
 
@@ -71,8 +79,9 @@ Follow the sub-skill workflow to produce output in `output/<mode>/`.
 ### Phase 6: Validate & Deliver
 
 - **Slides**: open in browser, run anti-slop checklist (see TASTE.md)
+- **PPTX**: reopen with python-pptx (confirm editable text, not images); optionally render a PNG/PDF preview via LibreOffice (`soffice`)
 - **Whiteboard**: run `scripts/whiteboard-cli.sh` for SVG rule validation + PNG export
-- **Dual**: validate both outputs, verify color coordination
+- **Combinations**: validate each output, verify color coordination across them
 
 ### Phase 7: Share & Export (Optional)
 
@@ -95,20 +104,21 @@ Before generating ANY output, internalize `skills/TASTE.md`. Non-negotiable:
 
 ## Design Dials Quick Reference
 
-| Dial | Slides | Whiteboard |
-|------|--------|------------|
-| DESIGN_VARIANCE | 7 | 5 |
-| MOTION_INTENSITY | 7 | 0 |
-| VISUAL_DENSITY | 6 | 8 |
+| Dial | Slides | PPTX | Whiteboard |
+|------|--------|------|------------|
+| DESIGN_VARIANCE | 7 | 6 | 5 |
+| MOTION_INTENSITY | 7 | 0 | 0 |
+| VISUAL_DENSITY | 6 | 6 | 8 |
 
 ## Canvas Constraints Quick Reference
 
-| | Slides | Whiteboard |
-|--|--------|------------|
-| Dimensions | 1920×1080 fixed | 1600-1700px width |
-| Fonts | Google Fonts | none set (Feishu → Noto Sans SC) |
-| Colors | CSS custom props | Inline solid hex |
-| Animation | GSAP timelines | None (static) |
+| | Slides | PPTX | Whiteboard |
+|--|--------|------|------------|
+| Dimensions | 1920×1080 fixed | 13.33×7.5 in (16:9) | 1600-1700px width |
+| Fonts | Google Fonts | must be installed on viewer (or embed) | none set (Feishu → Noto Sans SC) |
+| Colors | CSS custom props | literal RGB | Inline solid hex |
+| Animation | GSAP timelines | None | None (static) |
+| Editable after export | source HTML | yes, native PowerPoint | yes, Feishu objects |
 
 ## File Reference
 
@@ -116,6 +126,7 @@ Before generating ANY output, internalize `skills/TASTE.md`. Non-negotiable:
 |------|---------|-------------|
 | `skills/TASTE.md` | Anti-slop design rules | Always |
 | `skills/SLIDES.md` | HTML slide generation (7-phase) | mode=slides or dual |
+| `skills/PPTX.md` | Editable PowerPoint (.pptx) generation | mode=pptx |
 | `skills/WHITEBOARD.md` | Feishu SVG generation | mode=whiteboard or dual |
 | `skills/STYLE-SYSTEM.md` | Design token architecture | mode=dual, or style debugging |
 | `catalog/styles.json` | Unified style catalog (69 styles) | Phase 3 |

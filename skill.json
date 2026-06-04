@@ -1,20 +1,21 @@
 {
   "name": "sota-present",
   "version": "1.0.0",
-  "description": "State-of-the-art presentations: HTML slide decks and Feishu whiteboard SVGs with coordinated aesthetics",
+  "description": "State-of-the-art presentations: HTML slide decks, editable PowerPoint (.pptx), and Feishu whiteboard SVGs with coordinated aesthetics",
   "author": "YMaxwellHayes",
   "triggers": [
     "create slides", "make presentation", "pitch deck",
+    "editable powerpoint", "pptx", "keynote", "ppt source file",
     "whiteboard diagram", "feishu whiteboard", "SVG diagram",
     "generate deck", "slide deck",
-    "创建幻灯片", "制作演示", "演示文稿",
+    "创建幻灯片", "制作演示", "演示文稿", "可编辑 ppt", "ppt 源文件",
     "画板图", "飞书画板", "SVG 图"
   ],
   "dependencies": {
-    "optional": ["lark-cli", "@larksuite/whiteboard-cli", "librsvg", "cairosvg"],
+    "optional": ["lark-cli", "@larksuite/whiteboard-cli", "python-pptx", "libreoffice", "librsvg", "cairosvg"],
     "required": ["python3", "node"]
   },
-  "capabilities": ["slides", "whiteboard", "dual"],
+  "capabilities": ["slides", "pptx", "whiteboard", "dual"],
   "template_count": {
     "slides": 46,
     "whiteboard": 35,

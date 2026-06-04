@@ -2,15 +2,15 @@
 
 # sota-present
 
-**一次内容描述，产出有设计品味、风格一致的 HTML 演示文稿与飞书画板。**
+**一次内容描述，产出有设计品味、风格一致的 HTML 演示文稿、可编辑 PowerPoint 与飞书画板。**
 
 一个面向「高水准演示资料」的 [Claude Code](https://docs.claude.com/zh-CN/docs/claude-code) Skill。
 
 [English](./README.md) · 简体中文
 
-<img src="docs/preview/showcase.png" alt="sota-present 效果展示 —— HTML 幻灯片与协调的飞书画板" width="820">
+<img src="docs/preview/showcase.png" alt="sota-present 效果展示 —— HTML 幻灯片、可编辑 PowerPoint 与飞书画板" width="820">
 
-<sub>三种 HTML 幻灯片风格 + 一张飞书画板。看底部一行：绿色封面与画板共用同一套配色，这就是 `dual` 双模式。</sub>
+<sub>两种 HTML 风格、一份可编辑 PowerPoint（左下）、一张飞书画板（右下）—— 一个技能三种产物，配色协调。</sub>
 
 </div>
 
@@ -18,12 +18,13 @@
 
 ## 这是什么
 
-`sota-present` 是一个 Claude Code Skill。你只描述一次内容，Claude 就能沿**两条路径**产出演示资料：
+`sota-present` 是一个 Claude Code Skill。你只描述一次内容，Claude 就能产出**三种格式**的演示资料：
 
 - 🎞️ **HTML 演示文稿** — 单文件、零依赖、固定 1920×1080 舞台，支持键盘 / 触屏 / 滚轮翻页。
+- 📊 **可编辑 PowerPoint（.pptx）** — 原生、可在 PowerPoint / WPS / Keynote 里直接改的源文件：真实文字框和形状，不是图片。
 - 🖼️ **飞书画板 SVG** — 严格符合飞书渲染器约束，生成的是**可编辑**的画板对象，可直接嵌入飞书云文档。
 
-选 `dual`（双模式）就能从同一份内容**同时**产出两者，共用一套配色，看起来像一家人。
+要其中多种时，从同一份内容产出，共用一套配色，看起来像一家人。
 
 ## 为什么用它
 
@@ -32,7 +33,7 @@
 | 问题 | `sota-present` 的解法 |
 |---|---|
 | **AI 设计千篇一律** | 一层不可妥协的反-slop 规则（`TASTE`）：禁用这些「AI 味」（Inter/Roboto 当标题、generic indigo、全居中、em-dash、假截图……），并在交付前过一遍检查清单。 |
-| **多端重复劳动 + 风格漂移** | 同一份内容，从一套共享设计令牌**同时**编译出 HTML 和飞书画板。选 `verified_dual` 风格，两端保证协调一致。 |
+| **多端重复劳动 + 风格漂移** | 同一份内容，从一套共享设计令牌**同时**编译出 HTML、可编辑 PowerPoint 和飞书画板，几种格式共用一套配色而不会各做各的、风格走样。 |
 | **平台约束难搞** | 飞书画板渲染器规矩很硬（禁 `<path>`、禁渐变、禁透明度、单字体）。`sota-present` 把这些约束沉淀成规则 + 校验器，你不用懂渲染器也能产出可上传、可编辑的画板。 |
 
 它是一套**「品味 + 素材 + 平台适配」的脚手架**，不是黑盒。内容的深度与准确性仍然来自你和 Claude；技能保证的是**更高的质量下限**和**跨端一致性**。
@@ -46,42 +47,48 @@ npx skills add YMaxwellHayes/sota-present
 然后用自然语言对 Claude Code 说：
 
 ```
-「为我们 Q3 战略做一个 12 页的演示文稿。」
+「为我们 Q3 战略做一个 12 页的 HTML 演示。」
+「为我们 Q3 战略做一个可编辑的 PowerPoint 源文件。」
 「画一张我们系统架构的飞书画板。」
 「做一个技术分享演示，再配一张架构的飞书画板。」
 ```
 
-**环境要求：** Node.js ≥ 20、Python 3。可选：`lark-cli` + `@larksuite/whiteboard-cli`（把画板写入飞书）、`librsvg`/`cairosvg`（SVG→PNG）。运行 `bash scripts/preflight.sh` 自检。
+**环境要求：** Node.js ≥ 20、Python 3。可选：`python-pptx`（可编辑 .pptx）、`lark-cli` + `@larksuite/whiteboard-cli`（把画板写入飞书）、LibreOffice（.pptx 预览）、`librsvg`/`cairosvg`（SVG→PNG）。运行 `bash scripts/preflight.sh` 自检。
 
 ## 用法
 
 ### HTML 幻灯片
 Claude 识别为 `slides` 模式 → 用你的真实内容生成 3 个不同风格的预览 → 你挑一个 → 生成完整 deck 到 `output/slides/`。
 
+### 可编辑 PowerPoint
+Claude 识别为 `pptx` 模式 → 把内容整理成 slide spec → 跑 `scripts/build-pptx.py`（python-pptx）→ 用所选风格的配色和字体编译出原生可编辑的 `.pptx` 到 `output/pptx/`。可在 PowerPoint / WPS / Keynote 里直接打开修改。
+
 ### 飞书画板
 Claude 识别为 `whiteboard` 模式 → 选匹配的调色板 → 写出符合约束的 SVG → 用 `scripts/whiteboard-cli.sh` 校验 → 可经 `lark-doc` / `lark-whiteboard` 技能嵌入飞书云文档成为可编辑画板。
 
-### 双模式（两者协调）
-两个都要时，Claude 优先选 `verified_dual` 风格，让 HTML deck 和画板共用一套配色，成为协调的一套。
+### 多种组合（协调一致）
+要多种时：HTML + 画板会优先选 `verified_dual` 风格让两者共用配色；同一套令牌也驱动 PowerPoint 引擎。
 
 ## 工作原理
 
-分层架构让两个输出引擎彼此独立、又保持一致：
+分层架构让三个输出引擎彼此独立、又保持一致：
 
 ```
         TASTE（反-slop 规则）  +  STYLE-SYSTEM（共享设计令牌）
                               │  共用脊梁
-              ┌───────────────┴───────────────┐
-        HTML 引擎                          飞书画板引擎
-        (SLIDES.md)                       (WHITEBOARD.md)
-              │                                   │
-        gallery / preset 模板              调色板目录 + SVG 规则
+        ┌─────────────────────┼─────────────────────┐
+   HTML 引擎             PPTX 引擎             飞书画板引擎
+   (SLIDES.md)          (PPTX.md)            (WHITEBOARD.md)
+        │                    │                       │
+  gallery/preset 模板   python-pptx 构建器     调色板目录 + SVG 规则
+                        (原生 .pptx)
 ```
 
-- `skills/TASTE.md` — 反 AI-slop 设计规则（两条路径都适用）。
+- `skills/TASTE.md` — 反 AI-slop 设计规则（所有路径都适用）。
 - `skills/SLIDES.md` — 7 阶段 HTML 幻灯片工作流，固定 1920×1080 舞台。
+- `skills/PPTX.md` — 通过 spec 驱动的 `build-pptx.py` 生成可编辑 PowerPoint。
 - `skills/WHITEBOARD.md` — 在飞书渲染器硬规则下生成 SVG。
-- `skills/STYLE-SYSTEM.md` — 让两端保持同步的设计令牌桥梁。
+- `skills/STYLE-SYSTEM.md` — 让各输出保持同步的设计令牌桥梁。
 - `catalog/` — 精选的风格 / 模板 / 调色板索引。
 
 ## 内含素材
