@@ -120,6 +120,6 @@ Before generating ANY output, internalize `skills/TASTE.md`. Non-negotiable:
 
 (Counts verified against `catalog/` on 2026-06-03.)
 
-- **HTML slide templates**: 46 indexed in `slides-index.json` (34 gallery + 12 presets). An additional 34-template "bold pack" lives in `catalog/bold-templates-original.json` (not yet merged into the main index).
+- **HTML slide templates**: 46 indexed in `slides-index.json` (34 gallery + 12 presets). An additional 34-template "bold pack" lives in `catalog/_source/bold-templates-original.json` (raw import dump, not yet merged into the main index).
 - **Whiteboard palettes**: 35 in `whiteboard-index.json` (Restrained → Balanced → Bold). Note: upstream `beautiful-feishu-whiteboard` advertises 37 — 2 palettes were dropped during import; reconcile if needed.
 - **Verified dual-mode pairings**: 12 styles flagged `verified_dual` in `styles.json` (slides + whiteboard aesthetic match confirmed): editorial-forest, bold-poster, block-frame, monochrome, raw-grid, neo-grid-bold, coral, pin-and-paper, soft-editorial, grove, long-table, stencil-tablet.

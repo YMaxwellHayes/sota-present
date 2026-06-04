@@ -15,11 +15,11 @@ if command -v node &> /dev/null; then
     echo "✅ $(node -v)"
   else
     echo "❌ Found $(node -v), need ≥ 20"
-    ((errors++))
+    errors=$((errors + 1))
   fi
 else
   echo "❌ Not found"
-  ((errors++))
+  errors=$((errors + 1))
 fi
 
 # Check Python 3
@@ -28,7 +28,7 @@ if command -v python3 &> /dev/null; then
   echo "✅ $(python3 --version)"
 else
   echo "❌ Not found"
-  ((errors++))
+  errors=$((errors + 1))
 fi
 
 # Check optional: lark-cli
@@ -65,7 +65,7 @@ if [ -d "skills" ] && [ -d "catalog" ] && [ -d "templates" ]; then
   echo "✅"
 else
   echo "❌ Missing required directories"
-  ((errors++))
+  errors=$((errors + 1))
 fi
 
 # Check required files
@@ -74,7 +74,7 @@ if [ -f "SKILL.md" ] && [ -f "skill.json" ]; then
   echo "✅"
 else
   echo "❌ Missing SKILL.md or skill.json"
-  ((errors++))
+  errors=$((errors + 1))
 fi
 
 echo ""

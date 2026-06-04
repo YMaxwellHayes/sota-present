@@ -510,7 +510,7 @@
   .s-menu { background: var(--paper); }
   .s-menu .frame {
     /* Stack content from the top with natural spacing — no flex-stretch on
-       course rows, so the menu sits up against the title instead of the
+       menu rows, so the menu sits up against the title instead of the
        rows being pushed apart by space-between distribution. */
     position: absolute;
     inset: clamp(40px, 4vh, 70px) clamp(120px, 12vw, 280px) clamp(110px, 11vh, 170px);
@@ -539,11 +539,11 @@
     letter-spacing: -0.012em;
     color: var(--ink);
   }
-  .s-menu .courses {
+  .s-menu .menus {
     display: flex; flex-direction: column;
     gap: 0;
   }
-  .s-menu .course {
+  .s-menu .menu {
     display: grid;
     grid-template-columns: 64px 1fr auto;
     gap: clamp(14px, 1.4vw, 28px);
@@ -551,17 +551,17 @@
     padding: clamp(14px, 1.6vh, 24px) 0;
     border-bottom: 1px solid rgba(181, 61, 42, 0.32);
   }
-  .s-menu .course .num-tag {
+  .s-menu .menu .num-tag {
     font-family: 'Fraunces', Georgia, serif;
     
     font-size: clamp(16px, 1.1vw, 20px);
     color: var(--ink);
     line-height: 1;
   }
-  .s-menu .course .item {
+  .s-menu .menu .item {
     display: flex; flex-direction: column; gap: 4px;
   }
-  .s-menu .course .item .nm {
+  .s-menu .menu .item .nm {
     font-family: 'Bricolage Grotesque', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
@@ -570,7 +570,7 @@
     letter-spacing: -0.005em;
     color: var(--ink);
   }
-  .s-menu .course .item .desc {
+  .s-menu .menu .item .desc {
     font-family: 'Fraunces', Georgia, serif;
     
     font-size: clamp(15px, 1vw, 17px);
@@ -578,7 +578,7 @@
     color: var(--ink);
     max-width: 60ch;
   }
-  .s-menu .course .pair-tag {
+  .s-menu .menu .pair-tag {
     font-family: 'Fraunces', Georgia, serif;
     
     font-size: clamp(14px, 0.95vw, 16px);
@@ -915,7 +915,7 @@
               <div class="city-tag caption">Mexico City</div>
             </div>
             <div class="nm">A Plate<br/>of Quiet</div>
-            <div class="desc body-it">Eight courses cooked entirely on a single induction ring. The room agreed not to use phones for the entire evening, and almost kept the agreement.</div>
+            <div class="desc body-it">Eight menus cooked entirely on a single induction ring. The room agreed not to use phones for the entire evening, and almost kept the agreement.</div>
             <div class="meta-row">
               <div class="seats-tag caption">22 seats</div>
               <div class="date-tag caption">14 March 2025</div>
@@ -927,7 +927,7 @@
               <div class="city-tag caption">Tokyo</div>
             </div>
             <div class="nm">A Soup<br/>of Letters</div>
-            <div class="desc body-it">A reading evening, with a single course served slowly. Four guest writers, one bowl per person, and the longest pause we have ever held between courses.</div>
+            <div class="desc body-it">A reading evening, with a single menu served slowly. Four guest writers, one bowl per person, and the longest pause we have ever held between menus.</div>
             <div class="meta-row">
               <div class="seats-tag caption">18 seats</div>
               <div class="date-tag caption">06 July 2025</div>
@@ -939,7 +939,7 @@
               <div class="city-tag caption">Lisbon</div>
             </div>
             <div class="nm">December<br/>Edition</div>
-            <div class="desc body-it">A long winter dinner. Twenty-two seats, one shared roast, and a quiet bookshop next door we'll wander to between courses, when the rain agrees.</div>
+            <div class="desc body-it">A long winter dinner. Twenty-two seats, one shared roast, and a quiet bookshop next door we'll wander to between menus, when the rain agrees.</div>
             <div class="meta-row">
               <div class="seats-tag caption">22 seats</div>
               <div class="date-tag caption">11 December 2025</div>
@@ -998,8 +998,8 @@
           <div class="kicker caption">A Menu, in Five Slow Movements</div>
           <h2 class="h">December · Lisbon</h2>
         </div>
-        <div class="courses">
-          <div class="course">
+        <div class="menus">
+          <div class="menu">
             <div class="num-tag caption">i.</div>
             <div class="item">
               <div class="nm">Roasted chestnut soup</div>
@@ -1007,7 +1007,7 @@
             </div>
             <div class="pair-tag caption">unoaked white</div>
           </div>
-          <div class="course">
+          <div class="menu">
             <div class="num-tag caption">ii.</div>
             <div class="item">
               <div class="nm">A small bread, hot</div>
@@ -1015,7 +1015,7 @@
             </div>
             <div class="pair-tag caption">water, lemon</div>
           </div>
-          <div class="course">
+          <div class="menu">
             <div class="num-tag caption">iii.</div>
             <div class="item">
               <div class="nm">Mackerel, lightly cured</div>
@@ -1023,15 +1023,15 @@
             </div>
             <div class="pair-tag caption">vinho verde</div>
           </div>
-          <div class="course">
+          <div class="menu">
             <div class="num-tag caption">iv.</div>
             <div class="item">
-              <div class="nm">A long roast, the centre course</div>
+              <div class="nm">A long roast, the centre menu</div>
               <div class="desc body-it">slow lamb shoulder, root vegetables under it, served family-style</div>
             </div>
             <div class="pair-tag caption">douro red</div>
           </div>
-          <div class="course">
+          <div class="menu">
             <div class="num-tag caption">v.</div>
             <div class="item">
               <div class="nm">Cheese, two only</div>
@@ -1084,7 +1084,7 @@
           <div class="row">
             <div class="num-tag caption">07</div>
             <div class="city-tag">Brooklyn</div>
-            <div class="theme">A reading evening, with one quiet course</div>
+            <div class="theme">A reading evening, with one quiet menu</div>
             <div class="date-tag caption">17 January 2026</div>
             <div><span class="seats-pill caption">12 seats left</span></div>
           </div>

@@ -4,8 +4,10 @@
 
 set -e
 
-MODE=${1:?Usage: render.sh <slides|whiteboard> <input> <style-id> [output-dir]}
-INPUT=${2:?Missing input file}
+MODE=${1:?Usage: render.sh <slides|whiteboard> [input] <style-id> [output-dir]}
+# INPUT is advisory only: it names the content source for the agent to read.
+# This dispatcher does not consume it (generation is done by the agent, not this stub).
+INPUT=${2:-<none>}
 STYLE_ID=${3:?Missing style ID}
 OUTPUT_DIR=${4:-output/$MODE}
 

@@ -75,7 +75,7 @@ Claude:
 
 （数字以 `catalog/` 实测为准）
 
-- **HTML 幻灯片模板**: 46 个已索引（34 gallery + 12 presets），另有 34 个 bold pack 未并入主索引
+- **HTML 幻灯片模板**: 46 个已索引（34 gallery + 12 presets），另有 34 个 bold pack 在 `catalog/_source/` 原始导入文件中（未并入主索引）
 - **画板调色板**: 35 个（克制 → 均衡 → 大胆）
 - **验证的双模式配对**: 12 个（`verified_dual`，幻灯片 + 画板保证匹配）
 
