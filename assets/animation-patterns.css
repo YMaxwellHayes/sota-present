@@ -1,0 +1,120 @@
+/* animation-patterns.css — Animation patterns for slide presentations */
+
+/* Entrance animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(50px);
+}
+
+.reveal-blur {
+  opacity: 0;
+  filter: blur(10px);
+}
+
+/* Active slide animations */
+.slide.active .reveal,
+.slide.active .reveal-scale,
+.slide.active .reveal-left,
+.slide.active .reveal-right,
+.slide.active .reveal-blur {
+  opacity: 1;
+  transform: none;
+  filter: none;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Stagger children */
+.slide.active .reveal:nth-child(2),
+.slide.active .reveal-scale:nth-child(2),
+.slide.active .reveal-left:nth-child(2),
+.slide.active .reveal-right:nth-child(2),
+.slide.active .reveal-blur:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.slide.active .reveal:nth-child(3),
+.slide.active .reveal-scale:nth-child(3),
+.slide.active .reveal-left:nth-child(3),
+.slide.active .reveal-right:nth-child(3),
+.slide.active .reveal-blur:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+.slide.active .reveal:nth-child(4),
+.slide.active .reveal-scale:nth-child(4),
+.slide.active .reveal-left:nth-child(4),
+.slide.active .reveal-right:nth-child(4),
+.slide.active .reveal-blur:nth-child(4) {
+  transition-delay: 0.3s;
+}
+
+.slide.active .reveal:nth-child(5),
+.slide.active .reveal-scale:nth-child(5),
+.slide.active .reveal-left:nth-child(5),
+.slide.active .reveal-right:nth-child(5),
+.slide.active .reveal-blur:nth-child(5) {
+  transition-delay: 0.4s;
+}
+
+/* Background effects */
+.bg-gradient {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+}
+
+.bg-noise {
+  position: relative;
+}
+
+.bg-noise::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(var(--color-border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-border) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-scale,
+  .reveal-left,
+  .reveal-right,
+  .reveal-blur {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition-duration: 0.01ms;
+  }
+
+  .slide.active .reveal,
+  .slide.active .reveal-scale,
+  .slide.active .reveal-left,
+  .slide.active .reveal-right,
+  .slide.active .reveal-blur {
+    transition-duration: 0.01ms;
+    transition-delay: 0s;
+  }
+}

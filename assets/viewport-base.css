@@ -1,0 +1,72 @@
+/* viewport-base.css — Base CSS for 16:9 slide presentations */
+/* Fixed 1920x1080 stage model with viewport scaling */
+
+.deck-viewport {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background: var(--color-bg, #ffffff);
+}
+
+.deck-stage {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  transform-origin: 0 0;
+  /* JavaScript will calculate and apply scale */
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  width: 1920px;
+  height: 1080px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.6s;
+}
+
+.slide.active {
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Print styles */
+@media print {
+  .deck-viewport {
+    position: static;
+    overflow: visible;
+  }
+
+  .deck-stage {
+    position: static;
+    width: auto;
+    height: auto;
+    transform: none;
+  }
+
+  .slide {
+    position: static;
+    width: 1920px;
+    height: 1080px;
+    page-break-after: always;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .slide.active {
+    z-index: auto;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .slide {
+    transition-duration: 0.01ms;
+  }
+}
+
+/* Responsive scaling handled by JavaScript */
+/* The stage scales proportionally to fit viewport while maintaining 16:9 aspect ratio */

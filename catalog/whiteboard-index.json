@@ -1,0 +1,821 @@
+{
+  "palettes": [
+    {
+      "id": "avocado-press",
+      "name": "Avocado Press",
+      "intensity": "restrained",
+      "formality": "medium",
+      "vibe": "clean duotone, white with blue and lime",
+      "colors": {
+        "primary": "#0055A4",
+        "secondary": "#DCF4A2",
+        "accent": "#0055A4",
+        "background": "#FFFFFF",
+        "surface": "#FFFFFF",
+        "text": "#0055A4",
+        "text_muted": "#0055A4"
+      },
+      "best_for": ["product pipelines", "stage breakdowns", "modern brand boards", "duotone explainers"],
+      "avoid_for": ["dense data tables", "warm-toned content", "luxury or premium topics"],
+      "design_notes": {
+        "shadow_style": "none",
+        "border_width": "0px",
+        "corner_radius": "0-8px"
+      }
+    },
+    {
+      "id": "grove",
+      "name": "Grove",
+      "intensity": "restrained",
+      "formality": "high",
+      "vibe": "editorial, grounded, parchment and forest green",
+      "colors": {
+        "primary": "#192b1b",
+        "secondary": "#c8524a",
+        "accent": "#c8524a",
+        "background": "#e8e4d6",
+        "surface": "#dedad0",
+        "text": "#192b1b",
+        "text_muted": "#1e3221"
+      },
+      "best_for": ["literary reviews", "annual reports", "bookish explainers", "editorial timelines"],
+      "avoid_for": ["tech dashboards", "high-energy content", "children's materials"],
+      "design_notes": {
+        "shadow_style": "none",
+        "border_width": "0px",
+        "corner_radius": "0-8px"
+      }
+    },
+    {
+      "id": "jade-lens",
+      "name": "Jade Lens",
+      "intensity": "restrained",
+      "formality": "high",
+      "vibe": "calm, harmonious, minimal green",
+      "colors": {
+        "primary": "#2BA483",
+        "secondary": "#2CAE8C",
+        "accent": "#08754C",
+        "background": "#F5F1EE",
+        "surface": "#F5F1EE",
+        "text": "#1E2421",
+        "text_muted": "#0E5A3C"
+      },
+      "best_for": ["serene system maps", "concept overviews", "two-part comparisons", "slow-paced explainers"],
+      "avoid_for": ["dense data", "loud marketing content", "high-energy presentations"],
+      "design_notes": {
+        "shadow_style": "none",
+        "border_width": "0px",
+        "corner_radius": "0px"
+      }
+    },
+    {
+      "id": "long-table",
+      "name": "Long Table",
+      "intensity": "restrained",
+      "formality": "medium",
+      "vibe": "warm, rustic, single rust ink, menu like",
+      "colors": {
+        "primary": "#B53D2A",
+        "secondary": "#8E2D1F",
+        "accent": "#B53D2A",
+        "background": "#FAF1E2",
+        "surface": "#F2E5CF",
+        "text": "#B53D2A",
+        "text_muted": "#8E2D1F"
+      },
+      "best_for": ["recipe-style guides", "menu-like lists", "warm editorial boards", "rustic brand sheets"],
+      "avoid_for": ["technical diagrams", "corporate reports", "data-heavy content"],
+      "design_notes": {
+        "shadow_style": "none",
+        "border_width": "1-2px",
+        "corner_radius": "0-8px"
+      }
+    },
+    {
+      "id": "macchiato",
+      "name": "Macchiato",
+      "intensity": "restrained",
+      "formality": "high",
+      "vibe": "warm monochrome, almond and espresso, quiet",
+      "colors": {
+        "primary": "#25211B",
+        "secondary": "#6E6558",
+        "accent": "#9A917F",
+        "background": "#EDE7DD",
+        "surface": "#E5DECF",
+        "text": "#25211B",
+        "text_muted": "#6E6558"
+      },
+      "best_for": ["cozy explainers", "calm overviews", "literary content", "quiet brand boards"],
+      "avoid_for": ["high-energy content", "data dashboards", "playful or loud topics"],
+      "design_notes": {
+        "shadow_style": "none",
+        "border_width": "1-2px",
+        "corner_radius": "0-14px"
+      }
+    },
+    {
+      "id": "monochrome",
+      "name": "Monochrome",
+      "intensity": "restrained",
+      "formality": "high",
+      "vibe": "quiet, minimal, text first, no accent",
+      "colors": {
+        "primary": "#1A1A16",
+        "secondary": "#5E5E54",
+        "accent": "#8A8A80",
+        "background": "#FAFADF",
+        "surface": "#F2F2D2",
+        "text": "#1A1A16",
+        "text_muted": "#5E5E54"
+      },
+      "best_for": ["serious editorial boards", "text-heavy reports", "minimal brand sheets", "quiet explainers"],
+      "avoid_for": ["playful content", "marketing materials", "anything needing colour coding"],
+      "design_notes": {
+        "shadow_style": "none",
+        "border_width": "1-2px",
+        "corner_radius": "0-6px"
+      }
+    },
+    {
+      "id": "papier-bleu",
+      "name": "Papier Bleu",
+      "intensity": "restrained",
+      "formality": "medium",
+      "vibe": "Matisse calm, artful, airy",
+      "colors": {
+        "primary": "#72D0E9",
+        "secondary": "#4FB8D8",
+        "accent": "#1A3C8F",
+        "background": "#FAF3EB",
+        "surface": "#FAF3EB",
+        "text": "#1A3C8F",
+        "text_muted": "#1A3C8F"
+      },
+      "best_for": ["gentle explainers", "journey maps", "calm overviews", "artful brand boards"],
+      "avoid_for": ["technical diagrams", "corporate reports", "data-heavy content"],
+      "design_notes": {
+        "shadow_style": "none",
+        "border_width": "0px",
+        "corner_radius": "24px+"
+      }
+    },
+    {
+      "id": "reading-room",
+      "name": "Reading Room",
+      "intensity": "restrained",
+      "formality": "high",
+      "vibe": "quiet, literary, restrained, institutional",
+      "colors": {
+        "primary": "#0B0A09",
+        "secondary": "#D6C7CC",
+        "accent": "#DE916A",
+        "background": "#F6EBD8",
+        "surface": "#F1DAB1",
+        "text": "#0B0A09",
+        "text_muted": "#0B0A09"
+      },
+      "best_for": ["literary guides", "editorial timelines", "learning guides", "bookish comparisons"],
+      "avoid_for": ["high-energy marketing", "tech dashboards", "playful content"],
+      "design_notes": {
+        "shadow_style": "none",
+        "border_width": "2.5px",
+        "corner_radius": "0px"
+      }
+    },
+    {
+      "id": "salmon-stamp",
+      "name": "Salmon Stamp",
+      "intensity": "restrained",
+      "formality": "low",
+      "vibe": "clean stamp poster, white with salmon and green",
+      "colors": {
+        "primary": "#F0AE9E",
+        "secondary": "#049550",
+        "accent": "#049550",
+        "background": "#FFFFFF",
+        "surface": "#FFFFFF",
+        "text": "#000000",
+        "text_muted": "#000000"
+      },
+      "best_for": ["stamp-style posters", "clean brand boards", "airy explainers", "casual summaries"],
+      "avoid_for": ["formal reports", "dense data", "corporate presentations"],
+      "design_notes": {
+        "shadow_style": "none",
+        "border_width": "0-2px",
+        "corner_radius": "0-8px"
+      }
+    },
+
+    {
+      "id": "apricot-arc",
+      "name": "Apricot Arc",
+      "intensity": "balanced",
+      "formality": "medium",
+      "vibe": "warm, retro, geometric, friendly",
+      "colors": {
+        "primary": "#F69834",
+        "secondary": "#F9C2BD",
+        "accent": "#C7561E",
+        "background": "#FFF8EE",
+        "surface": "#FFFFFF",
+        "text": "#C7561E",
+        "text_muted": "#7A4A33"
+      },
+      "best_for": ["explanatory diagrams", "stage pipelines", "timelines", "mid-century brand boards"],
+      "avoid_for": ["corporate reports", "data-heavy dashboards", "serious or sombre content"],
+      "design_notes": {
+        "shadow_style": "none",
+        "border_width": "0px",
+        "corner_radius": "24px"
+      }
+    },
+    {
+      "id": "berry-pop",
+      "name": "Berry Pop",
+      "intensity": "balanced",
+      "formality": "medium",
+      "vibe": "fruity, fresh, white with raspberry and periwinkle",
+      "colors": {
+        "primary": "#9E2B50",
+        "secondary": "#C7D2F0",
+        "accent": "#6E1E3A",
+        "background": "#FFFFFF",
+        "surface": "#FFFFFF",
+        "text": "#6E1E3A",
+        "text_muted": "#9E2B50"
+      },
+      "best_for": ["brand one-pagers", "fruity explainers", "playful comparisons", "juice-bar style boards"],
+      "avoid_for": ["formal reports", "muted editorial content", "serious institutional boards"],
+      "design_notes": {
+        "shadow_style": "hard offset",
+        "border_width": "2-3px",
+        "corner_radius": "12-22px"
+      }
+    },
+    {
+      "id": "bold-poster",
+      "name": "Bold Poster",
+      "intensity": "balanced",
+      "formality": "medium",
+      "vibe": "loud type, print poster, single red accent",
+      "colors": {
+        "primary": "#D8000F",
+        "secondary": "#1C1410",
+        "accent": "#D8000F",
+        "background": "#FFFFFF",
+        "surface": "#F5F2EF",
+        "text": "#1C1410",
+        "text_muted": "#1C1410"
+      },
+      "best_for": ["editorial posters", "headline boards", "statement boards", "print-style explainers"],
+      "avoid_for": ["soft or gentle content", "pastel brand boards", "playful diagrams"],
+      "design_notes": {
+        "shadow_style": "hard offset",
+        "border_width": "1.5-3px",
+        "corner_radius": "0px"
+      }
+    },
+    {
+      "id": "checker-bloom",
+      "name": "Checker Bloom",
+      "intensity": "balanced",
+      "formality": "low",
+      "vibe": "playful, hand painted, mint with blue and green",
+      "colors": {
+        "primary": "#2C6EE0",
+        "secondary": "#5E9E4A",
+        "accent": "#2C6EE0",
+        "background": "#E8F1DD",
+        "surface": "#FFFFFF",
+        "text": "#151515",
+        "text_muted": "#151515"
+      },
+      "best_for": ["hand-painted explainers", "folk-style boards", "playful comparisons", "cheerful overviews"],
+      "avoid_for": ["corporate reports", "formal presentations", "serious institutional content"],
+      "design_notes": {
+        "shadow_style": "none",
+        "border_width": "2-3px",
+        "corner_radius": "10-20px"
+      }
+    },
+    {
+      "id": "cobalt-bloom",
+      "name": "Cobalt Bloom",
+      "intensity": "balanced",
+      "formality": "medium",
+      "vibe": "oversized type, fashion editorial, confident",
+      "colors": {
+        "primary": "#4746C6",
+        "secondary": "#DDA8A2",
+        "accent": "#4746C6",
+        "background": "#DDA8A2",
+        "surface": "#F4EFE9",
+        "text": "#171717",
+        "text_muted": "#171717"
+      },
+      "best_for": ["headline boards", "yearly plans", "single-number stats", "bold section openers"],
+      "avoid_for": ["dense text boards", "data tables", "small-label diagrams"],
+      "design_notes": {
+        "shadow_style": "none",
+        "border_width": "4px",
+        "corner_radius": "0px"
+      }
+    },
+    {
+      "id": "coral",
+      "name": "Coral",
+      "intensity": "balanced",
+      "formality": "medium",
+      "vibe": "warm, friendly, clean, signature coral",
+      "colors": {
+        "primary": "#E85D5D",
+        "secondary": "#D44A4A",
+        "accent": "#E85D5D",
+        "background": "#F5F0E8",
+        "surface": "#FFFFFF",
+        "text": "#1A1A1A",
+        "text_muted": "#6B6B6B"
+      },
+      "best_for": ["warm brand boards", "friendly explainers", "timeline boards", "editorial overviews"],
+      "avoid_for": ["cool-toned content", "corporate-neutral boards", "dark or moody topics"],
+      "design_notes": {
+        "shadow_style": "none",
+        "border_width": "4-5px",
+        "corner_radius": "0-12px"
+      }
+    },
+    {
+      "id": "cut-bloom",
+      "name": "Cut Bloom",
+      "intensity": "balanced",
+      "formality": "medium",
+      "vibe": "calm, warm, soft colour blocks",
+      "colors": {
+        "primary": "#535D9E",
+        "secondary": "#F0CB65",
+        "accent": "#F0CB65",
+        "background": "#FFFFFF",
+        "surface": "#FFFFFF",
+        "text": "#2E3566",
+        "text_muted": "#2E3566"
+      },
+      "best_for": ["warm editorial explainers", "concept maps", "value showcases", "gentle process flows"],
+      "avoid_for": ["high-energy marketing", "loud dashboards", "dense data boards"],
+      "design_notes": {
+        "shadow_style": "none",
+        "border_width": "0px",
+        "corner_radius": "28px"
+      }
+    },
+    {
+      "id": "editorial-forest",
+      "name": "Editorial Forest",
+      "intensity": "balanced",
+      "formality": "high",
+      "vibe": "literary, bookish, forest green and rose",
+      "colors": {
+        "primary": "#2e4a2a",
+        "secondary": "#e89cb1",
+        "accent": "#e89cb1",
+        "background": "#efe7d4",
+        "surface": "#e6dcc4",
+        "text": "#1a1a17",
+        "text_muted": "#243a21"
+      },
+      "best_for": ["literary quarterlies", "art-book monographs", "bookish explainers", "quiet annual reports"],
+      "avoid_for": ["tech dashboards", "loud marketing", "playful or candy content"],
+      "design_notes": {
+        "shadow_style": "none",
+        "border_width": "2px",
+        "corner_radius": "0-8px"
+      }
+    },
+    {
+      "id": "lime-slab",
+      "name": "Lime Slab",
+      "intensity": "balanced",
+      "formality": "medium",
+      "vibe": "electric, bold, modern SaaS",
+      "colors": {
+        "primary": "#EEFA79",
+        "secondary": "#0A0A05",
+        "accent": "#2F2E25",
+        "background": "#FFFFF2",
+        "surface": "#FFFFFF",
+        "text": "#0A0A05",
+        "text_muted": "#2F2E25"
+      },
+      "best_for": ["product explainers", "feature breakdowns", "comparison grids", "SaaS landing boards"],
+      "avoid_for": ["warm or muted content", "literary boards", "quiet editorial work"],
+      "design_notes": {
+        "shadow_style": "none",
+        "border_width": "2px",
+        "corner_radius": "12px"
+      }
+    },
+    {
+      "id": "linen-cut",
+      "name": "Linen Cut",
+      "intensity": "balanced",
+      "formality": "high",
+      "vibe": "mid-century modernist, tasteful, calm",
+      "colors": {
+        "primary": "#044D99",
+        "secondary": "#04B24F",
+        "accent": "#F61B27",
+        "background": "#E4D2C4",
+        "surface": "#E4D2C4",
+        "text": "#1F1A14",
+        "text_muted": "#1F1A14"
+      },
+      "best_for": ["cover-style hero boards", "manifestos", "big-idea explainers", "three-way comparisons"],
+      "avoid_for": ["dense data boards", "playful candy content", "tech dashboards"],
+      "design_notes": {
+        "shadow_style": "none",
+        "border_width": "2-3px",
+        "corner_radius": "0px"
+      }
+    },
+    {
+      "id": "pin-and-paper",
+      "name": "Pin & Paper",
+      "intensity": "balanced",
+      "formality": "medium",
+      "vibe": "clean, graphic, white with yellow and blue pop",
+      "colors": {
+        "primary": "#2A3C99",
+        "secondary": "#F1E84E",
+        "accent": "#F1E84E",
+        "background": "#FFFFFF",
+        "surface": "#FFFFFF",
+        "text": "#2A3C99",
+        "text_muted": "#2A3C99"
+      },
+      "best_for": ["brand one-pagers", "clean explainers", "graphic summaries", "modern stage boards"],
+      "avoid_for": ["warm-toned content", "literary boards", "dark or moody topics"],
+      "design_notes": {
+        "shadow_style": "none",
+        "border_width": "2-3px",
+        "corner_radius": "0-10px"
+      }
+    },
+    {
+      "id": "raw-grid",
+      "name": "Raw Grid",
+      "intensity": "balanced",
+      "formality": "medium",
+      "vibe": "system native, sharp, digital brutalism",
+      "colors": {
+        "primary": "#0A0A0A",
+        "secondary": "#F2D4CF",
+        "accent": "#E5EDD6",
+        "background": "#FFFFFF",
+        "surface": "#F5F5F5",
+        "text": "#0A0A0A",
+        "text_muted": "#333333"
+      },
+      "best_for": ["system maps", "digital dashboards", "brutalist explainers", "structured comparisons"],
+      "avoid_for": ["warm editorial content", "soft brand boards", "gentle or literary topics"],
+      "design_notes": {
+        "shadow_style": "hard offset",
+        "border_width": "3px",
+        "corner_radius": "0px"
+      }
+    },
+    {
+      "id": "riptide-cobalt",
+      "name": "Riptide Cobalt",
+      "intensity": "balanced",
+      "formality": "medium",
+      "vibe": "bold poster, low density, high impact",
+      "colors": {
+        "primary": "#375DFE",
+        "secondary": "#FDF0E0",
+        "accent": "#2741C0",
+        "background": "#FDF0E0",
+        "surface": "#FFFFFF",
+        "text": "#1A2240",
+        "text_muted": "#1A2240"
+      },
+      "best_for": ["bold hero boards", "two-sided comparisons", "stage flows", "section dividers"],
+      "avoid_for": ["dense content boards", "multi-step pipelines", "small-label diagrams"],
+      "design_notes": {
+        "shadow_style": "none",
+        "border_width": "4px",
+        "corner_radius": "0px"
+      }
+    },
+    {
+      "id": "soft-editorial",
+      "name": "Soft Editorial",
+      "intensity": "balanced",
+      "formality": "medium",
+      "vibe": "warm magazine, soft pastels, gentle",
+      "colors": {
+        "primary": "#E2A8CE",
+        "secondary": "#C9DA4F",
+        "accent": "#E7C6AD",
+        "background": "#ECE9DC",
+        "surface": "#ECE9DC",
+        "text": "#1C1A17",
+        "text_muted": "#1C1A17"
+      },
+      "best_for": ["calm explainers", "magazine-style overviews", "design-research boards", "literary content"],
+      "avoid_for": ["loud marketing", "high-energy dashboards", "technical system maps"],
+      "design_notes": {
+        "shadow_style": "none",
+        "border_width": "0px",
+        "corner_radius": "16-28px"
+      }
+    },
+    {
+      "id": "violet-marker",
+      "name": "Violet Marker",
+      "intensity": "balanced",
+      "formality": "low",
+      "vibe": "highlighter, white with violet and lime, modern",
+      "colors": {
+        "primary": "#C5A1FF",
+        "secondary": "#CFEE30",
+        "accent": "#CFEE30",
+        "background": "#FFFFFF",
+        "surface": "#FFFFFF",
+        "text": "#000000",
+        "text_muted": "#666463"
+      },
+      "best_for": ["modern brand boards", "highlight-style explainers", "casual summaries", "friendly diagrams"],
+      "avoid_for": ["formal reports", "warm-toned content", "serious institutional boards"],
+      "design_notes": {
+        "shadow_style": "none",
+        "border_width": "0px",
+        "corner_radius": "0-10px"
+      }
+    },
+
+    {
+      "id": "block-frame",
+      "name": "BlockFrame",
+      "intensity": "bold",
+      "formality": "low",
+      "vibe": "maximalist, candy, playful, sticker book",
+      "colors": {
+        "primary": "#FE90E8",
+        "secondary": "#C0F7FE",
+        "accent": "#F7CB46",
+        "background": "#FFFDF5",
+        "surface": "#FFFFFF",
+        "text": "#000000",
+        "text_muted": "#000000"
+      },
+      "best_for": ["playful explainers", "sticker-style boards", "toy-brand aesthetics", "zine layouts"],
+      "avoid_for": ["formal reports", "serious editorial content", "corporate presentations"],
+      "design_notes": {
+        "shadow_style": "hard offset",
+        "border_width": "4px",
+        "corner_radius": "0px"
+      }
+    },
+    {
+      "id": "burst-panel",
+      "name": "Burst Panel",
+      "intensity": "bold",
+      "formality": "low",
+      "vibe": "loud, energetic, dashboard",
+      "colors": {
+        "primary": "#FBD65A",
+        "secondary": "#CFACE8",
+        "accent": "#AAE4BA",
+        "background": "#FBD65A",
+        "surface": "#FFFAF0",
+        "text": "#1E1E1E",
+        "text_muted": "#1E1E1E"
+      },
+      "best_for": ["product dashboards", "feature comparisons", "pricing explainers", "system maps"],
+      "avoid_for": ["quiet editorial boards", "muted brand content", "formal reports"],
+      "design_notes": {
+        "shadow_style": "none",
+        "border_width": "4px",
+        "corner_radius": "18px"
+      }
+    },
+    {
+      "id": "confetti-wedge",
+      "name": "Confetti Wedge",
+      "intensity": "bold",
+      "formality": "low",
+      "vibe": "playful, breezy, celebratory pastel",
+      "colors": {
+        "primary": "#F8BED4",
+        "secondary": "#62C0A5",
+        "accent": "#65C8CD",
+        "background": "#F4F8FB",
+        "surface": "#F4F8FB",
+        "text": "#000000",
+        "text_muted": "#3A3C3E"
+      },
+      "best_for": ["upbeat brand explainers", "kickoff title scenes", "light concept maps", "celebratory boards"],
+      "avoid_for": ["serious reports", "dense data content", "dark or moody topics"],
+      "design_notes": {
+        "shadow_style": "none",
+        "border_width": "0px",
+        "corner_radius": "24px"
+      }
+    },
+    {
+      "id": "court-press",
+      "name": "Court Press",
+      "intensity": "bold",
+      "formality": "low",
+      "vibe": "sporty, athletic, energetic clash",
+      "colors": {
+        "primary": "#66914C",
+        "secondary": "#DA9EB7",
+        "accent": "#DA9EB7",
+        "background": "#F2EFE6",
+        "surface": "#FFFFFF",
+        "text": "#2F4224",
+        "text_muted": "#2F4224"
+      },
+      "best_for": ["sports-style explainers", "process boards", "playful step-by-step", "athletic brand boards"],
+      "avoid_for": ["formal reports", "quiet editorial content", "luxury brand boards"],
+      "design_notes": {
+        "shadow_style": "none",
+        "border_width": "2-3px",
+        "corner_radius": "0px"
+      }
+    },
+    {
+      "id": "crayon-stack",
+      "name": "Crayon Stack",
+      "intensity": "bold",
+      "formality": "low",
+      "vibe": "primary crayon brights, loud, fun",
+      "colors": {
+        "primary": "#FF472B",
+        "secondary": "#D3FE79",
+        "accent": "#7E90FC",
+        "background": "#FFFFFF",
+        "surface": "#FFFFFF",
+        "text": "#FF472B",
+        "text_muted": "#8A2E43"
+      },
+      "best_for": ["playful explainers", "taxonomy stacks", "crayon-bright comparisons", "energetic option boards"],
+      "avoid_for": ["formal content", "corporate reports", "quiet or refined boards"],
+      "design_notes": {
+        "shadow_style": "none",
+        "border_width": "0px",
+        "corner_radius": "0px"
+      }
+    },
+    {
+      "id": "grove-block",
+      "name": "Grove Block",
+      "intensity": "bold",
+      "formality": "medium",
+      "vibe": "brand-forward, flat, confident green",
+      "colors": {
+        "primary": "#008248",
+        "secondary": "#F6BDDA",
+        "accent": "#FCC715",
+        "background": "#F7F1EC",
+        "surface": "#FCF6F1",
+        "text": "#008248",
+        "text_muted": "#01623F"
+      },
+      "best_for": ["product explainers", "feature grids", "brand-forward comparisons", "friendly system maps"],
+      "avoid_for": ["quiet editorial boards", "muted or monochrome content", "formal reports"],
+      "design_notes": {
+        "shadow_style": "none",
+        "border_width": "4px",
+        "corner_radius": "18px"
+      }
+    },
+    {
+      "id": "mint-brut",
+      "name": "Mint Brut",
+      "intensity": "bold",
+      "formality": "low",
+      "vibe": "candy, friendly, app like",
+      "colors": {
+        "primary": "#F888C8",
+        "secondary": "#70F0A8",
+        "accent": "#F0DE4E",
+        "background": "#D0FDE4",
+        "surface": "#FFFBF3",
+        "text": "#000000",
+        "text_muted": "#000000"
+      },
+      "best_for": ["friendly explainers", "onboarding flows", "step sequences", "approachable system maps"],
+      "avoid_for": ["corporate reports", "serious editorial content", "formal brand boards"],
+      "design_notes": {
+        "shadow_style": "none",
+        "border_width": "4px",
+        "corner_radius": "12px"
+      }
+    },
+    {
+      "id": "neo-grid-bold",
+      "name": "Neo-Grid Bold",
+      "intensity": "bold",
+      "formality": "medium",
+      "vibe": "editorial grid, bold, structured",
+      "colors": {
+        "primary": "#0A0A0A",
+        "secondary": "#E6FF3D",
+        "accent": "#E6FF3D",
+        "background": "#F5F4EF",
+        "surface": "#ECECE8",
+        "text": "#0A0A0A",
+        "text_muted": "#8A8A85"
+      },
+      "best_for": ["magazine-spread boards", "editorial posters", "structured explainers", "bold annual reports"],
+      "avoid_for": ["soft or gentle content", "pastel brand boards", "playful candy topics"],
+      "design_notes": {
+        "shadow_style": "none",
+        "border_width": "3-4px",
+        "corner_radius": "0px"
+      }
+    },
+    {
+      "id": "riso-brut",
+      "name": "Riso Brut",
+      "intensity": "bold",
+      "formality": "medium",
+      "vibe": "neo brutalist editorial, confident, designed",
+      "colors": {
+        "primary": "#1F8A4C",
+        "secondary": "#F06CA8",
+        "accent": "#E85A1F",
+        "background": "#EFE9D9",
+        "surface": "#E4DCC4",
+        "text": "#0F0F0F",
+        "text_muted": "#2A2A2A"
+      },
+      "best_for": ["pipelines", "stage comparisons", "system maps", "explanatory diagrams"],
+      "avoid_for": ["soft or muted content", "gentle editorial boards", "pastel brand aesthetics"],
+      "design_notes": {
+        "shadow_style": "hard offset",
+        "border_width": "4px",
+        "corner_radius": "0px"
+      }
+    },
+    {
+      "id": "specimen-bold",
+      "name": "Specimen Bold",
+      "intensity": "bold",
+      "formality": "low",
+      "vibe": "type specimen, graphic, loud",
+      "colors": {
+        "primary": "#3EC06A",
+        "secondary": "#FBEF4A",
+        "accent": "#30A1E5",
+        "background": "#F3F3F3",
+        "surface": "#F3F3F3",
+        "text": "#2E302E",
+        "text_muted": "#2E302E"
+      },
+      "best_for": ["category showcases", "vocabulary maps", "stage callouts", "bold hero diagrams"],
+      "avoid_for": ["dense text boards", "quiet editorial content", "formal reports"],
+      "design_notes": {
+        "shadow_style": "none",
+        "border_width": "0px",
+        "corner_radius": "0px"
+      }
+    },
+    {
+      "id": "stencil-tablet",
+      "name": "Stencil & Tablet",
+      "intensity": "bold",
+      "formality": "low",
+      "vibe": "skate poster, retro print blocks, bold",
+      "colors": {
+        "primary": "#EE7A2E",
+        "secondary": "#C73B7A",
+        "accent": "#2D7E73",
+        "background": "#E2DCC9",
+        "surface": "#F4EFE0",
+        "text": "#0A0A0A",
+        "text_muted": "#0A0A0A"
+      },
+      "best_for": ["skate-poster aesthetics", "retro print boards", "bold tiled layouts", "energetic brand walls"],
+      "avoid_for": ["formal reports", "quiet editorial boards", "corporate presentations"],
+      "design_notes": {
+        "shadow_style": "none",
+        "border_width": "0px",
+        "corner_radius": "22-26px"
+      }
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "total_palettes": 35,
+    "intensity_groups": {
+      "restrained": 9,
+      "balanced": 15,
+      "bold": 11
+    },
+    "last_updated": "2026-06-03"
+  }
+}

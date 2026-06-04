@@ -1,0 +1,26 @@
+{
+  "name": "sota-present",
+  "version": "1.0.0",
+  "description": "State-of-the-art presentations: HTML slides, Feishu whiteboards, and code courses with coordinated aesthetics",
+  "author": "Leonxlnx",
+  "triggers": [
+    "create slides", "make presentation", "pitch deck",
+    "whiteboard diagram", "feishu whiteboard", "SVG diagram",
+    "code course", "codebase tutorial", "code walkthrough",
+    "generate deck", "slide deck",
+    "创建幻灯片", "制作演示", "演示文稿",
+    "画板图", "飞书画板", "SVG 图",
+    "代码课程", "代码教程"
+  ],
+  "dependencies": {
+    "optional": ["lark-cli", "@larksuite/whiteboard-cli", "librsvg", "cairosvg"],
+    "required": ["python3", "node"]
+  },
+  "capabilities": ["slides", "whiteboard", "course", "dual"],
+  "template_count": {
+    "slides": 55,
+    "whiteboard": 35,
+    "course": 20,
+    "dual_verified": 20
+  }
+}

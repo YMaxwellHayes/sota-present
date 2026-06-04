@@ -1,0 +1,87 @@
+{
+  "themes": [
+    {
+      "id": "professional-light",
+      "name": "Professional Light",
+      "description": "Clean, corporate-friendly light theme for technical courses",
+      "mood": ["professional", "clear", "structured"],
+      "best_for": ["enterprise software", "business applications", "corporate training"],
+      "color_scheme": "light",
+      "fonts": ["Inter", "Inter", "JetBrains Mono"],
+      "interactive_elements": ["code-translation", "quiz", "architecture-diagram", "flow-diagram"],
+      "density": "medium"
+    },
+    {
+      "id": "developer-dark",
+      "name": "Developer Dark",
+      "description": "Dark theme optimized for code-heavy courses",
+      "mood": ["technical", "modern", "focused"],
+      "best_for": ["web development", "backend systems", "DevOps", "infrastructure"],
+      "color_scheme": "dark",
+      "fonts": ["DM Sans", "DM Sans", "Fira Code"],
+      "interactive_elements": ["code-translation", "spot-the-bug", "group-chat", "layer-toggle"],
+      "density": "high"
+    },
+    {
+      "id": "literary-light",
+      "name": "Literary Light",
+      "description": "Elegant light theme with serif typography for conceptual courses",
+      "mood": ["thoughtful", "sophisticated", "narrative"],
+      "best_for": ["design systems", "architecture patterns", "conceptual frameworks"],
+      "color_scheme": "light",
+      "fonts": ["Cormorant Garamond", "Work Sans", "JetBrains Mono"],
+      "interactive_elements": ["code-translation", "callout-boxes", "pattern-cards", "glossary-tooltips"],
+      "density": "low"
+    },
+    {
+      "id": "hacker-dark",
+      "name": "Hacker Dark",
+      "description": "High-contrast dark theme for security and systems programming",
+      "mood": ["technical", "edgy", "intense"],
+      "best_for": ["security", "systems programming", "low-level concepts"],
+      "color_scheme": "dark",
+      "fonts": ["Rajdhani", "Rajdhani", "JetBrains Mono"],
+      "interactive_elements": ["code-translation", "spot-the-bug", "scenario-quiz", "data-flow-animation"],
+      "density": "high"
+    },
+    {
+      "id": "academic-light",
+      "name": "Academic Light",
+      "description": "Structured, grid-based theme for educational content",
+      "mood": ["academic", "structured", "objective"],
+      "best_for": ["computer science", "algorithms", "data structures", "academic courses"],
+      "color_scheme": "light",
+      "fonts": ["Helvetica Neue", "Helvetica Neue", "IBM Plex Mono"],
+      "interactive_elements": ["code-translation", "quiz", "drag-drop-matching", "numbered-step-cards"],
+      "density": "medium"
+    },
+    {
+      "id": "editorial-light",
+      "name": "Editorial Light",
+      "description": "Magazine-style theme for narrative-driven courses",
+      "mood": ["narrative", "approachable", "engaging"],
+      "best_for": ["case studies", "project walkthroughs", "real-world examples"],
+      "color_scheme": "light",
+      "fonts": ["Playfair Display", "Source Sans Pro", "Fira Code"],
+      "interactive_elements": ["code-translation", "group-chat", "callout-boxes", "visual-file-tree"],
+      "density": "low"
+    },
+    {
+      "id": "friendly-light",
+      "name": "Friendly Light",
+      "description": "Warm, welcoming theme for beginner-friendly content",
+      "mood": ["friendly", "approachable", "encouraging"],
+      "best_for": ["beginner tutorials", "onboarding", "introductory courses"],
+      "color_scheme": "light",
+      "fonts": ["Quicksand", "Open Sans", "JetBrains Mono"],
+      "interactive_elements": ["code-translation", "quiz", "drag-drop-matching", "icon-label-rows"],
+      "density": "low"
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "total_themes": 7,
+    "interactive_element_types": 17,
+    "last_updated": "2026-06-03"
+  }
+}

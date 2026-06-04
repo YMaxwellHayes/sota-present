@@ -1,0 +1,1798 @@
+{
+  "styles": [
+
+    {
+      "id": "editorial-forest",
+      "name": "Editorial Forest",
+      "description": "A serif-led editorial system in the register of a literary quarterly or art-book monograph. Deep forest green, dusty rose pink, and oat-cream paper with Source Serif 4 display and JetBrains Mono chrome. Flat color only, no gradients or shadows.",
+      "mood": ["editorial", "quiet", "considered", "warm", "intentional"],
+      "occasion": ["quarterly review", "internal readout", "studio update", "creative agency deck", "research recap"],
+      "tone": ["literary", "thoughtful", "warm", "low-pressure"],
+      "color_family": "green",
+      "verified_dual": true,
+      "capabilities": {
+        "slides": {
+          "template_ref": "gallery/editorial-forest",
+          "preset_ref": null,
+          "layout_archetypes": ["title", "content", "data-viz", "statement", "summary"]
+        },
+        "whiteboard": {
+          "palette_ref": "editorial-forest",
+          "palette_id_in_source": 8
+        },
+        "course": {
+          "theme_ref": "editorial-forest",
+          "compatible": true
+        }
+      },
+      "tokens": {
+        "color_primary": "#2e4a2a",
+        "color_secondary": "#e89cb1",
+        "color_accent": "#d27e96",
+        "color_bg": "#efe7d4",
+        "color_surface": "#e6dcc4",
+        "color_text": "#1a1a17",
+        "color_text_muted": "#3a5a36",
+        "color_border": "#2e4a2a",
+        "font_heading": "\"Source Serif 4\", serif",
+        "font_body": "\"Source Serif 4\", serif",
+        "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "2px",
+        "radius_md": "6px",
+        "radius_lg": "8px",
+        "motion_duration": "400ms",
+        "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "bold-poster",
+      "name": "Bold Poster",
+      "description": "A populist editorial poster system mashing vintage Italian sports-magazine display lettering with classical serif body. Shrikhand display at poster scale with a single fire-engine red accent on white newsprint. Loud, confident, unmistakably print-poster.",
+      "mood": ["bold", "editorial", "loud", "confident"],
+      "occasion": ["brand manifesto", "creative-led pitch", "magazine / editorial", "founder vision deck", "art / culture"],
+      "tone": ["dramatic", "graphic", "sharp", "intentional"],
+      "color_family": "red",
+      "verified_dual": true,
+      "capabilities": {
+        "slides": {
+          "template_ref": "gallery/bold-poster",
+          "preset_ref": null,
+          "layout_archetypes": ["title", "statement", "data-viz", "pillar"]
+        },
+        "whiteboard": {
+          "palette_ref": "bold-poster",
+          "palette_id_in_source": 13
+        },
+        "course": {
+          "theme_ref": "bold-poster",
+          "compatible": true
+        }
+      },
+      "tokens": {
+        "color_primary": "#D8000F",
+        "color_secondary": "#1C1410",
+        "color_accent": "#D8000F",
+        "color_bg": "#FFFFFF",
+        "color_surface": "#F5F2EF",
+        "color_text": "#1C1410",
+        "color_text_muted": "#5E5E54",
+        "color_border": "#1C1410",
+        "font_heading": "\"Shrikhand\", cursive",
+        "font_body": "\"Libre Baskerville\", serif",
+        "font_mono": "\"Space Grotesk\", sans-serif",
+        "radius_sm": "0px",
+        "radius_md": "0px",
+        "radius_lg": "4px",
+        "motion_duration": "550ms",
+        "motion_easing": "cubic-bezier(0.22, 1, 0.36, 1)"
+      }
+    },
+
+    {
+      "id": "block-frame",
+      "name": "BlockFrame",
+      "description": "Maximalist neobrutalist system with 4px solid black borders, 8px hard offset shadows, and a high-key candy palette of five saturated pastels. Display type is heavy uppercase Inter. Tilted decorative shapes break the grid intentionally. Bold, joyful, slightly chaotic.",
+      "mood": ["bold", "playful", "graphic", "fresh"],
+      "occasion": ["creative agency pitch", "indie SaaS launch", "designer portfolio", "brand redesign", "modern startup deck"],
+      "tone": ["confident", "graphic", "pop", "design-led"],
+      "color_family": "pastel-bold",
+      "verified_dual": true,
+      "capabilities": {
+        "slides": {
+          "template_ref": "gallery/block-frame",
+          "preset_ref": null,
+          "layout_archetypes": ["title", "content", "data-viz", "timeline", "team"]
+        },
+        "whiteboard": {
+          "palette_ref": "block-frame",
+          "palette_id_in_source": 27
+        },
+        "course": {
+          "theme_ref": "block-frame",
+          "compatible": true
+        }
+      },
+      "tokens": {
+        "color_primary": "#FE90E8",
+        "color_secondary": "#C0F7FE",
+        "color_accent": "#F7CB46",
+        "color_bg": "#FFFDF5",
+        "color_surface": "#FFFFFF",
+        "color_text": "#000000",
+        "color_text_muted": "#333333",
+        "color_border": "#000000",
+        "font_heading": "\"Inter\", sans-serif",
+        "font_body": "\"Inter\", sans-serif",
+        "font_mono": "\"Space Grotesk\", sans-serif",
+        "radius_sm": "0px",
+        "radius_md": "0px",
+        "radius_lg": "0px",
+        "motion_duration": "300ms",
+        "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "monochrome",
+      "name": "Monochrome",
+      "description": "A single-surface editorial palette with no accent color at all. Warm off-yellow cream canvas, very dark olive-black ink, two graphite tones. Quiet, restrained, text-first: distinction comes from scale, weight, and spacing, never from color. Jost ultra-light + Lora italic + JetBrains Mono.",
+      "mood": ["restrained", "literary", "archival", "ledger"],
+      "occasion": ["user research synthesis", "white paper", "longform report", "academic deck", "policy brief", "advisory deliverable"],
+      "tone": ["literary", "considered", "neutral", "honest"],
+      "color_family": "monochrome",
+      "verified_dual": true,
+      "capabilities": {
+        "slides": {
+          "template_ref": "gallery/monochrome",
+          "preset_ref": null,
+          "layout_archetypes": ["title", "content", "data-viz", "timeline", "quote"]
+        },
+        "whiteboard": {
+          "palette_ref": "monochrome",
+          "palette_id_in_source": 6
+        },
+        "course": {
+          "theme_ref": "monochrome",
+          "compatible": true
+        }
+      },
+      "tokens": {
+        "color_primary": "#1A1A16",
+        "color_secondary": "#5E5E54",
+        "color_accent": "#1A1A16",
+        "color_bg": "#FAFADF",
+        "color_surface": "#F5F0E4",
+        "color_text": "#1A1A16",
+        "color_text_muted": "#8A8A80",
+        "color_border": "#1A1A16",
+        "font_heading": "\"Jost\", sans-serif",
+        "font_body": "\"Jost\", sans-serif",
+        "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "0px",
+        "radius_md": "16px",
+        "radius_lg": "16px",
+        "motion_duration": "900ms",
+        "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "raw-grid",
+      "name": "Raw Grid",
+      "description": "Neo-brutalist system where the borders ARE the layout. Pure white canvas, 3px solid black structure, two muted pastel accents (blush + sage). Depth is hard black offset shadows. Cells abut without gaps. Sharp, system-native, digital brutalism.",
+      "mood": ["raw", "punchy", "energetic", "confident"],
+      "occasion": ["startup pitch", "accelerator demo day", "founder pitch", "indie product launch", "brand deck"],
+      "tone": ["direct", "modern", "no-nonsense", "graphic"],
+      "color_family": "monochrome",
+      "verified_dual": true,
+      "capabilities": {
+        "slides": {
+          "template_ref": "gallery/raw-grid",
+          "preset_ref": null,
+          "layout_archetypes": ["title", "content", "data-viz", "comparison"]
+        },
+        "whiteboard": {
+          "palette_ref": "raw-grid",
+          "palette_id_in_source": 21
+        },
+        "course": {
+          "theme_ref": "raw-grid",
+          "compatible": true
+        }
+      },
+      "tokens": {
+        "color_primary": "#0A0A0A",
+        "color_secondary": "#F2D4CF",
+        "color_accent": "#E5EDD6",
+        "color_bg": "#FFFFFF",
+        "color_surface": "#F5F5F5",
+        "color_text": "#0A0A0A",
+        "color_text_muted": "#333333",
+        "color_border": "#0A0A0A",
+        "font_heading": "\"Segoe UI\", system-ui, sans-serif",
+        "font_body": "\"Segoe UI\", system-ui, sans-serif",
+        "font_mono": "\"Segoe UI\", system-ui, sans-serif",
+        "radius_sm": "0px",
+        "radius_md": "0px",
+        "radius_lg": "0px",
+        "motion_duration": "300ms",
+        "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "neo-grid-bold",
+      "name": "Neo-Grid Bold",
+      "description": "Heavy editorial poster system on a strict block grid with one neon-lemon accent on putty-ecru. Space Grotesk uppercase display + JetBrains Mono chrome. Each slide reads as a magazine spread divided into colored panels. Dead flat, no shadows.",
+      "mood": ["confident", "punchy", "editorial", "modern"],
+      "occasion": ["product launch", "design review", "founder pitch", "brand deck", "consulting findings", "conference talk"],
+      "tone": ["bold", "minimal", "design-led", "graphic"],
+      "color_family": "yellow",
+      "verified_dual": true,
+      "capabilities": {
+        "slides": {
+          "template_ref": "gallery/neo-grid-bold",
+          "preset_ref": null,
+          "layout_archetypes": ["title", "content", "data-viz", "comparison", "stat"]
+        },
+        "whiteboard": {
+          "palette_ref": "neo-grid-bold",
+          "palette_id_in_source": 28
+        },
+        "course": {
+          "theme_ref": "neo-grid-bold",
+          "compatible": true
+        }
+      },
+      "tokens": {
+        "color_primary": "#E6FF3D",
+        "color_secondary": "#0A0A0A",
+        "color_accent": "#E6FF3D",
+        "color_bg": "#F5F4EF",
+        "color_surface": "#ECECE8",
+        "color_text": "#0A0A0A",
+        "color_text_muted": "#8A8A85",
+        "color_border": "#0A0A0A",
+        "font_heading": "\"Space Grotesk\", sans-serif",
+        "font_body": "\"Space Grotesk\", sans-serif",
+        "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "0px",
+        "radius_md": "0px",
+        "radius_lg": "0px",
+        "motion_duration": "400ms",
+        "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "coral",
+      "name": "Coral",
+      "description": "Bold magazine-poster system on three surface registers — coral fire, ink black, and warm cream. Bebas Neue display caps with 45° diagonal hatch pattern. Mid-century travel posters meets modern editorial sport magazines. Single coral hue as both accent and environment.",
+      "mood": ["bold", "warm", "modern", "confident"],
+      "occasion": ["fashion / beauty pitch", "fitness brand", "F&B brand deck", "lifestyle launch", "creative agency"],
+      "tone": ["graphic", "punchy", "magazine"],
+      "color_family": "warm",
+      "verified_dual": true,
+      "capabilities": {
+        "slides": {
+          "template_ref": "gallery/coral",
+          "preset_ref": null,
+          "layout_archetypes": ["title", "content", "data-viz", "stat"]
+        },
+        "whiteboard": {
+          "palette_ref": "coral",
+          "palette_id_in_source": 16
+        },
+        "course": {
+          "theme_ref": "coral",
+          "compatible": true
+        }
+      },
+      "tokens": {
+        "color_primary": "#E85D5D",
+        "color_secondary": "#1A1A1A",
+        "color_accent": "#D44A4A",
+        "color_bg": "#F5F0E8",
+        "color_surface": "#FFFFFF",
+        "color_text": "#1A1A1A",
+        "color_text_muted": "#6B6B6B",
+        "color_border": "#1A1A1A",
+        "font_heading": "\"Bebas Neue\", sans-serif",
+        "font_body": "\"Inter\", sans-serif",
+        "font_mono": "\"Space Grotesk\", sans-serif",
+        "radius_sm": "0px",
+        "radius_md": "8px",
+        "radius_lg": "12px",
+        "motion_duration": "400ms",
+        "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "pin-and-paper",
+      "name": "Pin & Paper",
+      "description": "Field-notebook editorial system: yellow legal-pad paper with deep cobalt-blue ink, hand-drawn safety-pin SVG illustrations, paper-grain texture. Space Grotesk headlines + Caveat handwriting + DM Mono archival labels. Analog field reports meet vintage public-notice boards.",
+      "mood": ["crafted", "handmade", "warm", "thoughtful", "literary"],
+      "occasion": ["research findings with personality", "qualitative report", "founder reflection", "creator essay deck", "workshop debrief"],
+      "tone": ["literary", "intimate", "warm", "grounded"],
+      "color_family": "yellow",
+      "verified_dual": true,
+      "capabilities": {
+        "slides": {
+          "template_ref": "gallery/pin-and-paper",
+          "preset_ref": null,
+          "layout_archetypes": ["title", "content", "quote", "data-viz"]
+        },
+        "whiteboard": {
+          "palette_ref": "pin-and-paper",
+          "palette_id_in_source": 20
+        },
+        "course": {
+          "theme_ref": "pin-and-paper",
+          "compatible": true
+        }
+      },
+      "tokens": {
+        "color_primary": "#1F3A8A",
+        "color_secondary": "#EFE56A",
+        "color_accent": "#C2342B",
+        "color_bg": "#EFE56A",
+        "color_surface": "#F8F1D6",
+        "color_text": "#1F3A8A",
+        "color_text_muted": "#2D4FB8",
+        "color_border": "#1F3A8A",
+        "font_heading": "\"Space Grotesk\", sans-serif",
+        "font_body": "\"Space Grotesk\", sans-serif",
+        "font_mono": "\"DM Mono\", monospace",
+        "radius_sm": "0px",
+        "radius_md": "8px",
+        "radius_lg": "16px",
+        "motion_duration": "400ms",
+        "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "soft-editorial",
+      "name": "Soft Editorial",
+      "description": "Warm magazine-spread aesthetic — Cormorant Garamond serif on warm paper with pastel candy accents (dusty pink, chartreuse, peach blush, sage, lilac). Generous rounded cards float on translucent white over cream. Editorial calm with riso-print color.",
+      "mood": ["literary", "elegant", "quiet", "warm-classical"],
+      "occasion": ["editorial feature", "longform brand story", "gallery or museum", "literary pitch", "advisory deliverable"],
+      "tone": ["literary", "considered", "warm", "magazine"],
+      "color_family": "pastel",
+      "verified_dual": true,
+      "capabilities": {
+        "slides": {
+          "template_ref": "gallery/soft-editorial",
+          "preset_ref": null,
+          "layout_archetypes": ["title", "content", "data-viz", "quote"]
+        },
+        "whiteboard": {
+          "palette_ref": "soft-editorial",
+          "palette_id_in_source": 14
+        },
+        "course": {
+          "theme_ref": "soft-editorial",
+          "compatible": true
+        }
+      },
+      "tokens": {
+        "color_primary": "#2A241B",
+        "color_secondary": "#E1A4C2",
+        "color_accent": "#D6DD63",
+        "color_bg": "#F2EEDF",
+        "color_surface": "#ECE6D2",
+        "color_text": "#2A241B",
+        "color_text_muted": "#5C5345",
+        "color_border": "#2A241B",
+        "font_heading": "\"Cormorant Garamond\", serif",
+        "font_body": "\"Work Sans\", sans-serif",
+        "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "8px",
+        "radius_md": "24px",
+        "radius_lg": "36px",
+        "motion_duration": "500ms",
+        "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "grove",
+      "name": "Grove",
+      "description": "Quiet editorial-serif system: deep forest green canvas with cream type, classical Playfair Display serifs, and a single terracotta coral accent. The calm authority of a literary journal or boutique brand book. Generous negative space and hairline borders.",
+      "mood": ["organic", "considered", "warm", "literary", "natural"],
+      "occasion": ["sustainability brand", "wellness brand", "outdoor / nature product", "winery or restaurant", "literary or arts deck"],
+      "tone": ["classical", "warm", "considered", "patient"],
+      "color_family": "green",
+      "verified_dual": true,
+      "capabilities": {
+        "slides": {
+          "template_ref": "gallery/grove",
+          "preset_ref": null,
+          "layout_archetypes": ["title", "content", "quote", "statement"]
+        },
+        "whiteboard": {
+          "palette_ref": "grove",
+          "palette_id_in_source": 2
+        },
+        "course": {
+          "theme_ref": "grove",
+          "compatible": true
+        }
+      },
+      "tokens": {
+        "color_primary": "#192b1b",
+        "color_secondary": "#d4cfbf",
+        "color_accent": "#c8524a",
+        "color_bg": "#192b1b",
+        "color_surface": "#e8e4d6",
+        "color_text": "#d4cfbf",
+        "color_text_muted": "#9a9590",
+        "color_border": "#d4cfbf",
+        "font_heading": "\"Playfair Display\", serif",
+        "font_body": "\"Jost\", sans-serif",
+        "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "0px",
+        "radius_md": "4px",
+        "radius_lg": "8px",
+        "motion_duration": "600ms",
+        "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "long-table",
+      "name": "Long Table",
+      "description": "Warm single-ink editorial system in the spirit of a printed supper-club menu or Risograph program. One buttery cream surface, one rust terracotta ink for everything. Bricolage Grotesque uppercase display + Fraunces serif body. Cozy, rustic, confidently monochrome.",
+      "mood": ["warm", "intimate", "modern", "friendly", "hospitality"],
+      "occasion": ["supper club or dinner series", "event or community gathering", "small hospitality / restaurant brand", "creative studio open house"],
+      "tone": ["warm", "playful", "considered", "social", "magazine-friendly"],
+      "color_family": "warm",
+      "verified_dual": true,
+      "capabilities": {
+        "slides": {
+          "template_ref": "gallery/long-table",
+          "preset_ref": null,
+          "layout_archetypes": ["title", "content", "menu", "timeline"]
+        },
+        "whiteboard": {
+          "palette_ref": "long-table",
+          "palette_id_in_source": 4
+        },
+        "course": {
+          "theme_ref": "long-table",
+          "compatible": true
+        }
+      },
+      "tokens": {
+        "color_primary": "#B53D2A",
+        "color_secondary": "#8E2D1F",
+        "color_accent": "#B53D2A",
+        "color_bg": "#FAF1E2",
+        "color_surface": "#F2E5CF",
+        "color_text": "#B53D2A",
+        "color_text_muted": "#B53D2A",
+        "color_border": "#B53D2A",
+        "font_heading": "\"Bricolage Grotesque\", sans-serif",
+        "font_body": "\"Fraunces\", serif",
+        "font_mono": "\"DM Mono\", monospace",
+        "radius_sm": "0px",
+        "radius_md": "8px",
+        "radius_lg": "24px",
+        "motion_duration": "400ms",
+        "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "stencil-tablet",
+      "name": "Stencil & Tablet",
+      "description": "West Coast skate-poster meets municipal stencil signage. Stardos Stencil headlines with ink-break gaps, Barlow Condensed chrome, bone-cream field tiled with rounded color tablets in a saturated retro-print accent set. Industrial poster meets vintage workshop sign.",
+      "mood": ["archival", "earthy", "tactile", "considered", "graphic"],
+      "occasion": ["museum / cultural institution", "art / architecture brand", "longform research", "heritage / craft brand", "manifesto"],
+      "tone": ["weighty", "considered", "tactile", "literary"],
+      "color_family": "earth",
+      "verified_dual": true,
+      "capabilities": {
+        "slides": {
+          "template_ref": "gallery/stencil-tablet",
+          "preset_ref": null,
+          "layout_archetypes": ["title", "content", "data-viz", "stat"]
+        },
+        "whiteboard": {
+          "palette_ref": "stencil-tablet",
+          "palette_id_in_source": 33
+        },
+        "course": {
+          "theme_ref": "stencil-tablet",
+          "compatible": true
+        }
+      },
+      "tokens": {
+        "color_primary": "#A06A3C",
+        "color_secondary": "#EE7A2E",
+        "color_accent": "#C73B7A",
+        "color_bg": "#E2DCC9",
+        "color_surface": "#F4EFE0",
+        "color_text": "#0A0A0A",
+        "color_text_muted": "#6B6B6B",
+        "color_border": "#0A0A0A",
+        "font_heading": "\"Stardos Stencil\", serif",
+        "font_body": "\"Inter\", sans-serif",
+        "font_mono": "\"Barlow Condensed\", sans-serif",
+        "radius_sm": "8px",
+        "radius_md": "22px",
+        "radius_lg": "26px",
+        "motion_duration": "400ms",
+        "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+
+    {
+      "id": "8-bit-orbit",
+      "name": "8-Bit Orbit",
+      "description": "Pixel-art neon arcade aesthetic on a deep navy void. CRT screen at 2am: cyberpunk, gaming, web3, indie dev tools.",
+      "mood": ["retro-tech", "playful", "cyberpunk", "energetic"],
+      "occasion": ["gaming pitch", "hackathon demo", "web3 / crypto deck", "indie product launch"],
+      "tone": ["geeky", "neon", "rebellious", "sci-fi"],
+      "color_family": "neon",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": "gallery/8-bit-orbit", "preset_ref": null, "layout_archetypes": ["title", "content", "data-viz"] },
+        "whiteboard": { "palette_ref": null, "palette_id_in_source": null },
+        "course": { "theme_ref": null, "compatible": false }
+      },
+      "tokens": {
+        "color_primary": "#00ffcc", "color_secondary": "#ff00aa", "color_accent": "#ffcc00",
+        "color_bg": "#0a0f1c", "color_surface": "#141b2d", "color_text": "#e0e0e0", "color_text_muted": "#7a8ba0", "color_border": "#00ffcc",
+        "font_heading": "\"Press Start 2P\", monospace", "font_body": "\"Space Grotesk\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "0px", "radius_md": "4px", "radius_lg": "8px", "motion_duration": "300ms", "motion_easing": "steps(4)"
+      }
+    },
+
+    {
+      "id": "biennale-yellow",
+      "name": "Biennale Yellow",
+      "description": "Solar yellow on warm parchment with deep indigo serif and atmospheric sun-glow gradients. Dutch-editorial atmosphere with a single-color signature.",
+      "mood": ["editorial", "atmospheric", "warm", "cultural-institution", "poster-like"],
+      "occasion": ["exhibition or biennale", "arts institution programme", "design or typography conference", "literary publication"],
+      "tone": ["literary", "considered", "contemplative", "warm-modern"],
+      "color_family": "yellow",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": "gallery/biennale-yellow", "preset_ref": null, "layout_archetypes": ["title", "content", "statement"] },
+        "whiteboard": { "palette_ref": null, "palette_id_in_source": null },
+        "course": { "theme_ref": null, "compatible": false }
+      },
+      "tokens": {
+        "color_primary": "#E8C820", "color_secondary": "#1a1a4e", "color_accent": "#E8C820",
+        "color_bg": "#f5f0e0", "color_surface": "#ebe5d0", "color_text": "#1a1a4e", "color_text_muted": "#555566", "color_border": "#1a1a4e",
+        "font_heading": "\"Playfair Display\", serif", "font_body": "\"Source Sans 3\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "0px", "radius_md": "4px", "radius_lg": "12px", "motion_duration": "500ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "blue-professional",
+      "name": "Blue Professional",
+      "description": "Cream paper background with electric cobalt blue accents. Clean modern professional — considered, polished, lightly authoritative.",
+      "mood": ["professional", "modern", "calm", "trustworthy"],
+      "occasion": ["B2B SaaS pitch", "consulting deliverable", "internal review", "advisory pitch", "investor update"],
+      "tone": ["clean", "considered", "polished", "neutral"],
+      "color_family": "blue",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": "gallery/blue-professional", "preset_ref": null, "layout_archetypes": ["title", "content", "data-viz", "comparison"] },
+        "whiteboard": { "palette_ref": "avocado-press", "palette_id_in_source": 10 },
+        "course": { "theme_ref": null, "compatible": true }
+      },
+      "tokens": {
+        "color_primary": "#2563EB", "color_secondary": "#1e40af", "color_accent": "#2563EB",
+        "color_bg": "#FAF9F6", "color_surface": "#FFFFFF", "color_text": "#1a1a1a", "color_text_muted": "#6B7280", "color_border": "#2563EB",
+        "font_heading": "\"DM Sans\", sans-serif", "font_body": "\"DM Sans\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "4px", "radius_md": "8px", "radius_lg": "16px", "motion_duration": "400ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "broadside",
+      "name": "Broadside",
+      "description": "Dark editorial canvas with a single fire orange accent and bilingual Latin/Chinese type stack. Newspaper headline energy — dramatic, punchy, literary.",
+      "mood": ["editorial", "dramatic", "loud", "newspaper"],
+      "occasion": ["brand manifesto", "founder vision deck", "magazine / cultural pitch", "design talk", "bilingual EN/CN deck"],
+      "tone": ["graphic", "punchy", "literary", "considered"],
+      "color_family": "warm",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": "gallery/broadside", "preset_ref": null, "layout_archetypes": ["title", "content", "statement"] },
+        "whiteboard": { "palette_ref": null, "palette_id_in_source": null },
+        "course": { "theme_ref": null, "compatible": false }
+      },
+      "tokens": {
+        "color_primary": "#E85D22", "color_secondary": "#1a1a1a", "color_accent": "#E85D22",
+        "color_bg": "#1a1a1a", "color_surface": "#2d2d2d", "color_text": "#f5f0e0", "color_text_muted": "#9a9590", "color_border": "#E85D22",
+        "font_heading": "\"Noto Serif\", serif", "font_body": "\"Noto Sans\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "0px", "radius_md": "0px", "radius_lg": "4px", "motion_duration": "400ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "capsule",
+      "name": "Capsule",
+      "description": "Modular pill-shaped cards on warm bone with a full pastel-pop palette. Y2K-tinged, upbeat, graphic, approachable.",
+      "mood": ["playful", "modern", "warm", "fresh", "fun"],
+      "occasion": ["lifestyle brand", "creator portfolio", "DTC product launch", "wellness or beauty pitch"],
+      "tone": ["upbeat", "graphic", "approachable", "cool"],
+      "color_family": "pastel",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": "gallery/capsule", "preset_ref": null, "layout_archetypes": ["title", "content", "comparison"] },
+        "whiteboard": { "palette_ref": "confetti-wedge", "palette_id_in_source": 29 },
+        "course": { "theme_ref": null, "compatible": true }
+      },
+      "tokens": {
+        "color_primary": "#F0A8D0", "color_secondary": "#A8D8EA", "color_accent": "#FFE6A7",
+        "color_bg": "#F5F0E8", "color_surface": "#FFFFFF", "color_text": "#1a1a1a", "color_text_muted": "#6B6B6B", "color_border": "#1a1a1a",
+        "font_heading": "\"Outfit\", sans-serif", "font_body": "\"Outfit\", sans-serif", "font_mono": "\"Space Grotesk\", sans-serif",
+        "radius_sm": "12px", "radius_md": "24px", "radius_lg": "999px", "motion_duration": "400ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "cartesian",
+      "name": "Cartesian",
+      "description": "Quiet warm-neutral palette with classical Playfair serifs. Tasteful and unhurried — investment theses, white papers, advisory work.",
+      "mood": ["quiet", "considered", "elegant", "warm-minimal"],
+      "occasion": ["investment thesis", "white paper", "advisory deliverable", "research report", "gallery / cultural"],
+      "tone": ["classical", "literary", "restrained", "confident-quiet"],
+      "color_family": "neutral",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": "gallery/cartesian", "preset_ref": null, "layout_archetypes": ["title", "content", "quote", "data-viz"] },
+        "whiteboard": { "palette_ref": "reading-room", "palette_id_in_source": 9 },
+        "course": { "theme_ref": null, "compatible": true }
+      },
+      "tokens": {
+        "color_primary": "#3A3632", "color_secondary": "#8A8580", "color_accent": "#B8A898",
+        "color_bg": "#F5F3EE", "color_surface": "#EBE8E2", "color_text": "#1a1a17", "color_text_muted": "#8A8580", "color_border": "#3A3632",
+        "font_heading": "\"Playfair Display\", serif", "font_body": "\"Source Sans 3\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "0px", "radius_md": "4px", "radius_lg": "8px", "motion_duration": "600ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "cobalt-grid",
+      "name": "Cobalt Grid",
+      "description": "Electric cobalt serifs on a graph-paper canvas, anchored by stair-stepped pixel-glitch decorations and slim hairline rules. Quietly serious design/research bulletin.",
+      "mood": ["editorial", "design-research", "studious", "modernist", "tech-print"],
+      "occasion": ["design trend or research report", "studio annual bulletin", "creative agency capabilities", "art or architecture publication"],
+      "tone": ["considered", "literary", "studious", "quietly-modern"],
+      "color_family": "blue",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": "gallery/cobalt-grid", "preset_ref": null, "layout_archetypes": ["title", "content", "data-viz"] },
+        "whiteboard": { "palette_ref": "cobalt-bloom", "palette_id_in_source": 15 },
+        "course": { "theme_ref": null, "compatible": true }
+      },
+      "tokens": {
+        "color_primary": "#1a3a8a", "color_secondary": "#4361ee", "color_accent": "#1a3a8a",
+        "color_bg": "#f5f4ef", "color_surface": "#ebe8e0", "color_text": "#1a1a1a", "color_text_muted": "#6B6B6B", "color_border": "#1a3a8a",
+        "font_heading": "\"Source Serif 4\", serif", "font_body": "\"Source Serif 4\", serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "0px", "radius_md": "4px", "radius_lg": "8px", "motion_duration": "400ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "creative-mode",
+      "name": "Creative Mode",
+      "description": "Cream paper canvas with confident multi-color (green, pink, orange, yellow) accents and Archivo Black display. Design-led and confident.",
+      "mood": ["creative", "confident", "playful", "design-led"],
+      "occasion": ["creative agency pitch", "design studio deck", "ad shop credentials", "brand creative review"],
+      "tone": ["graphic", "expressive", "modern"],
+      "color_family": "multi",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": "gallery/creative-mode", "preset_ref": null, "layout_archetypes": ["title", "content", "comparison"] },
+        "whiteboard": { "palette_ref": null, "palette_id_in_source": null },
+        "course": { "theme_ref": null, "compatible": false }
+      },
+      "tokens": {
+        "color_primary": "#2D7E73", "color_secondary": "#E85D5D", "color_accent": "#F7CB46",
+        "color_bg": "#F5F0E8", "color_surface": "#FFFFFF", "color_text": "#1a1a1a", "color_text_muted": "#6B6B6B", "color_border": "#1a1a1a",
+        "font_heading": "\"Archivo Black\", sans-serif", "font_body": "\"Space Grotesk\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "0px", "radius_md": "8px", "radius_lg": "16px", "motion_duration": "400ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "daisy-days",
+      "name": "Daisy Days",
+      "description": "Cheerful pastel deck with hand-drawn daisies, stars, and rainbows. Friendly, soft, and warm — education, kids, wellness, community.",
+      "mood": ["cheerful", "playful", "warm", "sunny", "wholesome"],
+      "occasion": ["education / classroom", "kids product launch", "wellness program", "community workshop", "team kickoff"],
+      "tone": ["friendly", "soft", "encouraging", "approachable"],
+      "color_family": "pastel",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": "gallery/daisy-days", "preset_ref": null, "layout_archetypes": ["title", "content"] },
+        "whiteboard": { "palette_ref": "confetti-wedge", "palette_id_in_source": 29 },
+        "course": { "theme_ref": null, "compatible": true }
+      },
+      "tokens": {
+        "color_primary": "#F0B4D4", "color_secondary": "#98D4BB", "color_accent": "#FFE6A7",
+        "color_bg": "#FFF9F0", "color_surface": "#FFFFFF", "color_text": "#3A3632", "color_text_muted": "#8A8580", "color_border": "#E8D8C8",
+        "font_heading": "\"Quicksand\", sans-serif", "font_body": "\"Nunito\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "8px", "radius_md": "16px", "radius_lg": "24px", "motion_duration": "500ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "editorial-tri-tone",
+      "name": "Editorial Tri-Tone",
+      "description": "Three-color editorial system: dusty pink, mustard cream, and deep burgundy. Bricolage + Instrument Serif. Fashion-magazine spread.",
+      "mood": ["editorial", "warm", "intentional", "moody"],
+      "occasion": ["editorial / magazine pitch", "fashion brand deck", "lifestyle media", "literary / cultural"],
+      "tone": ["literary", "warm", "considered", "stylish"],
+      "color_family": "warm",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": "gallery/editorial-tri-tone", "preset_ref": null, "layout_archetypes": ["title", "content", "statement"] },
+        "whiteboard": { "palette_ref": null, "palette_id_in_source": null },
+        "course": { "theme_ref": null, "compatible": false }
+      },
+      "tokens": {
+        "color_primary": "#6B1D3A", "color_secondary": "#D4A574", "color_accent": "#E89CB1",
+        "color_bg": "#F5F0E8", "color_surface": "#EBE5D0", "color_text": "#1a1a17", "color_text_muted": "#5C5345", "color_border": "#6B1D3A",
+        "font_heading": "\"Instrument Serif\", serif", "font_body": "\"Bricolage Grotesque\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "0px", "radius_md": "6px", "radius_lg": "12px", "motion_duration": "400ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "emerald-editorial",
+      "name": "Emerald Editorial",
+      "description": "Magazine-cover business deck: emerald + navy + paper, double-rule masthead ornaments, bold Bodoni-style display serif. Editorial gravitas without stiffness.",
+      "mood": ["editorial", "considered", "confident", "magazine-cover"],
+      "occasion": ["leadership presentation", "quarterly review", "strategy readout", "planning office deck"],
+      "tone": ["literary", "authoritative", "warm", "designed"],
+      "color_family": "green",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": "gallery/emerald-editorial", "preset_ref": null, "layout_archetypes": ["title", "content", "data-viz", "statement"] },
+        "whiteboard": { "palette_ref": "editorial-forest", "palette_id_in_source": 8 },
+        "course": { "theme_ref": null, "compatible": true }
+      },
+      "tokens": {
+        "color_primary": "#1a5c3a", "color_secondary": "#1a2744", "color_accent": "#c9b896",
+        "color_bg": "#F5F0E8", "color_surface": "#FFFFFF", "color_text": "#1a2744", "color_text_muted": "#6B6B6B", "color_border": "#1a5c3a",
+        "font_heading": "\"Bodoni Moda\", serif", "font_body": "\"Source Sans 3\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "0px", "radius_md": "4px", "radius_lg": "8px", "motion_duration": "500ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "mat",
+      "name": "Mat",
+      "description": "Dark sage canvas with bone paper and burnt-orange accent. Mid-century modern with wood undertones — design studio, architecture, ceramics.",
+      "mood": ["warm-modern", "considered", "tactile", "mid-century"],
+      "occasion": ["design studio credentials", "architecture / interior brand", "ceramics or craft brand", "furniture pitch"],
+      "tone": ["warm", "design-led", "intentional", "considered"],
+      "color_family": "earth",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": "gallery/mat", "preset_ref": null, "layout_archetypes": ["title", "content", "comparison"] },
+        "whiteboard": { "palette_ref": "linen-cut", "palette_id_in_source": 34 },
+        "course": { "theme_ref": null, "compatible": true }
+      },
+      "tokens": {
+        "color_primary": "#4A5D4A", "color_secondary": "#C8703A", "color_accent": "#C8703A",
+        "color_bg": "#4A5D4A", "color_surface": "#F0EBE0", "color_text": "#F0EBE0", "color_text_muted": "#B8B0A0", "color_border": "#F0EBE0",
+        "font_heading": "\"DM Serif Display\", serif", "font_body": "\"DM Sans\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "0px", "radius_md": "8px", "radius_lg": "16px", "motion_duration": "500ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "peoples-platform",
+      "name": "People's Platform",
+      "description": "Activist poster energy: blue, orange, red on cream, with Alfa Slab + Caveat Brush. Honest, loud, graphic — protest-poster energy.",
+      "mood": ["activist", "loud", "graphic", "honest"],
+      "occasion": ["cultural commentary", "manifesto", "community / civic deck", "design talk", "campaign pitch"],
+      "tone": ["punchy", "direct", "expressive", "warm-bold"],
+      "color_family": "multi",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": "gallery/peoples-platform", "preset_ref": null, "layout_archetypes": ["title", "content", "statement"] },
+        "whiteboard": { "palette_ref": "riso-brut", "palette_id_in_source": 32 },
+        "course": { "theme_ref": null, "compatible": true }
+      },
+      "tokens": {
+        "color_primary": "#2563EB", "color_secondary": "#E85D22", "color_accent": "#D8000F",
+        "color_bg": "#F5F0E0", "color_surface": "#FFFFFF", "color_text": "#1a1a1a", "color_text_muted": "#555555", "color_border": "#1a1a1a",
+        "font_heading": "\"Alfa Slab One\", serif", "font_body": "\"Space Grotesk\", sans-serif", "font_mono": "\"Caveat\", cursive",
+        "radius_sm": "0px", "radius_md": "0px", "radius_lg": "4px", "motion_duration": "400ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "pink-script",
+      "name": "Pink Script — After Hours",
+      "description": "Black canvas, hot pink accent, pearl-cream paper, Instrument Serif headlines. Late-night editorial luxury — nocturnal, intentional, luxe.",
+      "mood": ["nocturnal", "moody", "intentional", "luxe", "expressive"],
+      "occasion": ["fashion brand deck", "creator personal brand", "after-hours product", "luxury launch", "editorial feature"],
+      "tone": ["literary", "sultry", "considered", "magazine"],
+      "color_family": "pink",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": "gallery/pink-script", "preset_ref": null, "layout_archetypes": ["title", "statement", "quote"] },
+        "whiteboard": { "palette_ref": "berry-pop", "palette_id_in_source": 11 },
+        "course": { "theme_ref": null, "compatible": true }
+      },
+      "tokens": {
+        "color_primary": "#FF2D78", "color_secondary": "#1a1a1a", "color_accent": "#FF2D78",
+        "color_bg": "#0f0f0f", "color_surface": "#1a1a1a", "color_text": "#F0E8DC", "color_text_muted": "#9a9590", "color_border": "#FF2D78",
+        "font_heading": "\"Instrument Serif\", serif", "font_body": "\"Work Sans\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "0px", "radius_md": "4px", "radius_lg": "12px", "motion_duration": "600ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "playful",
+      "name": "Playful",
+      "description": "Sun-warm peach background with Syne display. Friendly indie launch deck — warm, approachable, welcoming.",
+      "mood": ["warm", "approachable", "indie", "friendly"],
+      "occasion": ["creator portfolio", "indie product launch", "lifestyle brand", "small-business pitch"],
+      "tone": ["upbeat", "informal", "welcoming"],
+      "color_family": "warm",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": "gallery/playful", "preset_ref": null, "layout_archetypes": ["title", "content"] },
+        "whiteboard": { "palette_ref": "apricot-arc", "palette_id_in_source": 17 },
+        "course": { "theme_ref": null, "compatible": true }
+      },
+      "tokens": {
+        "color_primary": "#E8A87C", "color_secondary": "#D4856A", "color_accent": "#E8A87C",
+        "color_bg": "#F5E6DC", "color_surface": "#FFFFFF", "color_text": "#1a1a1a", "color_text_muted": "#6B6B6B", "color_border": "#E8A87C",
+        "font_heading": "\"Syne\", sans-serif", "font_body": "\"DM Sans\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "8px", "radius_md": "16px", "radius_lg": "24px", "motion_duration": "400ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "retro-windows",
+      "name": "Retro Windows",
+      "description": "Windows 95 chrome: gray title bars, MS Sans Serif, pixel typography. Full nostalgia — knowingly retro.",
+      "mood": ["nostalgic", "retro", "geeky", "playful"],
+      "occasion": ["retro gaming pitch", "Y2K brand", "creator portfolio (90s aesthetic)", "tech-history talk"],
+      "tone": ["winking", "nostalgic", "geeky", "fun"],
+      "color_family": "neutral",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": "gallery/retro-windows", "preset_ref": null, "layout_archetypes": ["title", "content"] },
+        "whiteboard": { "palette_ref": null, "palette_id_in_source": null },
+        "course": { "theme_ref": null, "compatible": false }
+      },
+      "tokens": {
+        "color_primary": "#000080", "color_secondary": "#C0C0C0", "color_accent": "#008080",
+        "color_bg": "#C0C0C0", "color_surface": "#FFFFFF", "color_text": "#000000", "color_text_muted": "#808080", "color_border": "#808080",
+        "font_heading": "\"MS Sans Serif\", sans-serif", "font_body": "\"MS Sans Serif\", sans-serif", "font_mono": "\"Courier New\", monospace",
+        "radius_sm": "0px", "radius_md": "0px", "radius_lg": "0px", "motion_duration": "200ms", "motion_easing": "steps(2)"
+      }
+    },
+
+    {
+      "id": "retro-zine",
+      "name": "Retro Zine",
+      "description": "Beige paper with green accent and Bebas Neue + Caveat. Riso-printed zine in HTML form — lo-fi, underground, crafted.",
+      "mood": ["crafted", "lo-fi", "underground", "warm-retro"],
+      "occasion": ["indie zine / publication", "music or arts brand", "creator portfolio", "small-batch / craft launch"],
+      "tone": ["scrappy", "warm", "intentional", "DIY"],
+      "color_family": "earth",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": "gallery/retro-zine", "preset_ref": null, "layout_archetypes": ["title", "content"] },
+        "whiteboard": { "palette_ref": null, "palette_id_in_source": null },
+        "course": { "theme_ref": null, "compatible": false }
+      },
+      "tokens": {
+        "color_primary": "#2D7E73", "color_secondary": "#B53D2A", "color_accent": "#2D7E73",
+        "color_bg": "#E8DCC8", "color_surface": "#F5F0E0", "color_text": "#1a1a1a", "color_text_muted": "#6B6B6B", "color_border": "#2D7E73",
+        "font_heading": "\"Bebas Neue\", sans-serif", "font_body": "\"Space Grotesk\", sans-serif", "font_mono": "\"Caveat\", cursive",
+        "radius_sm": "0px", "radius_md": "4px", "radius_lg": "8px", "motion_duration": "400ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "sakura-chroma",
+      "name": "Sakura Chroma",
+      "description": "Vintage Japanese cassette-package aesthetic: cream paper, diagonal rainbow ribbons, condensed bold type, JIS-style spec checkboxes. 80s-Japanese-tech.",
+      "mood": ["retro", "playful", "kawaii-tech", "warm", "tactile"],
+      "occasion": ["product launch or catalogue", "indie hardware brand", "music label", "creative studio annual report"],
+      "tone": ["playful", "confident", "warm", "tactile", "80s-Japanese-tech"],
+      "color_family": "multi",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": "gallery/sakura-chroma", "preset_ref": null, "layout_archetypes": ["title", "content", "data-viz"] },
+        "whiteboard": { "palette_ref": null, "palette_id_in_source": null },
+        "course": { "theme_ref": null, "compatible": false }
+      },
+      "tokens": {
+        "color_primary": "#E85D5D", "color_secondary": "#2563EB", "color_accent": "#F7CB46",
+        "color_bg": "#F5F0E0", "color_surface": "#FFFFFF", "color_text": "#1a1a1a", "color_text_muted": "#6B6B6B", "color_border": "#1a1a1a",
+        "font_heading": "\"Barlow Condensed\", sans-serif", "font_body": "\"Noto Sans\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "0px", "radius_md": "4px", "radius_lg": "8px", "motion_duration": "400ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "scatterbrain",
+      "name": "Scatterbrain",
+      "description": "Post-it inspired: pastel sticky notes, Caveat handwriting, Shrikhand and Zilla Slab type stack. Designer's whiteboard — messy-on-purpose.",
+      "mood": ["playful", "creative", "warm", "messy-on-purpose", "workshop"],
+      "occasion": ["brainstorm / workshop", "creative agency credentials", "design-thinking session", "ideation pitch"],
+      "tone": ["informal", "warm", "expressive", "human"],
+      "color_family": "pastel",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": "gallery/scatterbrain", "preset_ref": null, "layout_archetypes": ["title", "content", "brainstorm"] },
+        "whiteboard": { "palette_ref": "checker-bloom", "palette_id_in_source": 18 },
+        "course": { "theme_ref": null, "compatible": true }
+      },
+      "tokens": {
+        "color_primary": "#FFE6A7", "color_secondary": "#F0B4D4", "color_accent": "#98D4BB",
+        "color_bg": "#FFFFFF", "color_surface": "#FFF9E6", "color_text": "#1a1a1a", "color_text_muted": "#6B6B6B", "color_border": "#E8D8C8",
+        "font_heading": "\"Shrikhand\", cursive", "font_body": "\"Zilla Slab\", serif", "font_mono": "\"Caveat\", cursive",
+        "radius_sm": "4px", "radius_md": "8px", "radius_lg": "16px", "motion_duration": "400ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "signal",
+      "name": "Signal",
+      "description": "Deep navy canvas with bone paper and a single muted-gold accent. Institutional with quiet weight — investor decks, board presentations.",
+      "mood": ["institutional", "trustworthy", "considered", "weighty"],
+      "occasion": ["investor deck", "consulting deliverable", "board presentation", "legal / policy brief", "academic deck"],
+      "tone": ["sober", "polished", "established", "literary"],
+      "color_family": "blue",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": "gallery/signal", "preset_ref": null, "layout_archetypes": ["title", "content", "data-viz", "statement"] },
+        "whiteboard": { "palette_ref": "papier-bleu", "palette_id_in_source": 7 },
+        "course": { "theme_ref": null, "compatible": true }
+      },
+      "tokens": {
+        "color_primary": "#1a2744", "color_secondary": "#C9B896", "color_accent": "#C9B896",
+        "color_bg": "#1a2744", "color_surface": "#F5F0E8", "color_text": "#F5F0E8", "color_text_muted": "#9a9590", "color_border": "#C9B896",
+        "font_heading": "\"Playfair Display\", serif", "font_body": "\"Source Sans 3\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "0px", "radius_md": "4px", "radius_lg": "8px", "motion_duration": "600ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "studio",
+      "name": "Studio",
+      "description": "Black canvas with electric-yellow type. High-voltage design studio aesthetic — the loudest in the library.",
+      "mood": ["electric", "bold", "graphic", "design-led", "high-contrast"],
+      "occasion": ["design studio credentials", "creative agency pitch", "brand showcase", "fashion / sneaker brand"],
+      "tone": ["graphic", "loud", "modern", "intentional"],
+      "color_family": "neon",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": "gallery/studio", "preset_ref": null, "layout_archetypes": ["title", "content", "statement"] },
+        "whiteboard": { "palette_ref": "lime-slab", "palette_id_in_source": 23 },
+        "course": { "theme_ref": null, "compatible": true }
+      },
+      "tokens": {
+        "color_primary": "#E6FF3D", "color_secondary": "#0A0A0A", "color_accent": "#E6FF3D",
+        "color_bg": "#0A0A0A", "color_surface": "#1a1a1a", "color_text": "#E6FF3D", "color_text_muted": "#8A8A85", "color_border": "#E6FF3D",
+        "font_heading": "\"Archivo Black\", sans-serif", "font_body": "\"Space Grotesk\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "0px", "radius_md": "0px", "radius_lg": "4px", "motion_duration": "300ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "vellum",
+      "name": "Vellum",
+      "description": "Deep navy canvas with warm-yellow Cormorant serifs and a single dusty teal accent. Scholarly, literary, quietly intelligent.",
+      "mood": ["scholarly", "literary", "considered", "quiet", "intellectual"],
+      "occasion": ["research findings", "white paper", "academic deck", "advisory deliverable", "literary pitch"],
+      "tone": ["literary", "considered", "patient", "intelligent"],
+      "color_family": "blue",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": "gallery/vellum", "preset_ref": null, "layout_archetypes": ["title", "content", "quote", "statement"] },
+        "whiteboard": { "palette_ref": "reading-room", "palette_id_in_source": 9 },
+        "course": { "theme_ref": null, "compatible": true }
+      },
+      "tokens": {
+        "color_primary": "#1a2744", "color_secondary": "#C9B896", "color_accent": "#6B8E8E",
+        "color_bg": "#1a2744", "color_surface": "#243352", "color_text": "#E8D8B0", "color_text_muted": "#8A9AB0", "color_border": "#C9B896",
+        "font_heading": "\"Cormorant Garamond\", serif", "font_body": "\"Cormorant Garamond\", serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "0px", "radius_md": "4px", "radius_lg": "8px", "motion_duration": "600ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+
+    {
+      "id": "avocado-press",
+      "name": "Avocado Press",
+      "description": "Clean duotone on white: deep French blue and pale avocado lime. Blue leads as ink and surface; lime is the punch. Airy, modern, not boxed-in.",
+      "mood": ["clean", "duotone", "modern", "airy"],
+      "occasion": ["brand one-pager", "feature breakdown", "product explainer"],
+      "tone": ["clean", "confident", "fresh"],
+      "color_family": "blue",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": null, "preset_ref": null, "layout_archetypes": ["title", "content"] },
+        "whiteboard": { "palette_ref": "avocado-press", "palette_id_in_source": 10 },
+        "course": { "theme_ref": null, "compatible": true }
+      },
+      "tokens": {
+        "color_primary": "#0055A4", "color_secondary": "#DCF4A2", "color_accent": "#0055A4",
+        "color_bg": "#FFFFFF", "color_surface": "#FFFFFF", "color_text": "#0055A4", "color_text_muted": "#4A7AB5", "color_border": "#0055A4",
+        "font_heading": "\"DM Sans\", sans-serif", "font_body": "\"DM Sans\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "0px", "radius_md": "4px", "radius_lg": "8px", "motion_duration": "400ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "berry-pop",
+      "name": "Berry Pop",
+      "description": "Fresh fruity brand palette: white page with deep raspberry-wine hero and pale periwinkle counter. Confident and playful, juice-bar energy.",
+      "mood": ["fruity", "fresh", "playful", "confident"],
+      "occasion": ["lifestyle brand", "community deck", "creator portfolio"],
+      "tone": ["playful", "bold", "fresh"],
+      "color_family": "pink",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": null, "preset_ref": null, "layout_archetypes": ["title", "content"] },
+        "whiteboard": { "palette_ref": "berry-pop", "palette_id_in_source": 11 },
+        "course": { "theme_ref": null, "compatible": true }
+      },
+      "tokens": {
+        "color_primary": "#9E2B50", "color_secondary": "#C7D2F0", "color_accent": "#6E1E3A",
+        "color_bg": "#FFFFFF", "color_surface": "#FFFFFF", "color_text": "#6E1E3A", "color_text_muted": "#9E2B50", "color_border": "#6E1E3A",
+        "font_heading": "\"Outfit\", sans-serif", "font_body": "\"DM Sans\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "8px", "radius_md": "16px", "radius_lg": "22px", "motion_duration": "400ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "checker-bloom",
+      "name": "Checker Bloom",
+      "description": "Playful hand-painted folk palette: pale mint-green page with cobalt blue and grass green accents. Cheerful, naive-art, painted-poster energy.",
+      "mood": ["playful", "hand-painted", "cheerful", "folk"],
+      "occasion": ["community workshop", "education", "wellness program"],
+      "tone": ["warm", "friendly", "naive-art"],
+      "color_family": "green",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": null, "preset_ref": null, "layout_archetypes": ["title", "content"] },
+        "whiteboard": { "palette_ref": "checker-bloom", "palette_id_in_source": 18 },
+        "course": { "theme_ref": null, "compatible": true }
+      },
+      "tokens": {
+        "color_primary": "#2C6EE0", "color_secondary": "#5E9E4A", "color_accent": "#2C6EE0",
+        "color_bg": "#E8F1DD", "color_surface": "#FFFFFF", "color_text": "#151515", "color_text_muted": "#555555", "color_border": "#151515",
+        "font_heading": "\"Nunito\", sans-serif", "font_body": "\"DM Sans\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "8px", "radius_md": "16px", "radius_lg": "20px", "motion_duration": "400ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "cobalt-bloom",
+      "name": "Cobalt Bloom",
+      "description": "Maximal-typographic two-tone editorial: electric cobalt on warm blush-salmon ground. Oversized type, fashion-magazine confidence, airy negative space.",
+      "mood": ["bold", "editorial", "fashion", "confident"],
+      "occasion": ["headline boards", "yearly plan", "bold section openers"],
+      "tone": ["confident", "editorial", "airy"],
+      "color_family": "blue",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": null, "preset_ref": null, "layout_archetypes": ["title", "statement", "stat"] },
+        "whiteboard": { "palette_ref": "cobalt-bloom", "palette_id_in_source": 15 },
+        "course": { "theme_ref": null, "compatible": true }
+      },
+      "tokens": {
+        "color_primary": "#4746C6", "color_secondary": "#DDA8A2", "color_accent": "#4746C6",
+        "color_bg": "#DDA8A2", "color_surface": "#F4EFE9", "color_text": "#171717", "color_text_muted": "#555555", "color_border": "#4746C6",
+        "font_heading": "\"Playfair Display\", serif", "font_body": "\"DM Sans\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "0px", "radius_md": "0px", "radius_lg": "0px", "motion_duration": "400ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "confetti-wedge",
+      "name": "Confetti Wedge",
+      "description": "Playful, breezy, celebratory pastel. Confetti energy — joyful and light.",
+      "mood": ["playful", "breezy", "celebratory", "pastel"],
+      "occasion": ["team celebration", "launch party", "community event"],
+      "tone": ["joyful", "light", "friendly"],
+      "color_family": "pastel",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": null, "preset_ref": null, "layout_archetypes": ["title", "content"] },
+        "whiteboard": { "palette_ref": "confetti-wedge", "palette_id_in_source": 29 },
+        "course": { "theme_ref": null, "compatible": true }
+      },
+      "tokens": {
+        "color_primary": "#F0B4D4", "color_secondary": "#A8D8EA", "color_accent": "#FFE6A7",
+        "color_bg": "#FFF9F5", "color_surface": "#FFFFFF", "color_text": "#2A241B", "color_text_muted": "#8A8580", "color_border": "#E8D8C8",
+        "font_heading": "\"Outfit\", sans-serif", "font_body": "\"Nunito\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "8px", "radius_md": "16px", "radius_lg": "24px", "motion_duration": "400ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "court-press",
+      "name": "Court Press",
+      "description": "Sporty, athletic, energetic clash. Court-sport energy with bold color blocking.",
+      "mood": ["sporty", "athletic", "energetic", "bold"],
+      "occasion": ["sports brand", "fitness launch", "athletic event"],
+      "tone": ["energetic", "competitive", "bold"],
+      "color_family": "bold",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": null, "preset_ref": null, "layout_archetypes": ["title", "content", "stat"] },
+        "whiteboard": { "palette_ref": "court-press", "palette_id_in_source": 30 },
+        "course": { "theme_ref": null, "compatible": true }
+      },
+      "tokens": {
+        "color_primary": "#E85D22", "color_secondary": "#1a2744", "color_accent": "#E85D22",
+        "color_bg": "#FFFFFF", "color_surface": "#F5F0E8", "color_text": "#1a1a1a", "color_text_muted": "#6B6B6B", "color_border": "#1a1a1a",
+        "font_heading": "\"Archivo Black\", sans-serif", "font_body": "\"Space Grotesk\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "0px", "radius_md": "0px", "radius_lg": "4px", "motion_duration": "300ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "crayon-stack",
+      "name": "Crayon Stack",
+      "description": "Primary crayon brights, loud and fun. Bold primary colors stacked with playful energy.",
+      "mood": ["playful", "loud", "primary", "fun"],
+      "occasion": ["kids product", "education", "creative workshop"],
+      "tone": ["fun", "bold", "childlike"],
+      "color_family": "bold",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": null, "preset_ref": null, "layout_archetypes": ["title", "content"] },
+        "whiteboard": { "palette_ref": "crayon-stack", "palette_id_in_source": 31 },
+        "course": { "theme_ref": null, "compatible": true }
+      },
+      "tokens": {
+        "color_primary": "#D8000F", "color_secondary": "#2563EB", "color_accent": "#F7CB46",
+        "color_bg": "#FFFFFF", "color_surface": "#FFF9F0", "color_text": "#1a1a1a", "color_text_muted": "#555555", "color_border": "#1a1a1a",
+        "font_heading": "\"Nunito\", sans-serif", "font_body": "\"DM Sans\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "8px", "radius_md": "16px", "radius_lg": "24px", "motion_duration": "400ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "cut-bloom",
+      "name": "Cut Bloom",
+      "description": "Calm two-color color-block: flat periwinkle blue and marigold yellow on white. No outlines, no shadows — pure solid color. Warm editorial softness.",
+      "mood": ["calm", "warm", "soft", "editorial"],
+      "occasion": ["concept maps", "value showcases", "gentle process flows"],
+      "tone": ["soft", "unhurried", "warm"],
+      "color_family": "blue",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": null, "preset_ref": null, "layout_archetypes": ["title", "content"] },
+        "whiteboard": { "palette_ref": "cut-bloom", "palette_id_in_source": 19 },
+        "course": { "theme_ref": null, "compatible": true }
+      },
+      "tokens": {
+        "color_primary": "#535D9E", "color_secondary": "#F0CB65", "color_accent": "#4D5794",
+        "color_bg": "#FFFFFF", "color_surface": "#FFFFFF", "color_text": "#2E3566", "color_text_muted": "#535D9E", "color_border": "#2E3566",
+        "font_heading": "\"DM Serif Display\", serif", "font_body": "\"DM Sans\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "12px", "radius_md": "28px", "radius_lg": "28px", "motion_duration": "500ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "grove-block",
+      "name": "Grove Block",
+      "description": "Brand-forward, flat, confident green. Blocky brand identity with forest-green anchor.",
+      "mood": ["brand-forward", "flat", "confident", "green"],
+      "occasion": ["sustainability brand", "outdoor brand", "brand guidelines"],
+      "tone": ["confident", "grounded", "bold"],
+      "color_family": "green",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": null, "preset_ref": null, "layout_archetypes": ["title", "content"] },
+        "whiteboard": { "palette_ref": "grove-block", "palette_id_in_source": 26 },
+        "course": { "theme_ref": null, "compatible": true }
+      },
+      "tokens": {
+        "color_primary": "#192b1b", "color_secondary": "#2e4a2a", "color_accent": "#c8524a",
+        "color_bg": "#e8e4d6", "color_surface": "#FFFFFF", "color_text": "#192b1b", "color_text_muted": "#555555", "color_border": "#192b1b",
+        "font_heading": "\"Archivo\", sans-serif", "font_body": "\"DM Sans\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "0px", "radius_md": "4px", "radius_lg": "8px", "motion_duration": "400ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "jade-lens",
+      "name": "Jade Lens",
+      "description": "Calm, harmonious: warm putty canvas with large solid jade-emerald ellipses. Overlapping shapes produce deeper green lens. Serene geometry.",
+      "mood": ["calm", "harmonious", "minimal", "serene"],
+      "occasion": ["system maps", "concept overviews", "two-part comparisons"],
+      "tone": ["quiet", "minimal", "geometric"],
+      "color_family": "green",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": null, "preset_ref": null, "layout_archetypes": ["title", "content"] },
+        "whiteboard": { "palette_ref": "jade-lens", "palette_id_in_source": 3 },
+        "course": { "theme_ref": null, "compatible": true }
+      },
+      "tokens": {
+        "color_primary": "#2BA483", "color_secondary": "#08754C", "color_accent": "#2CAE8C",
+        "color_bg": "#F5F1EE", "color_surface": "#F5F1EE", "color_text": "#1E2421", "color_text_muted": "#555555", "color_border": "#1E2421",
+        "font_heading": "\"DM Serif Display\", serif", "font_body": "\"DM Sans\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "0px", "radius_md": "16px", "radius_lg": "24px", "motion_duration": "500ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "lime-slab",
+      "name": "Lime Slab",
+      "description": "Neobrutalist SaaS-landing aesthetic: single electric lime field and slab-heavy black type. Crisp white cards with thin charcoal rules. Loud but tidy.",
+      "mood": ["electric", "bold", "modern", "SaaS"],
+      "occasion": ["product explainers", "feature breakdowns", "comparison grids", "bright system maps"],
+      "tone": ["loud", "clean", "energetic"],
+      "color_family": "yellow",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": null, "preset_ref": null, "layout_archetypes": ["title", "content", "comparison"] },
+        "whiteboard": { "palette_ref": "lime-slab", "palette_id_in_source": 23 },
+        "course": { "theme_ref": null, "compatible": true }
+      },
+      "tokens": {
+        "color_primary": "#EEFA79", "color_secondary": "#0A0A05", "color_accent": "#EEFA79",
+        "color_bg": "#FFFFF2", "color_surface": "#FFFFFF", "color_text": "#0A0A05", "color_text_muted": "#2F2E25", "color_border": "#2F2E25",
+        "font_heading": "\"Archivo\", sans-serif", "font_body": "\"DM Sans\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "0px", "radius_md": "12px", "radius_lg": "12px", "motion_duration": "300ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "linen-cut",
+      "name": "Linen Cut",
+      "description": "Mid-century modernist color-block: warm natural-linen ground with bold flat blocks in primary blue, green, red. Eames-era Herman Miller energy. Vast negative space.",
+      "mood": ["mid-century", "modernist", "calm", "graphic"],
+      "occasion": ["cover-style hero boards", "manifestos", "big-idea explainers"],
+      "tone": ["calm", "confident", "graphic"],
+      "color_family": "earth",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": null, "preset_ref": null, "layout_archetypes": ["title", "statement"] },
+        "whiteboard": { "palette_ref": "linen-cut", "palette_id_in_source": 34 },
+        "course": { "theme_ref": null, "compatible": true }
+      },
+      "tokens": {
+        "color_primary": "#044D99", "color_secondary": "#F61B27", "color_accent": "#04B24F",
+        "color_bg": "#E4D2C4", "color_surface": "#E4D2C4", "color_text": "#1F1A14", "color_text_muted": "#555555", "color_border": "#1F1A14",
+        "font_heading": "\"Archivo\", sans-serif", "font_body": "\"DM Sans\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "0px", "radius_md": "4px", "radius_lg": "8px", "motion_duration": "500ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "macchiato",
+      "name": "Macchiato",
+      "description": "Warm monochrome: almond and espresso tones. Quiet, refined, institutional warmth.",
+      "mood": ["warm", "monochrome", "quiet", "refined"],
+      "occasion": ["literary decks", "advisory deliverables", "quiet brand work"],
+      "tone": ["warm", "quiet", "restrained"],
+      "color_family": "neutral",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": null, "preset_ref": null, "layout_archetypes": ["title", "content"] },
+        "whiteboard": { "palette_ref": "macchiato", "palette_id_in_source": 5 },
+        "course": { "theme_ref": null, "compatible": true }
+      },
+      "tokens": {
+        "color_primary": "#8B7355", "color_secondary": "#D4C4A8", "color_accent": "#6B5B45",
+        "color_bg": "#F5EDE0", "color_surface": "#EBE3D4", "color_text": "#3A3020", "color_text_muted": "#8B7355", "color_border": "#8B7355",
+        "font_heading": "\"Cormorant Garamond\", serif", "font_body": "\"DM Sans\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "0px", "radius_md": "4px", "radius_lg": "8px", "motion_duration": "600ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "mint-brut",
+      "name": "Mint Brut",
+      "description": "Candy, friendly, app-like. Mint brutalism with playful confidence.",
+      "mood": ["candy", "friendly", "playful", "bold"],
+      "occasion": ["app design", "product launch", "startup deck"],
+      "tone": ["friendly", "bold", "playful"],
+      "color_family": "green",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": null, "preset_ref": null, "layout_archetypes": ["title", "content"] },
+        "whiteboard": { "palette_ref": "mint-brut", "palette_id_in_source": 25 },
+        "course": { "theme_ref": null, "compatible": true }
+      },
+      "tokens": {
+        "color_primary": "#98D4BB", "color_secondary": "#0A0A0A", "color_accent": "#98D4BB",
+        "color_bg": "#FFFFFF", "color_surface": "#F0FAF5", "color_text": "#0A0A0A", "color_text_muted": "#555555", "color_border": "#0A0A0A",
+        "font_heading": "\"Archivo\", sans-serif", "font_body": "\"DM Sans\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "0px", "radius_md": "8px", "radius_lg": "16px", "motion_duration": "300ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "papier-bleu",
+      "name": "Papier Bleu",
+      "description": "Matisse calm, artful, airy. French blue on white paper — art-school sophistication with restraint.",
+      "mood": ["Matisse", "artful", "airy", "calm"],
+      "occasion": ["art brand", "cultural deck", "gallery exhibition"],
+      "tone": ["artful", "restrained", "airy"],
+      "color_family": "blue",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": null, "preset_ref": null, "layout_archetypes": ["title", "content"] },
+        "whiteboard": { "palette_ref": "papier-bleu", "palette_id_in_source": 7 },
+        "course": { "theme_ref": null, "compatible": true }
+      },
+      "tokens": {
+        "color_primary": "#1a3a8a", "color_secondary": "#4361ee", "color_accent": "#1a3a8a",
+        "color_bg": "#FFFFFF", "color_surface": "#F5F3EE", "color_text": "#1a3a8a", "color_text_muted": "#6B7280", "color_border": "#1a3a8a",
+        "font_heading": "\"Playfair Display\", serif", "font_body": "\"DM Sans\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "0px", "radius_md": "4px", "radius_lg": "8px", "motion_duration": "500ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "reading-room",
+      "name": "Reading Room",
+      "description": "Quiet, literary, restrained, institutional. The hush of a university reading room — text-first, calm authority.",
+      "mood": ["quiet", "literary", "restrained", "institutional"],
+      "occasion": ["academic decks", "research papers", "policy briefs"],
+      "tone": ["quiet", "serious", "institutional"],
+      "color_family": "neutral",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": null, "preset_ref": null, "layout_archetypes": ["title", "content", "quote"] },
+        "whiteboard": { "palette_ref": "reading-room", "palette_id_in_source": 9 },
+        "course": { "theme_ref": null, "compatible": true }
+      },
+      "tokens": {
+        "color_primary": "#3A3632", "color_secondary": "#8A8580", "color_accent": "#6B1D3A",
+        "color_bg": "#F5F3EE", "color_surface": "#EBE8E2", "color_text": "#1a1a17", "color_text_muted": "#8A8580", "color_border": "#3A3632",
+        "font_heading": "\"Playfair Display\", serif", "font_body": "\"Source Sans 3\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "0px", "radius_md": "4px", "radius_lg": "8px", "motion_duration": "600ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "riptide-cobalt",
+      "name": "Riptide Cobalt",
+      "description": "Bold poster, low density, high impact. Cobalt blue with riptide energy — maximal typography on minimal canvas.",
+      "mood": ["bold", "poster", "high-impact", "confident"],
+      "occasion": ["brand manifestos", "conference keynotes", "poster-style decks"],
+      "tone": ["bold", "confident", "dramatic"],
+      "color_family": "blue",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": null, "preset_ref": null, "layout_archetypes": ["title", "statement"] },
+        "whiteboard": { "palette_ref": "riptide-cobalt", "palette_id_in_source": 22 },
+        "course": { "theme_ref": null, "compatible": true }
+      },
+      "tokens": {
+        "color_primary": "#1a3a8a", "color_secondary": "#E85D5D", "color_accent": "#1a3a8a",
+        "color_bg": "#F5F0E8", "color_surface": "#FFFFFF", "color_text": "#1a1a1a", "color_text_muted": "#6B6B6B", "color_border": "#1a3a8a",
+        "font_heading": "\"Archivo Black\", sans-serif", "font_body": "\"Space Grotesk\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "0px", "radius_md": "0px", "radius_lg": "4px", "motion_duration": "400ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "riso-brut",
+      "name": "Riso Brut",
+      "description": "Neo-brutalist editorial, confident, designed. The safe, designed default — risograph-print energy with editorial discipline.",
+      "mood": ["neo-brutalist", "editorial", "confident", "designed"],
+      "occasion": ["general work", "designed decks", "editorial presentations"],
+      "tone": ["confident", "designed", "editorial"],
+      "color_family": "multi",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": null, "preset_ref": null, "layout_archetypes": ["title", "content", "data-viz"] },
+        "whiteboard": { "palette_ref": "riso-brut", "palette_id_in_source": 32 },
+        "course": { "theme_ref": null, "compatible": true }
+      },
+      "tokens": {
+        "color_primary": "#E85D22", "color_secondary": "#2563EB", "color_accent": "#F7CB46",
+        "color_bg": "#F5F0E0", "color_surface": "#FFFFFF", "color_text": "#1a1a1a", "color_text_muted": "#555555", "color_border": "#1a1a1a",
+        "font_heading": "\"Archivo\", sans-serif", "font_body": "\"Space Grotesk\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "0px", "radius_md": "4px", "radius_lg": "8px", "motion_duration": "400ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "salmon-stamp",
+      "name": "Salmon Stamp",
+      "description": "Clean stamp poster: white with salmon and green. Low formality, clean graphic stamp-poster energy.",
+      "mood": ["clean", "stamp", "poster", "fresh"],
+      "occasion": ["event posters", "community boards", "casual brand work"],
+      "tone": ["clean", "casual", "graphic"],
+      "color_family": "warm",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": null, "preset_ref": null, "layout_archetypes": ["title", "content"] },
+        "whiteboard": { "palette_ref": "salmon-stamp", "palette_id_in_source": 1 },
+        "course": { "theme_ref": null, "compatible": true }
+      },
+      "tokens": {
+        "color_primary": "#E8856A", "color_secondary": "#2D7E73", "color_accent": "#E8856A",
+        "color_bg": "#FFFFFF", "color_surface": "#FFFFFF", "color_text": "#1a1a1a", "color_text_muted": "#6B6B6B", "color_border": "#E8856A",
+        "font_heading": "\"Bebas Neue\", sans-serif", "font_body": "\"DM Sans\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "0px", "radius_md": "4px", "radius_lg": "8px", "motion_duration": "400ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "apricot-arc",
+      "name": "Apricot Arc",
+      "description": "Warm, retro, geometric, friendly. Apricot tones with arc-shaped geometry — 70s warmth meets modern layout.",
+      "mood": ["warm", "retro", "geometric", "friendly"],
+      "occasion": ["lifestyle brands", "community decks", "warm brand work"],
+      "tone": ["warm", "friendly", "retro"],
+      "color_family": "warm",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": null, "preset_ref": null, "layout_archetypes": ["title", "content"] },
+        "whiteboard": { "palette_ref": "apricot-arc", "palette_id_in_source": 17 },
+        "course": { "theme_ref": null, "compatible": true }
+      },
+      "tokens": {
+        "color_primary": "#E8A87C", "color_secondary": "#D4856A", "color_accent": "#E8A87C",
+        "color_bg": "#FFF5EC", "color_surface": "#FFFFFF", "color_text": "#1a1a1a", "color_text_muted": "#6B6B6B", "color_border": "#E8A87C",
+        "font_heading": "\"Outfit\", sans-serif", "font_body": "\"DM Sans\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "8px", "radius_md": "16px", "radius_lg": "24px", "motion_duration": "400ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "specimen-bold",
+      "name": "Specimen Bold",
+      "description": "Type specimen, graphic, loud. Typography-as-art with bold specimen display.",
+      "mood": ["type-specimen", "graphic", "loud", "bold"],
+      "occasion": ["typography showcases", "design conferences", "brand type decks"],
+      "tone": ["graphic", "bold", "typographic"],
+      "color_family": "bold",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": null, "preset_ref": null, "layout_archetypes": ["title", "statement"] },
+        "whiteboard": { "palette_ref": "specimen-bold", "palette_id_in_source": 35 },
+        "course": { "theme_ref": null, "compatible": true }
+      },
+      "tokens": {
+        "color_primary": "#0A0A0A", "color_secondary": "#D8000F", "color_accent": "#D8000F",
+        "color_bg": "#F5F0E8", "color_surface": "#FFFFFF", "color_text": "#0A0A0A", "color_text_muted": "#6B6B6B", "color_border": "#0A0A0A",
+        "font_heading": "\"Playfair Display\", serif", "font_body": "\"Space Grotesk\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "0px", "radius_md": "0px", "radius_lg": "4px", "motion_duration": "400ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "violet-marker",
+      "name": "Violet Marker",
+      "description": "Highlighter aesthetic: white with violet and lime. Modern marker-stroke energy, low formality.",
+      "mood": ["highlighter", "modern", "fresh", "playful"],
+      "occasion": ["creative workshops", "youth brands", "modern brand work"],
+      "tone": ["fresh", "modern", "playful"],
+      "color_family": "purple",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": null, "preset_ref": null, "layout_archetypes": ["title", "content"] },
+        "whiteboard": { "palette_ref": "violet-marker", "palette_id_in_source": 24 },
+        "course": { "theme_ref": null, "compatible": true }
+      },
+      "tokens": {
+        "color_primary": "#7C3AED", "color_secondary": "#A8E885", "color_accent": "#7C3AED",
+        "color_bg": "#FFFFFF", "color_surface": "#FFFFFF", "color_text": "#1a1a1a", "color_text_muted": "#6B6B6B", "color_border": "#7C3AED",
+        "font_heading": "\"Space Grotesk\", sans-serif", "font_body": "\"DM Sans\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "4px", "radius_md": "8px", "radius_lg": "16px", "motion_duration": "400ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "burst-panel",
+      "name": "Burst Panel",
+      "description": "Loud, energetic, dashboard. Panel-burst energy for high-impact data and comparisons.",
+      "mood": ["loud", "energetic", "dashboard", "bold"],
+      "occasion": ["data dashboards", "performance reports", "energetic brand decks"],
+      "tone": ["energetic", "bold", "data-driven"],
+      "color_family": "bold",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": null, "preset_ref": null, "layout_archetypes": ["title", "content", "data-viz"] },
+        "whiteboard": { "palette_ref": "burst-panel", "palette_id_in_source": 28 },
+        "course": { "theme_ref": null, "compatible": true }
+      },
+      "tokens": {
+        "color_primary": "#E85D22", "color_secondary": "#2563EB", "color_accent": "#F7CB46",
+        "color_bg": "#FFFFFF", "color_surface": "#F5F0E8", "color_text": "#1a1a1a", "color_text_muted": "#555555", "color_border": "#1a1a1a",
+        "font_heading": "\"Archivo Black\", sans-serif", "font_body": "\"Space Grotesk\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "0px", "radius_md": "4px", "radius_lg": "8px", "motion_duration": "300ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+
+    {
+      "id": "bold-signal",
+      "name": "Bold Signal",
+      "description": "Confident, bold, modern, high-impact. Colored card on dark gradient with large section numbers. Archivo Black + Space Grotesk.",
+      "mood": ["bold", "modern", "high-impact", "confident"],
+      "occasion": ["tech keynotes", "product launches", "startup pitches"],
+      "tone": ["confident", "bold", "modern"],
+      "color_family": "dark",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": null, "preset_ref": "bold-signal", "layout_archetypes": ["title", "content", "data-viz"] },
+        "whiteboard": { "palette_ref": null, "palette_id_in_source": null },
+        "course": { "theme_ref": null, "compatible": false }
+      },
+      "tokens": {
+        "color_primary": "#FF5722", "color_secondary": "#1a1a1a", "color_accent": "#FF5722",
+        "color_bg": "#1a1a1a", "color_surface": "#2d2d2d", "color_text": "#ffffff", "color_text_muted": "#9a9590", "color_border": "#FF5722",
+        "font_heading": "\"Archivo Black\", sans-serif", "font_body": "\"Space Grotesk\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "0px", "radius_md": "8px", "radius_lg": "16px", "motion_duration": "400ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "electric-studio",
+      "name": "Electric Studio",
+      "description": "Bold, clean, professional, high-contrast. Split panel — white top, blue bottom. Manrope throughout.",
+      "mood": ["bold", "clean", "professional", "high-contrast"],
+      "occasion": ["agency decks", "professional services", "brand guidelines"],
+      "tone": ["clean", "professional", "confident"],
+      "color_family": "blue",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": null, "preset_ref": "electric-studio", "layout_archetypes": ["title", "content", "quote"] },
+        "whiteboard": { "palette_ref": null, "palette_id_in_source": null },
+        "course": { "theme_ref": null, "compatible": false }
+      },
+      "tokens": {
+        "color_primary": "#4361ee", "color_secondary": "#0a0a0a", "color_accent": "#4361ee",
+        "color_bg": "#0a0a0a", "color_surface": "#ffffff", "color_text": "#0a0a0a", "color_text_muted": "#6B6B6B", "color_border": "#4361ee",
+        "font_heading": "\"Manrope\", sans-serif", "font_body": "\"Manrope\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "0px", "radius_md": "4px", "radius_lg": "8px", "motion_duration": "400ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "creative-voltage",
+      "name": "Creative Voltage",
+      "description": "Bold, creative, energetic, retro-modern. Electric blue left panel, dark right, script accents. Syne + Space Mono.",
+      "mood": ["bold", "creative", "energetic", "retro-modern"],
+      "occasion": ["creative agency pitches", "design conferences", "brand showcases"],
+      "tone": ["creative", "bold", "retro-modern"],
+      "color_family": "blue",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": null, "preset_ref": "creative-voltage", "layout_archetypes": ["title", "content"] },
+        "whiteboard": { "palette_ref": null, "palette_id_in_source": null },
+        "course": { "theme_ref": null, "compatible": false }
+      },
+      "tokens": {
+        "color_primary": "#0066ff", "color_secondary": "#d4ff00", "color_accent": "#d4ff00",
+        "color_bg": "#0066ff", "color_surface": "#1a1a2e", "color_text": "#ffffff", "color_text_muted": "#8A9AB0", "color_border": "#d4ff00",
+        "font_heading": "\"Syne\", sans-serif", "font_body": "\"Syne\", sans-serif", "font_mono": "\"Space Mono\", monospace",
+        "radius_sm": "0px", "radius_md": "4px", "radius_lg": "8px", "motion_duration": "400ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "dark-botanical",
+      "name": "Dark Botanical",
+      "description": "Elegant, sophisticated, artistic, premium. Dark canvas with abstract soft gradient shapes. Cormorant + IBM Plex Sans.",
+      "mood": ["elegant", "sophisticated", "artistic", "premium"],
+      "occasion": ["luxury brands", "art exhibitions", "fashion editorials"],
+      "tone": ["elegant", "artistic", "premium"],
+      "color_family": "dark",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": null, "preset_ref": "dark-botanical", "layout_archetypes": ["title", "content", "quote"] },
+        "whiteboard": { "palette_ref": null, "palette_id_in_source": null },
+        "course": { "theme_ref": null, "compatible": false }
+      },
+      "tokens": {
+        "color_primary": "#d4a574", "color_secondary": "#e8b4b8", "color_accent": "#c9b896",
+        "color_bg": "#0f0f0f", "color_surface": "#1a1a1a", "color_text": "#e8e4df", "color_text_muted": "#9a9590", "color_border": "#d4a574",
+        "font_heading": "\"Cormorant\", serif", "font_body": "\"IBM Plex Sans\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "0px", "radius_md": "8px", "radius_lg": "24px", "motion_duration": "600ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "notebook-tabs",
+      "name": "Notebook Tabs",
+      "description": "Editorial, organized, elegant, tactile. Cream paper card on dark background with colorful tabs. Bodoni Moda + DM Sans.",
+      "mood": ["editorial", "organized", "elegant", "tactile"],
+      "occasion": ["research presentations", "educational decks", "literary publications"],
+      "tone": ["organized", "elegant", "editorial"],
+      "color_family": "pastel",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": null, "preset_ref": "notebook-tabs", "layout_archetypes": ["title", "content", "data-viz"] },
+        "whiteboard": { "palette_ref": null, "palette_id_in_source": null },
+        "course": { "theme_ref": null, "compatible": false }
+      },
+      "tokens": {
+        "color_primary": "#98d4bb", "color_secondary": "#c7b8ea", "color_accent": "#f4b8c5",
+        "color_bg": "#2d2d2d", "color_surface": "#f8f6f1", "color_text": "#1a1a1a", "color_text_muted": "#555555", "color_border": "#2d2d2d",
+        "font_heading": "\"Bodoni Moda\", serif", "font_body": "\"DM Sans\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "4px", "radius_md": "8px", "radius_lg": "16px", "motion_duration": "500ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "pastel-geometry",
+      "name": "Pastel Geometry",
+      "description": "Friendly, organized, modern, approachable. White card on pastel background with vertical pills. Plus Jakarta Sans throughout.",
+      "mood": ["friendly", "organized", "modern", "approachable"],
+      "occasion": ["team decks", "onboarding", "lifestyle brands"],
+      "tone": ["friendly", "organized", "approachable"],
+      "color_family": "pastel",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": null, "preset_ref": "pastel-geometry", "layout_archetypes": ["title", "content"] },
+        "whiteboard": { "palette_ref": null, "palette_id_in_source": null },
+        "course": { "theme_ref": null, "compatible": false }
+      },
+      "tokens": {
+        "color_primary": "#f0b4d4", "color_secondary": "#a8d4c4", "color_accent": "#9b8dc4",
+        "color_bg": "#c8d9e6", "color_surface": "#faf9f7", "color_text": "#1a1a1a", "color_text_muted": "#555555", "color_border": "#c8d9e6",
+        "font_heading": "\"Plus Jakarta Sans\", sans-serif", "font_body": "\"Plus Jakarta Sans\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "8px", "radius_md": "16px", "radius_lg": "999px", "motion_duration": "400ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "split-pastel",
+      "name": "Split Pastel",
+      "description": "Playful, modern, friendly, creative. Two-color vertical split (peach left, lavender right). Outfit throughout.",
+      "mood": ["playful", "modern", "friendly", "creative"],
+      "occasion": ["creative pitches", "lifestyle brands", "team kickoffs"],
+      "tone": ["playful", "friendly", "creative"],
+      "color_family": "pastel",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": null, "preset_ref": "split-pastel", "layout_archetypes": ["title", "content"] },
+        "whiteboard": { "palette_ref": null, "palette_id_in_source": null },
+        "course": { "theme_ref": null, "compatible": false }
+      },
+      "tokens": {
+        "color_primary": "#f5e6dc", "color_secondary": "#e4dff0", "color_accent": "#c8f0d8",
+        "color_bg": "#f5e6dc", "color_surface": "#e4dff0", "color_text": "#1a1a1a", "color_text_muted": "#555555", "color_border": "#e8d8c8",
+        "font_heading": "\"Outfit\", sans-serif", "font_body": "\"Outfit\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "8px", "radius_md": "16px", "radius_lg": "24px", "motion_duration": "400ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "vintage-editorial",
+      "name": "Vintage Editorial",
+      "description": "Witty, confident, editorial, personality-driven. Centered content on cream with abstract geometric shapes. Fraunces + Work Sans.",
+      "mood": ["witty", "confident", "editorial", "personality"],
+      "occasion": ["brand storytelling", "magazine decks", "cultural pitches"],
+      "tone": ["witty", "confident", "editorial"],
+      "color_family": "neutral",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": null, "preset_ref": "vintage-editorial", "layout_archetypes": ["title", "content", "quote"] },
+        "whiteboard": { "palette_ref": null, "palette_id_in_source": null },
+        "course": { "theme_ref": null, "compatible": false }
+      },
+      "tokens": {
+        "color_primary": "#1a1a1a", "color_secondary": "#e8d4c0", "color_accent": "#e8d4c0",
+        "color_bg": "#f5f3ee", "color_surface": "#f5f3ee", "color_text": "#1a1a1a", "color_text_muted": "#555555", "color_border": "#1a1a1a",
+        "font_heading": "\"Fraunces\", serif", "font_body": "\"Work Sans\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "0px", "radius_md": "4px", "radius_lg": "8px", "motion_duration": "500ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "neon-cyber",
+      "name": "Neon Cyber",
+      "description": "Futuristic, techy, confident. Deep navy with cyan and magenta neon. Particle backgrounds, neon glow, grid patterns.",
+      "mood": ["futuristic", "techy", "confident", "neon"],
+      "occasion": ["tech keynotes", "cybersecurity decks", "developer conferences"],
+      "tone": ["futuristic", "techy", "confident"],
+      "color_family": "neon",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": null, "preset_ref": "neon-cyber", "layout_archetypes": ["title", "content", "data-viz"] },
+        "whiteboard": { "palette_ref": null, "palette_id_in_source": null },
+        "course": { "theme_ref": null, "compatible": false }
+      },
+      "tokens": {
+        "color_primary": "#00ffcc", "color_secondary": "#ff00aa", "color_accent": "#00ffcc",
+        "color_bg": "#0a0f1c", "color_surface": "#141b2d", "color_text": "#e0e0e0", "color_text_muted": "#7a8ba0", "color_border": "#00ffcc",
+        "font_heading": "\"Clash Display\", sans-serif", "font_body": "\"Satoshi\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "0px", "radius_md": "4px", "radius_lg": "8px", "motion_duration": "300ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "terminal-green",
+      "name": "Terminal Green",
+      "description": "Developer-focused, hacker aesthetic. GitHub dark with terminal green. Scan lines, blinking cursor, code syntax.",
+      "mood": ["developer", "hacker", "terminal", "technical"],
+      "occasion": ["developer tools", "open-source projects", "hackathon demos"],
+      "tone": ["technical", "geeky", "minimal"],
+      "color_family": "dark",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": null, "preset_ref": "terminal-green", "layout_archetypes": ["title", "content", "code"] },
+        "whiteboard": { "palette_ref": null, "palette_id_in_source": null },
+        "course": { "theme_ref": null, "compatible": false }
+      },
+      "tokens": {
+        "color_primary": "#39d353", "color_secondary": "#0d1117", "color_accent": "#39d353",
+        "color_bg": "#0d1117", "color_surface": "#161b22", "color_text": "#39d353", "color_text_muted": "#8b949e", "color_border": "#39d353",
+        "font_heading": "\"JetBrains Mono\", monospace", "font_body": "\"JetBrains Mono\", monospace", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "0px", "radius_md": "4px", "radius_lg": "8px", "motion_duration": "200ms", "motion_easing": "steps(4)"
+      }
+    },
+
+    {
+      "id": "swiss-modern",
+      "name": "Swiss Modern",
+      "description": "Clean, precise, Bauhaus-inspired. Pure white, pure black, red accent. Visible grid, asymmetric layouts.",
+      "mood": ["clean", "precise", "Bauhaus", "modernist"],
+      "occasion": ["architecture decks", "design systems", "institutional reports"],
+      "tone": ["clean", "precise", "modernist"],
+      "color_family": "monochrome",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": null, "preset_ref": "swiss-modern", "layout_archetypes": ["title", "content", "data-viz"] },
+        "whiteboard": { "palette_ref": null, "palette_id_in_source": null },
+        "course": { "theme_ref": null, "compatible": false }
+      },
+      "tokens": {
+        "color_primary": "#ff3300", "color_secondary": "#000000", "color_accent": "#ff3300",
+        "color_bg": "#ffffff", "color_surface": "#f5f5f5", "color_text": "#000000", "color_text_muted": "#666666", "color_border": "#000000",
+        "font_heading": "\"Archivo\", sans-serif", "font_body": "\"Nunito\", sans-serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "0px", "radius_md": "0px", "radius_lg": "0px", "motion_duration": "400ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    },
+
+    {
+      "id": "paper-and-ink",
+      "name": "Paper & Ink",
+      "description": "Editorial, literary, thoughtful. Warm cream with charcoal and crimson accent. Drop caps, pull quotes, elegant rules.",
+      "mood": ["editorial", "literary", "thoughtful"],
+      "occasion": ["literary publications", "editorial features", "research papers"],
+      "tone": ["literary", "thoughtful", "elegant"],
+      "color_family": "neutral",
+      "verified_dual": false,
+      "capabilities": {
+        "slides": { "template_ref": null, "preset_ref": "paper-and-ink", "layout_archetypes": ["title", "content", "quote"] },
+        "whiteboard": { "palette_ref": null, "palette_id_in_source": null },
+        "course": { "theme_ref": null, "compatible": false }
+      },
+      "tokens": {
+        "color_primary": "#c41e3a", "color_secondary": "#1a1a1a", "color_accent": "#c41e3a",
+        "color_bg": "#faf9f7", "color_surface": "#faf9f7", "color_text": "#1a1a1a", "color_text_muted": "#6B6B6B", "color_border": "#1a1a1a",
+        "font_heading": "\"Cormorant Garamond\", serif", "font_body": "\"Source Serif 4\", serif", "font_mono": "\"JetBrains Mono\", monospace",
+        "radius_sm": "0px", "radius_md": "4px", "radius_lg": "8px", "motion_duration": "600ms", "motion_easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      }
+    }
+  ],
+
+  "metadata": {
+    "version": "1.0.0",
+    "total_styles": 69,
+    "verified_dual_count": 12,
+    "slides_only_count": 34,
+    "whiteboard_only_count": 23,
+    "last_updated": "2026-06-03"
+  }
+}
