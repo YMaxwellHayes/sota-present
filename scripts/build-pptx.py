@@ -308,11 +308,25 @@ class Deck:
     def stat(self, d, i, n):
         gd="bg"; s=self._slide(gd); top=self.heading(s, d.get("heading",""), d.get("kicker"), gd) if d.get("heading") else 2.4
         items=d.get("items",[]); m=max(1,len(items)); gap=0.45; cw=(self.CW-(m-1)*gap)/m; y=max(top,2.5)
+        # stat figures are meant to be short; if a value is long (e.g. a name), scale the
+        # whole row down so it stays on one line and never overlaps the label below.
+        base=self.ts["stat_number"]["pt"]
+        longest=max((len(str(it.get("value",""))) for it in items), default=2)
+        # rough chars-that-fit at base size in one column; shrink proportionally, clamp
+        fit=max(2.0, cw/ (base*0.62/72.0))    # approx Latin glyphs per column width
+        size=base if longest<=fit else max(30, base*fit/longest)
+        self._stat_pt=size
         for k,it in enumerate(items):
             x=self.MX+k*(cw+gap); self.rect(s, x, y, 0.7, 0.09, self.g(gd)["accent"])
-            self.role_text(s, x, y+0.22, cw, 1.6, it.get("value",""), "stat_number", gd)
-            self.role_text(s, x, y+1.9, cw, 1.5, it.get("label",""), "body", gd, color_role="muted")
+            self._role_text_sized(s, x, y+0.22, cw, size*1.5/72.0+0.1, it.get("value",""), "stat_number", gd, size)
+            self.role_text(s, x, y+0.22+size*1.5/72.0+0.18, cw, 1.4, it.get("label",""), "body", gd, color_role="muted")
         self.pageno(s, i, n, gd)
+
+    def _role_text_sized(self, s, x, y, w, h, text, role, ground, size):
+        """role_text but with an explicit point size override (for adaptive stat figures)."""
+        rs=dict(self.ts[role]); rs["pt"]=size; saved=self.ts[role]; self.ts[role]=rs
+        try: self.role_text(s, x, y, w, h, text, role, ground)
+        finally: self.ts[role]=saved
 
     def quote(self, d, i, n):
         gd=self.p.get("section_ground","bg_alt"); s=self._slide(gd); gg=self.g(gd)
