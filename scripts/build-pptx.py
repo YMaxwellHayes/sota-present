@@ -139,6 +139,7 @@ class Deck:
         self.p = prof; self.ts = prof["type_scale"]; self.sp = prof["spacing"]
         self.comp = prof["components"]; self.depth = prof["depth"]; self.rules = prof["rules"]
         self.fonts = prof["fonts"]; self.cjk = cjk_override
+        self.layout = prof.get("layout", {})   # per-archetype composition variants
         self.MX = self.sp["margin_x"]; self.CW = W - 2*self.MX
         self.prs = Presentation()
         self.prs.slide_width = Emu(int(W*EMU_IN)); self.prs.slide_height = Emu(int(H*EMU_IN))
@@ -182,13 +183,13 @@ class Deck:
                   rounded=True, radius=self.sp["radius_card"])
 
     def role_text(self, s, x, y, w, h, text, role, ground, color_role=None,
-                  align=PP_ALIGN.LEFT, anchor=MSO_ANCHOR.TOP):
+                  align=PP_ALIGN.LEFT, anchor=MSO_ANCHOR.TOP, color_hex=None):
         rs = self.ts[role]; gg = self.g(ground)
         # default colour per role
         if color_role is None:
             color_role = {"eyebrow":"accent","caption":"muted","body":"body","bullet":"body",
                           "stat_unit":"accent"}.get(role, "heading")
-        color = gg.get(color_role, gg["heading"])
+        color = color_hex or gg.get(color_role, gg["heading"])
         t = str(text)
         if self.rules.get("no_em_dash"): t = t.replace("—"," ").replace("–","-")
         if rs.get("transform")=="upper" and self.rules.get("mono_upper", True): t = upper_ascii(t)
@@ -216,12 +217,31 @@ class Deck:
         if not self.comp.get("footline"): return
         self.role_text(s, self.MX, H-0.58, self.CW-2.2, 0.4, title, "caption", ground, color_role="muted")
 
+    def _on(self, fillhex):  # readable text colour on an arbitrary fill
+        gg = self.g(self.p["ground_default"])
+        return gg["fill"] if lum(fillhex) < 0.5 else (gg.get("heading") if lum(gg.get("heading","#000"))<0.5 else "#1A1A1A")
+
     def heading(self, s, txt, eyebrow, ground):
-        gg = self.g(ground); top = self.sp["margin_top"]
+        gg = self.g(ground); var = self.layout.get("heading", "rail"); top = self.sp["margin_top"]
+        if var == "band":
+            bh = 1.46; band = gg["accent"]; on = self._on(band)
+            self.rect(s, 0, 0, W, bh, band)
+            yy = 0.34
+            if eyebrow:
+                self.role_text(s, self.MX, yy, self.CW, 0.34, eyebrow, "eyebrow", ground, color_hex=on); yy += 0.42
+            self.role_text(s, self.MX, yy, self.CW, 0.7, txt, "headline", ground, color_hex=on, anchor=MSO_ANCHOR.MIDDLE)
+            return bh + 0.34
+        if var == "plain":   # no accent bar; heavier full rule under a left-aligned heading
+            y = top
+            if eyebrow: self.role_text(s, self.MX+0.02, y, self.CW, 0.4, eyebrow, "eyebrow", ground); y += 0.42
+            self.role_text(s, self.MX, y, self.CW, 0.95, txt, "headline", ground, anchor=MSO_ANCHOR.MIDDLE)
+            ry = y + 0.96
+            self.rect(s, self.MX, ry, self.CW, max(2.4, self.sp["rule_card_pt"])/72.0, gg["heading"])
+            return ry + 0.3
+        # "rail" (default): left accent bar + heading + hairline baseline
         y = top
         if eyebrow:
-            self.role_text(s, self.MX+0.02, y, self.CW, 0.4, eyebrow, "eyebrow", ground)
-            y += 0.42
+            self.role_text(s, self.MX+0.02, y, self.CW, 0.4, eyebrow, "eyebrow", ground); y += 0.42
         self.rect(s, self.MX, y+0.05, 0.11, 0.62, gg["accent"])
         self.role_text(s, self.MX+0.32, y, self.CW-0.4, 0.95, txt, "headline", ground, anchor=MSO_ANCHOR.MIDDLE)
         ry = y + 0.92
@@ -251,11 +271,30 @@ class Deck:
 
     # ---------------- renderers ----------------
     def cover(self, d, i, n):
+        var = self.layout.get("cover", "left")
+        if var == "block":   # full colour ground, big title in contrast + corner block
+            gd = "bg_alt"; s = self._slide(gd); gg = self.g(gd)
+            self.rect(s, W-1.7, 0, 1.7, 1.7, gg["accent"])
+            y = 2.5
+            if d.get("eyebrow"): self.role_text(s, self.MX, y, self.CW-1.8, 0.5, d["eyebrow"], "eyebrow", gd); y += 0.5
+            self.role_text(s, self.MX-0.05, y, self.CW, 2.6, d["title"], "hero", gd)
+            if d.get("subtitle"): self.role_text(s, self.MX, 5.35, self.CW-1.6, 1.4, d["subtitle"], "body", gd, color_role="body")
+            if d.get("footer"): self.role_text(s, self.MX, H-0.72, self.CW, 0.4, d["footer"], "caption", gd, color_role="muted")
+            return
+        if var == "baseline":   # top rule band + title anchored low
+            gd = self.p.get("cover_ground", self.p["ground_default"]); s = self._slide(gd); gg = self.g(gd)
+            self.rect(s, self.MX, 0.95, self.CW, max(2.0, self.sp["rule_card_pt"])/72.0, gg["heading"])
+            if d.get("eyebrow"): self.role_text(s, self.MX, 0.5, self.CW, 0.4, d["eyebrow"], "eyebrow", gd)
+            self.role_text(s, self.MX-0.05, 3.5, self.CW+0.2, 2.6, d["title"], "hero", gd, anchor=MSO_ANCHOR.BOTTOM)
+            if d.get("subtitle"): self.role_text(s, self.MX, 6.2, self.CW-1.0, 1.0, d["subtitle"], "body", gd)
+            if d.get("footer"): self.role_text(s, W-3.6, 0.5, 2.6, 0.4, d["footer"], "caption", gd, color_role="muted", align=PP_ALIGN.RIGHT)
+            return
+        # "left" (default)
         gd = self.p.get("cover_ground", self.p["ground_default"]); s=self._slide(gd)
         self.decor(s, "cover", gd)
         y = 2.35
         if d.get("eyebrow"): self.role_text(s, self.MX, y, self.CW, 0.5, d["eyebrow"], "eyebrow", gd); y+=0.5
-        self.role_text(s, self.MX-0.05, y, self.CW+0.2, 2.6, d["title"], "hero", gd);
+        self.role_text(s, self.MX-0.05, y, self.CW+0.2, 2.6, d["title"], "hero", gd)
         if d.get("subtitle"):
             self.role_text(s, self.MX, 5.25, self.CW-1.0, 1.4, d["subtitle"], "body", gd)
         if d.get("footer"):
@@ -282,26 +321,54 @@ class Deck:
     def content(self, d, i, n):
         gd="bg"; s=self._slide(gd); y=self.heading(s, d["heading"], d.get("kicker"), gd)
         if d.get("lead"): self.role_text(s, self.MX+0.02, y, self.CW-0.2, 1.0, d["lead"], "body", gd); y+=1.05
-        bullets=d.get("bullets",[])
+        bullets=d.get("bullets",[]); var=self.layout.get("content","bullets")
         if bullets:
-            avail=H-y-0.6; step=min(0.95,max(0.6,avail/len(bullets)))
-            for b in bullets:
-                self.marker(s, self.MX+0.04, y+0.16, gd)
-                self.role_text(s, self.MX+0.5, y, self.CW-0.6, step, b, "bullet", gd)
-                y+=step
+            if var=="twocol" and len(bullets)>=4:   # two columns of bullets
+                colw=(self.CW-0.5)/2; half=(len(bullets)+1)//2
+                for ci,chunk in enumerate((bullets[:half], bullets[half:])):
+                    cx=self.MX+ci*(colw+0.5); yy=y; step=min(0.95,max(0.62,(H-y-0.6)/max(half,1)))
+                    for b in chunk:
+                        self.marker(s, cx+0.02, yy+0.16, gd, size=0.14)
+                        self.role_text(s, cx+0.44, yy, colw-0.5, step, b, "bullet", gd); yy+=step
+            elif var=="numbered":   # big index numbers instead of markers
+                step=min(1.0,max(0.66,(H-y-0.6)/len(bullets)))
+                for k,b in enumerate(bullets):
+                    self.role_text(s, self.MX, y, 0.8, step, f"{k+1:02d}", "card_title", gd, color_role="accent")
+                    self.role_text(s, self.MX+0.95, y, self.CW-1.05, step, b, "bullet", gd, anchor=MSO_ANCHOR.MIDDLE)
+                    if k<len(bullets)-1: self.rect(s, self.MX+0.95, y+step-0.04, self.CW-1.05, self.sp["rule_pt"]/72.0, self.g(gd)["muted"])
+                    y+=step
+            else:   # "bullets" default
+                step=min(0.95,max(0.6,(H-y-0.6)/len(bullets)))
+                for b in bullets:
+                    self.marker(s, self.MX+0.04, y+0.16, gd)
+                    self.role_text(s, self.MX+0.5, y, self.CW-0.6, step, b, "bullet", gd); y+=step
         self.footline(s, d.get("foot",""), gd); self.pageno(s, i, n, gd)
 
     def two_col(self, d, i, n):
         gd="bg"; s=self._slide(gd); top=self.heading(s, d["heading"], d.get("kicker"), gd)
+        var=self.layout.get("two_col","cards")
         ct=top+0.05; ch=H-ct-0.65; gap=self.sp["gap_card"]; cw=(self.CW-gap)/2
+        gg=self.g(gd)
         for c,(tk,ik) in enumerate([("left_title","left"),("right_title","right")]):
-            x=self.MX+c*(cw+gap); self.card(s, x, ct, cw, ch, gd); pad=self.sp["card_pad"]
-            self.role_text(s, x+pad, ct+0.34, cw-2*pad, 1.0, d.get(tk,""), "card_title", gd, color_role="accent")
-            self.rect(s, x+pad, ct+1.32, cw-2*pad, self.sp["rule_pt"]/72.0, self.g(gd)["muted"])
+            x=self.MX+c*(cw+gap); on=None; pad=self.sp["card_pad"]
+            if var=="split":          # no cards; a vertical hairline between columns
+                pad=0.05
+                if c==1: self.rect(s, self.MX+cw+gap/2-0.006, ct+0.1, 0.014, ch-0.2, gg["muted"])
+            elif var=="colorblock" and c==0:   # left column on an accent panel
+                self.rect(s, x, ct, cw, ch, gg["accent"]); on=self._on(gg["accent"])
+            elif var=="colorblock":             # right column on surface panel
+                self.rect(s, x, ct, cw, ch, gg["surface"])
+            else:                      # "cards" default
+                self.card(s, x, ct, cw, ch, gd)
+            tx=x+pad; rule_c = on or gg["muted"]
+            self.role_text(s, tx, ct+0.34, cw-2*pad, 1.0, d.get(tk,""), "card_title", gd,
+                           color_role="accent", color_hex=on)
+            self.rect(s, tx, ct+1.32, cw-2*pad, 0.014, rule_c)
             iy=ct+1.6; items=d.get(ik,[]); istep=min(0.8,max(0.5,(ct+ch-0.4-iy)/max(len(items),1)))
             for it in items:
-                self.marker(s, x+pad, iy+0.1, gd, size=0.13)
-                self.role_text(s, x+pad+0.32, iy, cw-2*pad-0.32, istep, it, "bullet", gd)
+                if on: self.rect(s, tx, iy+0.1, 0.13, 0.13, on)
+                else:  self.marker(s, tx, iy+0.1, gd, size=0.13)
+                self.role_text(s, tx+0.32, iy, cw-2*pad-0.32, istep, it, "bullet", gd, color_hex=on)
                 iy+=istep
         self.pageno(s, i, n, gd)
 

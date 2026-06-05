@@ -12,7 +12,22 @@ Use **`catalog/profiles/editorial-forest.json`** as the canonical worked example
 ## Required top-level keys
 `id`, `ground_default`, `grounds`, `fonts`, `type_scale`, `spacing`,
 `components`, `depth`, `decor`, `rules`. Optional: `section_ground`,
-`statement_ground`, `cover_ground` (default to `bg`/`bg_alt`).
+`statement_ground`, `cover_ground` (default to `bg`/`bg_alt`), and **`layout`**.
+
+## `layout` — composition variants (this is what makes styles structurally different, not just recoloured)
+Pick a variant per archetype so each style *composes* differently:
+- **`heading`**: `rail` (left accent bar + hairline, default) · `band` (full-width
+  colour band with eyebrow+title in contrast) · `plain` (no bar, heavy rule under).
+- **`cover`**: `left` (eyebrow+big title upper-left, default) · `block` (full colour
+  ground / `bg_alt` + corner block, dramatic) · `baseline` (top rule band + title
+  anchored low).
+- **`two_col`**: `cards` (two surface cards, default) · `split` (no cards, a vertical
+  hairline divides two columns) · `colorblock` (left column on an accent panel).
+- **`content`**: `bullets` (marker list, default) · `numbered` (big index numbers +
+  row rules) · `twocol` (bullets in two columns).
+Omitting `layout` (or any key) falls back to the defaults above. Match the variant
+to the style's design.md: grid/Swiss → band+baseline+split+numbered; bold/poster →
+block cover; editorial → split columns; etc.
 
 ## Field reference (all values are RESOLVED literals — no clamp/CSS-vars/placeholders)
 
