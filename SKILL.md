@@ -76,6 +76,14 @@ Based on mode, read the corresponding sub-skill files and follow their workflow:
 
 Follow the sub-skill workflow to produce output in `output/<mode>/`.
 
+**Content first.** Before styling, distill the source material into the key points
+that belong on slides: one idea per slide, headlines ≤ 8 words, real content only,
+zero em-dashes; split rather than shrink. For `pptx` this distillation becomes the
+**deck spec** consumed by `scripts/build-pptx.py` (see `skills/PPTX.md`); the chosen
+style's **design profile** (`catalog/profiles/<id>.json`) then drives the layout so
+the deck carries that style's design DNA. HTML, PPTX, and whiteboard all draw from
+the same selected style, so the formats stay coordinated.
+
 ### Phase 6: Validate & Deliver
 
 - **Slides**: open in browser, run anti-slop checklist (see TASTE.md)
@@ -130,6 +138,7 @@ Before generating ANY output, internalize `skills/TASTE.md`. Non-negotiable:
 | `skills/WHITEBOARD.md` | Feishu SVG generation | mode=whiteboard or dual |
 | `skills/STYLE-SYSTEM.md` | Design token architecture | mode=dual, or style debugging |
 | `catalog/styles.json` | Unified style catalog (69 styles) | Phase 3 |
+| `catalog/profiles/<id>.json` | Per-style PPTX design profiles (10 curated) | mode=pptx |
 | `catalog/slides-index.json` | Slide template details | During slide generation |
 | `catalog/whiteboard-index.json` | Palette details | During whiteboard generation |
 

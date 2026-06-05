@@ -91,6 +91,16 @@ Example for "Corporate Aurora" style:
 <text fill="#0F172A" font-size="24">Title</text>
 ```
 
+#### PPTX (Design Profile)
+PowerPoint has no CSS variables, so the PPTX engine reads a **design profile** —
+`catalog/profiles/<id>.json`, distilled from the style's `design.md` + tokens into
+resolved literal values (hex, pt, em-tracking, booleans). The profile is the
+shared source of truth for type scale, colour roles (incl. a `bg_alt` ground for
+dark flips), spacing, chrome, components, depth and the do/don't rules — keeping
+the PPTX coordinated with HTML/whiteboard. A style links to its profile via
+`capabilities.slides.profile_ref` in `styles.json`; styles without one fall back
+to a token-derived default. See `skills/PPTX.md` and `docs/PROFILE-SCHEMA.md`.
+
 ## Cross-Format Font Mapping
 
 HTML can use Google Fonts. Feishu SVG cannot — it ignores any `font-family` and

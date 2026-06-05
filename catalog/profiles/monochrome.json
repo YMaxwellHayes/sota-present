@@ -1,0 +1,45 @@
+{
+  "id": "monochrome",
+  "derived_from": "templates/slides/gallery/monochrome/design.md + styles.json",
+  "ground_default": "bg",
+  "grounds": {
+    "bg":     { "fill": "#FAFADF", "heading": "#1A1A16", "body": "#1A1A16", "muted": "#5E5E54", "accent": "#1A1A16", "surface": "#F5F0E4", "border": "#1A1A16" },
+    "bg_alt": { "fill": "#1A1A16", "heading": "#FAFADF", "body": "#FAFADF", "muted": "#8A8A80", "accent": "#FAFADF", "surface": "#23231E", "border": "#FAFADF" }
+  },
+  "fonts": {
+    "display": "Jost",
+    "body": "Jost",
+    "mono": "JetBrains Mono",
+    "cjk": "Noto Sans SC",
+    "cjk_mono": "Noto Sans Mono CJK SC",
+    "single_weight_display": false
+  },
+  "type_scale": {
+    "hero":        { "pt": 82,  "weight": 200, "face": "display", "tracking": -0.02,  "leading": 0.96, "transform": "none" },
+    "display":     { "pt": 48,  "weight": 200, "face": "display", "tracking": -0.01,  "leading": 1.1,  "transform": "none" },
+    "headline":    { "pt": 31,  "weight": 300, "face": "display", "tracking": 0,      "leading": 1.2,  "transform": "none" },
+    "eyebrow":     { "pt": 12,  "weight": 400, "face": "mono",    "tracking": 0.14,   "leading": 1.0,  "transform": "upper" },
+    "body":        { "pt": 16.5,"weight": 300, "face": "body",    "tracking": 0,      "leading": 1.7,  "transform": "none" },
+    "bullet":      { "pt": 16.5,"weight": 300, "face": "body",    "tracking": 0,      "leading": 1.65, "transform": "none" },
+    "caption":     { "pt": 11.5,"weight": 400, "face": "mono",    "tracking": 0.12,   "leading": 1.0,  "transform": "upper" },
+    "stat_number": { "pt": 53,  "weight": 200, "face": "display", "tracking": -0.03,  "leading": 1.0,  "transform": "none" },
+    "stat_unit":   { "pt": 19,  "weight": 400, "face": "display", "tracking": 0,      "leading": 1.3,  "transform": "none" },
+    "quote":       { "pt": 31,  "weight": 400, "face": "display", "tracking": 0,      "leading": 1.35, "transform": "none" },
+    "card_title":  { "pt": 27,  "weight": 400, "face": "display", "tracking": 0,      "leading": 1.15, "transform": "none" }
+  },
+  "spacing": {
+    "margin_x": 1.6, "margin_top": 0.6, "margin_bottom": 0.52,
+    "gap_card": 0.3, "gap_bullet": 0.22, "card_pad": 0.46,
+    "radius_card": 0.16, "rule_pt": 1.0, "rule_card_pt": 1.0
+  },
+  "components": {
+    "footline": true, "pageno": true, "heading_rule": true,
+    "marker": "dash", "card_border": true, "card_fill": "surface", "monogram": false
+  },
+  "depth": { "mode": "flat", "shadow": false, "offset_dx": 0, "offset_dy": 0, "offset_color": "border" },
+  "decor": [ { "type": "rule", "where": "cover", "color": "accent" } ],
+  "rules": {
+    "no_em_dash": true, "lock_accent": true, "off_black_white": true,
+    "mono_upper": true, "body_max_weight": 400, "display_force_bold": false
+  }
+}

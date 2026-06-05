@@ -1,0 +1,45 @@
+{
+  "id": "vellum",
+  "derived_from": "templates/slides/gallery/vellum/design.md + styles.json",
+  "ground_default": "bg",
+  "grounds": {
+    "bg":     { "fill": "#2A3870", "heading": "#E8D85C", "body": "#E8D85C", "muted": "#A39A6E", "accent": "#3A7878", "surface": "#343F80", "border": "#E8D85C" },
+    "bg_alt": { "fill": "#1F2858", "heading": "#E8D85C", "body": "#E8D85C", "muted": "#A39A6E", "accent": "#3A7878", "surface": "#34407A", "border": "#E8D85C" }
+  },
+  "fonts": {
+    "display": "Cormorant Garamond",
+    "body": "DM Sans",
+    "mono": "Courier Prime",
+    "cjk": "Noto Serif SC",
+    "cjk_mono": "Noto Sans Mono CJK SC",
+    "single_weight_display": false
+  },
+  "type_scale": {
+    "hero":        { "pt": 105, "weight": 400, "face": "display", "tracking": -0.01, "leading": 0.92, "transform": "none" },
+    "display":     { "pt": 67,  "weight": 400, "face": "display", "tracking": -0.01, "leading": 0.95, "transform": "none" },
+    "headline":    { "pt": 38,  "weight": 400, "face": "display", "tracking": -0.01, "leading": 1.05, "transform": "none" },
+    "eyebrow":     { "pt": 12,  "weight": 400, "face": "mono",    "tracking": 0.06,  "leading": 1.0,  "transform": "none" },
+    "body":        { "pt": 16.5,"weight": 400, "face": "body",    "tracking": 0,     "leading": 1.65, "transform": "none" },
+    "bullet":      { "pt": 16.5,"weight": 400, "face": "body",    "tracking": 0,     "leading": 1.5,  "transform": "none" },
+    "caption":     { "pt": 12,  "weight": 400, "face": "mono",    "tracking": 0.06,  "leading": 1.0,  "transform": "none" },
+    "stat_number": { "pt": 53,  "weight": 400, "face": "display", "tracking": -0.02, "leading": 1.0,  "transform": "none" },
+    "stat_unit":   { "pt": 23,  "weight": 500, "face": "display", "tracking": -0.01, "leading": 1.0,  "transform": "none" },
+    "quote":       { "pt": 31,  "weight": 400, "face": "display", "tracking": -0.01, "leading": 1.25, "transform": "none" },
+    "card_title":  { "pt": 23,  "weight": 500, "face": "display", "tracking": -0.01, "leading": 1.15, "transform": "none" }
+  },
+  "spacing": {
+    "margin_x": 0.95, "margin_top": 0.6, "margin_bottom": 0.52,
+    "gap_card": 0.3, "gap_bullet": 0.22, "card_pad": 0.46,
+    "radius_card": 0.0, "rule_pt": 1.0, "rule_card_pt": 1.0
+  },
+  "components": {
+    "footline": true, "pageno": true, "heading_rule": true,
+    "marker": "square", "card_border": true, "card_fill": "surface", "monogram": false
+  },
+  "depth": { "mode": "flat", "shadow": false, "offset_dx": 0, "offset_dy": 0, "offset_color": "border" },
+  "decor": [ { "type": "edge_bar", "where": "cover", "color": "accent" } ],
+  "rules": {
+    "no_em_dash": true, "lock_accent": true, "off_black_white": true,
+    "mono_upper": false, "body_max_weight": 400, "display_force_bold": false
+  }
+}

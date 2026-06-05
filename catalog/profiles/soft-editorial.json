@@ -1,0 +1,45 @@
+{
+  "id": "soft-editorial",
+  "derived_from": "templates/slides/gallery/soft-editorial/design.md + styles.json",
+  "ground_default": "bg",
+  "grounds": {
+    "bg":     { "fill": "#F2EEDF", "heading": "#2A241B", "body": "#2A241B", "muted": "#5C5345", "accent": "#E1A4C2", "surface": "#FBF8EF", "border": "#2A241B" },
+    "bg_alt": { "fill": "#ECE6D2", "heading": "#2A241B", "body": "#2A241B", "muted": "#5C5345", "accent": "#D6DD63", "surface": "#F2EEDF", "border": "#2A241B" }
+  },
+  "fonts": {
+    "display": "Cormorant Garamond",
+    "body": "Work Sans",
+    "mono": "JetBrains Mono",
+    "cjk": "Noto Serif SC",
+    "cjk_mono": "Noto Sans Mono CJK SC",
+    "single_weight_display": false
+  },
+  "type_scale": {
+    "hero":        { "pt": 116, "weight": 500, "face": "display", "tracking": -0.02,  "leading": 0.92, "transform": "none" },
+    "display":     { "pt": 94,  "weight": 500, "face": "display", "tracking": -0.015, "leading": 0.95, "transform": "none" },
+    "headline":    { "pt": 48,  "weight": 500, "face": "display", "tracking": -0.01,  "leading": 0.98, "transform": "none" },
+    "eyebrow":     { "pt": 14,  "weight": 400, "face": "body",    "tracking": -0.005, "leading": 1.0,  "transform": "none" },
+    "body":        { "pt": 17,  "weight": 400, "face": "body",    "tracking": 0,      "leading": 1.5,  "transform": "none" },
+    "bullet":      { "pt": 17,  "weight": 400, "face": "body",    "tracking": 0,      "leading": 1.4,  "transform": "none" },
+    "caption":     { "pt": 13,  "weight": 400, "face": "display", "tracking": 0,      "leading": 1.2,  "transform": "none" },
+    "stat_number": { "pt": 100, "weight": 500, "face": "display", "tracking": -0.02,  "leading": 0.9,  "transform": "none" },
+    "stat_unit":   { "pt": 22,  "weight": 500, "face": "display", "tracking": -0.01,  "leading": 1.05, "transform": "none" },
+    "quote":       { "pt": 44,  "weight": 500, "face": "display", "tracking": -0.01,  "leading": 1.05, "transform": "none" },
+    "card_title":  { "pt": 36,  "weight": 500, "face": "display", "tracking": -0.01,  "leading": 1.0,  "transform": "none" }
+  },
+  "spacing": {
+    "margin_x": 0.95, "margin_top": 0.6, "margin_bottom": 0.52,
+    "gap_card": 0.3, "gap_bullet": 0.22, "card_pad": 0.46,
+    "radius_card": 0.09, "rule_pt": 1.0, "rule_card_pt": 1.5
+  },
+  "components": {
+    "footline": true, "pageno": true, "heading_rule": true,
+    "marker": "circle", "card_border": false, "card_fill": "surface", "monogram": false
+  },
+  "depth": { "mode": "flat", "shadow": false, "offset_dx": 0, "offset_dy": 0, "offset_color": "border" },
+  "decor": [ { "type": "edge_bar", "where": "cover", "color": "accent" } ],
+  "rules": {
+    "no_em_dash": true, "lock_accent": true, "off_black_white": true,
+    "mono_upper": true, "body_max_weight": 400, "display_force_bold": false
+  }
+}

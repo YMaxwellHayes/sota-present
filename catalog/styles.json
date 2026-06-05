@@ -36,7 +36,8 @@
             "data-viz",
             "statement",
             "summary"
-          ]
+          ],
+          "profile_ref": "editorial-forest"
         },
         "whiteboard": {
           "palette_ref": "editorial-forest",
@@ -96,7 +97,8 @@
             "statement",
             "data-viz",
             "pillar"
-          ]
+          ],
+          "profile_ref": "bold-poster"
         },
         "whiteboard": {
           "palette_ref": "bold-poster",
@@ -219,7 +221,8 @@
             "data-viz",
             "timeline",
             "quote"
-          ]
+          ],
+          "profile_ref": "monochrome"
         },
         "whiteboard": {
           "palette_ref": "monochrome",
@@ -341,7 +344,8 @@
             "data-viz",
             "comparison",
             "stat"
-          ]
+          ],
+          "profile_ref": "neo-grid-bold"
         },
         "whiteboard": {
           "palette_ref": "neo-grid-bold",
@@ -521,7 +525,8 @@
             "content",
             "data-viz",
             "quote"
-          ]
+          ],
+          "profile_ref": "soft-editorial"
         },
         "whiteboard": {
           "palette_ref": "soft-editorial",
@@ -704,7 +709,8 @@
             "content",
             "data-viz",
             "stat"
-          ]
+          ],
+          "profile_ref": "stencil-tablet"
         },
         "whiteboard": {
           "palette_ref": "stencil-tablet",
@@ -881,7 +887,8 @@
             "content",
             "data-viz",
             "comparison"
-          ]
+          ],
+          "profile_ref": "blue-professional"
         },
         "whiteboard": {
           "palette_ref": "avocado-press",
@@ -1118,7 +1125,8 @@
             "title",
             "content",
             "data-viz"
-          ]
+          ],
+          "profile_ref": "cobalt-grid"
         },
         "whiteboard": {
           "palette_ref": "cobalt-bloom",
@@ -1997,7 +2005,8 @@
             "content",
             "quote",
             "statement"
-          ]
+          ],
+          "profile_ref": "vellum"
         },
         "whiteboard": {
           "palette_ref": "reading-room",
@@ -3882,7 +3891,8 @@
             "title",
             "content",
             "data-viz"
-          ]
+          ],
+          "profile_ref": "swiss-modern"
         },
         "whiteboard": {
           "palette_ref": null,

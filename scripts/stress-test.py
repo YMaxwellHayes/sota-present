@@ -245,8 +245,54 @@ def check_pptx():
     ratio_ok = abs((pr.slide_width / pr.slide_height) - 16/9) < 0.01
     rec("pptx", "16:9 stage", ratio_ok, "")
 
+# ---------- 6b. DESIGN PROFILES ----------
+def check_profiles():
+    import glob as _g
+    styles = {s["id"] for s in json.load(open("catalog/styles.json"))["styles"]}
+    profs = sorted(_g.glob("catalog/profiles/*.json"))
+    rec("profiles", "profiles dir present", len(profs) > 0, f"{len(profs)} profiles")
+    REQ = ("grounds", "fonts", "type_scale", "spacing", "components", "depth", "rules")
+    bad = []
+    for f in profs:
+        try:
+            p = json.load(open(f))
+        except Exception as e:
+            bad.append(f"{f}: parse {e}"); continue
+        miss = [k for k in REQ if k not in p]
+        if miss: bad.append(f"{p.get('id',f)}: missing {miss}")
+        g = p.get("grounds", {}).get("bg", {})
+        for role in ("fill", "heading", "body"):
+            if not HEX.match(str(g.get(role, ""))): bad.append(f"{p.get('id')}: bg.{role} bad hex")
+        if p.get("id") not in styles: bad.append(f"{p.get('id')}: not in styles.json")
+    rec("profiles", "all profiles valid + in styles.json", not bad, "; ".join(bad[:5]) or f"{len(profs)} ok")
+    # profile-driven build is editable + correct shape
+    try:
+        import pptx  # noqa
+    except ImportError:
+        rec("profiles", "profiled build", True, "SKIPPED (no python-pptx)"); return
+    spec = {"title": "t", "slides": [
+        {"type": "cover", "eyebrow": "X", "title": "标题 Title", "subtitle": "s", "footer": "f"},
+        {"type": "content", "heading": "标题", "lead": "l", "bullets": ["一 one", "二 two"]},
+        {"type": "two_col", "heading": "对比", "left_title": "L", "left": ["a"], "right_title": "R", "right": ["b"]},
+        {"type": "stat", "heading": "数", "items": [{"value": "9", "label": "x"}]},
+        {"type": "statement", "text": "punch", "sub": "s"},
+        {"type": "closing", "title": "end 结束"}]}
+    import tempfile, json as _j
+    dd = tempfile.mkdtemp(); sp = os.path.join(dd, "s.json"); out = os.path.join(dd, "d.pptx")
+    open(sp, "w").write(_j.dumps(spec, ensure_ascii=False))
+    pr = subprocess.run(["python3", "scripts/build-pptx.py", "--style", "editorial-forest",
+                         "--spec", sp, "--out", out], capture_output=True, text=True)
+    ok = pr.returncode == 0 and os.path.exists(out)
+    rec("profiles", "profiled (editorial-forest) build runs", ok, (pr.stderr or pr.stdout)[-120:] if not ok else "ok")
+    if ok:
+        from pptx import Presentation
+        p2 = Presentation(out)
+        n = len(p2.slides._sldIdLst)
+        has = any(sh.has_text_frame and sh.text_frame.text.strip() for s in p2.slides for sh in s.shapes)
+        rec("profiles", "profiled deck editable + 6 slides", n == 6 and has, f"slides={n} text={has}")
+
 # ---------- run ----------
-for fn in (check_catalog, check_palettes, check_validator, check_render, check_pptx, check_scripts):
+for fn in (check_catalog, check_palettes, check_validator, check_render, check_pptx, check_profiles, check_scripts):
     try:
         fn()
     except Exception as e:
